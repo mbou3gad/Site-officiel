@@ -2,1317 +2,1919 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>À propos — Hod Fragonard | Site Officiel</title>
+  <title>Hod Fragonard — Site officiel</title>
+  <meta name="description" content="Découvrez Hod Fragonard, juriste, autrice, entrepreneure et ambassadrice de paix. Retrouvez ses ouvrages, ses formations numériques, ses engagements et ses projets.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B1F33">
+  <link rel="canonical" href="https://hodfragonard.com/">
 
-  <meta name="description" content="Découvrez le parcours de Hod Fragonard : juriste engagée, autrice et entrepreneure (Koyeba Koluka), Ambassadrice de Paix (FPU/UPF).">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hod Fragonard — Site officiel">
+  <meta property="og:description" content="Le droit, les idées et l'engagement au service d'une vision.">
+  <meta property="og:url" content="https://hodfragonard.com/">
+  <meta property="og:image" content="https://hodfragonard.com/assets/images/hero-portrait.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/main.css">
 
   <style>
-
-    /* =========================================================
-       PAGE À PROPOS — STYLE PREMIUM
-       Les liens, textes et images d'origine sont conservés
-    ========================================================= */
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
-    .about-hero-modern {
-      position: relative;
-      overflow: hidden;
+    :root {
+      --navy: #0B1F33;
+      --deep: #071625;
+      --blue: #165EA6;
+      --gold: #C9A45C;
+      --gold-light: #E4C985;
+      --ivory: #F7F3EA;
+      --white: #FFFFFF;
+      --text: #222B33;
+      --muted: #68717A;
+      --shadow: 0 16px 42px rgba(11,31,51,.09);
     }
 
-    .about-hero-modern::after {
-      content: "";
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border: 1px solid rgba(201, 162, 39, 0.18);
-      border-radius: 50%;
-      right: -130px;
-      bottom: -150px;
-      pointer-events: none;
+    * {
+      box-sizing: border-box;
     }
 
-
-    /* =========================================================
-       SECTION BIO
-    ========================================================= */
-
-    .about-modern-section {
-      background: #ffffff;
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+      overflow-x: clip;
     }
 
-    .about-modern-grid {
-      display: grid;
-      grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
-      gap: 80px;
-      align-items: center;
+    body {
+      margin: 0;
+      max-width: 100%;
+      overflow-x: clip;
+      font-family: "DM Sans", Arial, sans-serif;
+      color: var(--text);
     }
 
-
-    /* =========================================================
-       PHOTO
-    ========================================================= */
-
-    .about-photo-modern {
-      position: relative;
-      padding: 18px;
+    img, svg {
+      max-width: 100%;
     }
 
-    .about-photo-modern::before {
-      content: "";
-      position: absolute;
-
-      top: 0;
-      left: 0;
-
-      width: 75%;
-      height: 75%;
-
-      border-top: 1px solid #c9a227;
-      border-left: 1px solid #c9a227;
-
-      opacity: 0.65;
-    }
-
-    .about-photo-modern::after {
-      content: "";
-      position: absolute;
-
-      right: 0;
-      bottom: 0;
-
-      width: 75%;
-      height: 75%;
-
-      border-right: 1px solid #c9a227;
-      border-bottom: 1px solid #c9a227;
-
-      opacity: 0.65;
-    }
-
-    .about-photo-inner {
-      position: relative;
-      z-index: 2;
-
-      overflow: hidden;
-
-      background: #f7f3ea;
-
-      box-shadow:
-        0 20px 50px rgba(11, 31, 51, 0.14);
-    }
-
-    .about-photo-inner img {
-      display: block;
-
-      width: 100%;
+    img {
       height: auto;
-
-      max-height: 650px;
-
-      object-fit: cover;
-
-      transition:
-        transform 0.7s ease;
     }
 
-    .about-photo-inner:hover img {
-      transform: scale(1.025);
+    h1, h2, h3, h4 {
+      font-family: "Playfair Display", Georgia, serif;
     }
 
-
-    /* =========================================================
-       TEXTE BIO
-    ========================================================= */
-
-    .about-modern-text {
-      max-width: 720px;
+    a {
+      overflow-wrap: anywhere;
     }
 
-    .about-modern-text h2 {
-      margin-bottom: 14px;
-
-      color: #0b1f33;
-
-      font-size: clamp(2rem, 4vw, 3rem);
-
-      line-height: 1.1;
+    .container {
+      width: min(1200px, calc(100% - 40px));
+      margin-inline: auto;
     }
 
-    .about-modern-text .gold-line {
-      width: 70px;
-      height: 2px;
-
-      margin-bottom: 30px;
-
-      background: #c9a227;
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 10px;
+      z-index: 9999;
+      padding: 12px;
+      color: var(--navy);
+      background: white;
     }
 
-    .about-intro-modern {
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      font-size: 1.16rem;
-
-      line-height: 1.8;
-
-      color: #0b1f33;
+    .skip-link:focus {
+      top: 10px;
     }
 
-    .about-modern-text p {
-      line-height: 1.85;
-      color: #555;
+    /* MENU ET NAVIGATION */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(11,31,51,.08);
     }
 
-
-    /* =========================================================
-       BOUTONS
-    ========================================================= */
-
-    .about-actions-modern {
+    .header-inner {
+      min-height: 82px;
       display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 14px;
-
-      margin-top: 34px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
     }
 
-
-    /* =========================================================
-       SECTION 4 DIMENSIONS
-    ========================================================= */
-
-    .dimensions-modern {
-      position: relative;
-
-      background:
-        linear-gradient(
-          135deg,
-          #f7f3ea 0%,
-          #f4efe4 100%
-        );
-
-      overflow: hidden;
-    }
-
-    .dimensions-modern::before {
-      content: "";
-
-      position: absolute;
-
-      width: 400px;
-      height: 400px;
-
-      border: 1px solid rgba(201, 162, 39, 0.12);
-
-      border-radius: 50%;
-
-      left: -230px;
-      top: 50px;
-
-      pointer-events: none;
-    }
-
-    .dimensions-modern::after {
-      content: "";
-
-      position: absolute;
-
-      width: 300px;
-      height: 300px;
-
-      border: 1px solid rgba(201, 162, 39, 0.12);
-
-      border-radius: 50%;
-
-      right: -170px;
-      bottom: -120px;
-
-      pointer-events: none;
-    }
-
-
-    /* =========================================================
-       EN-TÊTE SECTION
-    ========================================================= */
-
-    .dimensions-header-modern {
-      position: relative;
-      z-index: 2;
-
-      max-width: 760px;
-
-      margin: 0 auto 55px;
-
-      text-align: center;
-    }
-
-    .dimensions-header-modern h2 {
-      margin-bottom: 15px;
-
-      color: #0b1f33;
-
-      font-size: clamp(2rem, 4vw, 2.8rem);
-    }
-
-    .dimensions-header-modern .gold-line {
-      margin: 0 auto 20px;
-
-      width: 70px;
-      height: 2px;
-
-      background: #c9a227;
-    }
-
-
-    /* =========================================================
-       GRILLE DES 4 DIMENSIONS
-    ========================================================= */
-
-    .pillars-grid-modern {
-      position: relative;
-      z-index: 2;
-
-      display: grid;
-
-      grid-template-columns: repeat(4, 1fr);
-
-      gap: 22px;
-    }
-
-
-    /* =========================================================
-       CARTES
-    ========================================================= */
-
-    .pillar-card-modern {
-      position: relative;
-
+    .logo {
       display: flex;
       flex-direction: column;
-
-      min-height: 360px;
-
-      padding: 34px 28px 28px;
-
-      background: #ffffff;
-
-      border: 1px solid rgba(11, 31, 51, 0.07);
-
-      box-shadow:
-        0 10px 30px rgba(11, 31, 51, 0.055);
-
-      overflow: hidden;
-
-      transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease,
-        border-color 0.4s ease;
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .08em;
+      line-height: 1.15;
+      flex-shrink: 0;
     }
 
-    .pillar-card-modern::before {
+    .logo span:first-child {
+      color: var(--gold);
+      font-size: 1.15rem;
+    }
+
+    .logo span:nth-child(2) {
+      font-size: .85rem;
+    }
+
+    .logo-tag {
+      margin-top: 5px;
+      font-size: .55rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 10px 8px;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: .76rem;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #A27C32;
+    }
+
+    .nav-links a[href="formations.html"] {
+      color: #A27C32;
+    }
+
+    .nav-links a[href="formations.html"]::after {
       content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin-top: 4px;
+      background: var(--gold);
+    }
 
-      position: absolute;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      text-decoration: none;
+      text-align: center;
+      font-family: inherit;
+      font-size: .85rem;
+      font-weight: 700;
+      transition: background .25s, color .25s, transform .25s;
+      cursor: pointer;
+    }
 
-      top: 0;
-      left: 0;
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
+    .btn-sm {
+      padding: 10px 15px;
+      font-size: .76rem;
+    }
+
+    .btn-lg {
+      padding: 16px 25px;
+    }
+
+    .btn-or {
+      color: var(--navy);
+      background: var(--gold);
+    }
+
+    .btn-or:hover {
+      background: var(--gold-light);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--navy);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue);
+    }
+
+    .btn-outline {
+      color: var(--navy);
+      border-color: var(--navy);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      color: white;
+      background: var(--navy);
+    }
+
+    .btn-outline-white {
+      color: white;
+      border-color: rgba(255,255,255,.65);
+    }
+
+    .btn-outline-white:hover {
+      color: var(--navy);
+      background: white;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      padding: 10px;
+      border: 1px solid rgba(11,31,51,.15);
+      background: white;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 2px;
       width: 100%;
-      height: 3px;
-
-      background: #c9a227;
-
-      transform: scaleX(0);
-
-      transform-origin: left;
-
-      transition:
-        transform 0.4s ease;
+      background: var(--navy);
     }
 
-    .pillar-card-modern:hover {
-      transform: translateY(-8px);
-
-      box-shadow:
-        0 22px 45px rgba(11, 31, 51, 0.12);
-
-      border-color:
-        rgba(201, 162, 39, 0.25);
+    .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1001;
+      max-height: calc(100vh - 82px);
+      overflow-y: auto;
+      padding: 25px 24px;
+      background: white;
+      border-top: 1px solid #eee;
+      box-shadow: var(--shadow);
     }
 
-    .pillar-card-modern:hover::before {
-      transform: scaleX(1);
+    .nav-mobile.is-open {
+      display: block;
     }
 
+    .nav-mobile-tagline {
+      display: block;
+      margin-bottom: 18px;
+      color: #A27C32;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+    }
 
-    /* =========================================================
-       ICÔNES
-    ========================================================= */
+    .nav-mobile-links {
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+    }
 
-    .pillar-icon-modern {
-      width: 58px;
-      height: 58px;
+    .nav-mobile-links a {
+      display: block;
+      padding: 13px 0;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+      font-size: .92rem;
+      font-weight: 600;
+    }
 
+    .nav-mobile-links a:hover,
+    .nav-mobile-links a.active {
+      color: #A27C32;
+    }
+
+    /* HERO */
+
+    .home-hero {
+      position: relative;
+      isolation: isolate;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      margin-bottom: 25px;
-
-      background: #f7f3ea;
-
-      color: #b08a1c;
-
-      border: 1px solid rgba(201, 162, 39, 0.22);
-
-      border-radius: 50%;
-
-      transition:
-        background 0.35s ease,
-        color 0.35s ease,
-        transform 0.35s ease;
-    }
-
-    .pillar-card-modern:hover .pillar-icon-modern {
-      background: #0b1f33;
-
-      color: #ffffff;
-
-      transform: rotate(5deg);
-    }
-
-    .pillar-icon-modern svg {
-      width: 26px;
-      height: 26px;
-
-      stroke-width: 1.5;
-    }
-
-
-    /* =========================================================
-       TITRES DES CARTES
-    ========================================================= */
-
-    .pillar-card-modern h3 {
-      margin: 0 0 13px;
-
-      color: #0b1f33;
-
-      font-size: 1.3rem;
-
-      line-height: 1.25;
-    }
-
-    .pillar-card-modern p {
-      margin: 0 0 25px;
-
-      color: #666;
-
-      line-height: 1.7;
-
-      font-size: 0.94rem;
-    }
-
-
-    /* =========================================================
-       LIENS DES CARTES
-    ========================================================= */
-
-    .pillar-link-modern {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 8px;
-
-      margin-top: auto;
-
-      color: #0b1f33;
-
-      text-decoration: none;
-
-      font-size: 0.82rem;
-
-      font-weight: 700;
-
-      letter-spacing: 0.03em;
-
-      transition:
-        color 0.3s ease,
-        gap 0.3s ease;
-    }
-
-    .pillar-link-modern::after {
-      content: "→";
-
-      font-size: 1rem;
-
-      transition:
-        transform 0.3s ease;
-    }
-
-    .pillar-link-modern:hover {
-      color: #b08a1c;
-
-      gap: 13px;
-    }
-
-    .pillar-link-modern:hover::after {
-      transform: translateX(3px);
-    }
-
-
-    /* =========================================================
-       CARTE AMBASSADRICE
-    ========================================================= */
-
-    .pillar-card-modern.ambassadrice-modern {
+      min-height: 690px;
+      min-height: 88svh;
+      overflow: hidden;
+      color: white;
+      text-align: center;
       background:
-        linear-gradient(
-          145deg,
-          #0b1f33 0%,
-          #102c45 100%
-        );
-
-      border-color: #0b1f33;
+        radial-gradient(circle at 50% 15%, rgba(201,164,92,.13), transparent 35%),
+        linear-gradient(135deg, #061522, #165EA6 55%, #081827);
     }
 
-    .pillar-card-modern.ambassadrice-modern h3 {
-      color: #ffffff;
+    .home-hero::before,
+    .home-hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border: 1px solid rgba(201,164,92,.2);
+      border-radius: 50%;
     }
 
-    .pillar-card-modern.ambassadrice-modern p {
-      color: rgba(255, 255, 255, 0.76);
+    .home-hero::before {
+      width: 600px;
+      height: 600px;
+      right: -300px;
+      top: -250px;
     }
 
-    .pillar-card-modern.ambassadrice-modern .pillar-icon-modern {
-      background: rgba(201, 162, 39, 0.12);
-
-      color: #d6b34a;
-
-      border-color: rgba(201, 162, 39, 0.35);
+    .home-hero::after {
+      width: 360px;
+      height: 360px;
+      left: -180px;
+      bottom: -180px;
     }
 
-    .pillar-card-modern.ambassadrice-modern .pillar-link-modern {
-      color: #ffffff;
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+      padding: 100px 0 70px;
     }
 
-    .pillar-card-modern.ambassadrice-modern .pillar-link-modern:hover {
-      color: #d6b34a;
+    .hero-eyebrow {
+      margin-bottom: 24px;
+      color: var(--gold-light);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .25em;
     }
 
+    .hero-title {
+      margin: 0;
+      color: white;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: .98;
+      letter-spacing: -.04em;
+      overflow-wrap: anywhere;
+    }
 
-    /* =========================================================
-       TABLETTE
-    ========================================================= */
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-title span:first-child {
+      color: var(--gold);
+      font-size: .7em;
+      letter-spacing: .02em;
+    }
+
+    .hero-roles {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 25px;
+      color: rgba(255,255,255,.8);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+
+    .hero-roles .sep {
+      color: var(--gold);
+    }
+
+    .hero-quote {
+      max-width: 700px;
+      margin: 28px auto 0;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .hero-description {
+      max-width: 680px;
+      margin: 18px auto 0;
+      color: rgba(255,255,255,.76);
+      font-size: .92rem;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .hero-actions .btn {
+      min-height: 49px;
+    }
+
+    .btn-gold-solid {
+      color: var(--navy);
+      background: var(--gold);
+    }
+
+    .btn-gold-outline {
+      color: white;
+      border-color: var(--gold);
+    }
+
+    .btn-gold-outline:hover {
+      color: var(--navy);
+      background: var(--gold);
+    }
+
+    .hero-peace {
+      margin-top: 38px;
+      color: var(--gold-light);
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+    }
+
+    .hero-peace small {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255,255,255,.6);
+      font-size: .55rem;
+      font-weight: 400;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .bg-white {
+      background: white;
+    }
+
+    .bg-ivory {
+      background: var(--ivory);
+    }
+
+    .bg-dark {
+      color: white;
+      background: var(--navy);
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin: 0 auto 42px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: #A27C32;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .section-header h2,
+    .section-heading {
+      margin: 12px 0;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+    }
+
+    .bg-dark .section-heading {
+      color: white;
+    }
+
+    .section-header p {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .gold-line {
+      width: 58px;
+      height: 2px;
+      margin: 20px 0;
+      background: var(--gold);
+    }
+
+    .gold-line-center {
+      margin-inline: auto;
+    }
+
+    /* LES QUATRE PILIERS */
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .pillar-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      min-height: 330px;
+      padding: 28px 24px;
+      background: white;
+      border: 1px solid rgba(11,31,51,.08);
+      box-shadow: 0 10px 30px rgba(11,31,51,.04);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .pillar-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 22px;
+      color: #A27C32;
+      background: var(--ivory);
+      border: 1px solid rgba(201,164,92,.25);
+      border-radius: 50%;
+    }
+
+    .pillar-icon svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .pillar-sub {
+      margin-bottom: 8px;
+      color: #A27C32;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .pillar-card h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 1.35rem;
+    }
+
+    .pillar-card p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: .87rem;
+      line-height: 1.75;
+    }
+
+    .pillar-link {
+      margin-top: auto;
+      color: var(--navy);
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .pillar-link:hover {
+      color: #A27C32;
+    }
+
+    .pillar-peace {
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+
+    .pillar-peace h3,
+    .pillar-peace .pillar-link {
+      color: white;
+    }
+
+    .pillar-peace p {
+      color: rgba(255,255,255,.75);
+    }
+
+    .pillar-peace .pillar-icon {
+      color: var(--gold-light);
+      background: rgba(201,164,92,.1);
+    }
+
+    /* PRESENTATION */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .about-photo {
+      position: relative;
+      padding: 15px;
+    }
+
+    .about-photo::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 65%;
+      height: 65%;
+      border-top: 1px solid var(--gold);
+      border-left: 1px solid var(--gold);
+    }
+
+    .about-photo img {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .about-content h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+    }
+
+    .about-content p {
+      color: #5E6870;
+      line-height: 1.9;
+    }
+
+    /* OUVRAGES */
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 22px;
+    }
+
+    .book-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      color: var(--text);
+      background: white;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .book-cover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 330px;
+      padding: 20px;
+      background: linear-gradient(145deg, #F8F5ED, #ECE7DC);
+    }
+
+    .book-cover img {
+      display: block;
+      max-height: 290px;
+      width: auto;
+      object-fit: contain;
+      box-shadow: 0 12px 28px rgba(0,0,0,.15);
+    }
+
+    .book-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 22px;
+    }
+
+    .book-number {
+      color: #A27C32;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+    }
+
+    .book-body h3 {
+      margin: 10px 0;
+      color: var(--navy);
+      font-size: 1.12rem;
+      line-height: 1.4;
+    }
+
+    .book-body p {
+      color: var(--muted);
+      font-size: .86rem;
+      line-height: 1.65;
+    }
+
+    .book-body .btn {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
+    /* FORMATIONS : MISE EN AVANT SUR L'ACCUEIL */
+
+    .formations-feature {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(201,164,92,.15), transparent 35%),
+        linear-gradient(135deg, #071625, #0B1F33);
+    }
+
+    .formations-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .formations-feature h2 {
+      margin: 14px 0;
+      color: white;
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      line-height: 1.15;
+    }
+
+    .formations-feature p {
+      color: rgba(255,255,255,.78);
+      font-size: .95rem;
+      line-height: 1.9;
+    }
+
+    .formations-feature .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .formation-benefits {
+      display: grid;
+      gap: 15px;
+      margin: 25px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .formation-benefits li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: rgba(255,255,255,.88);
+      font-size: .9rem;
+      line-height: 1.65;
+    }
+
+    .formation-benefits li span {
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .formation-panel {
+      padding: 34px;
+      color: var(--navy);
+      background: var(--ivory);
+      border-top: 4px solid var(--gold);
+      box-shadow: 0 20px 50px rgba(0,0,0,.15);
+    }
+
+    .formation-panel .panel-label {
+      color: #A27C32;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .formation-panel h3 {
+      margin: 12px 0;
+      font-size: 1.7rem;
+      line-height: 1.3;
+    }
+
+    .formation-panel p {
+      color: #5E6870;
+      font-size: .9rem;
+    }
+
+    .formation-panel .btn {
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    /* AGENDA ET ACTUALITÉS */
+
+    .event-card {
+      display: grid;
+      grid-template-columns: 110px 1px minmax(0,1fr) auto;
+      align-items: center;
+      gap: 24px;
+      padding: 28px;
+      background: white;
+      border: 1px solid rgba(11,31,51,.08);
+      box-shadow: var(--shadow);
+    }
+
+    .event-date {
+      text-align: center;
+      color: var(--navy);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+
+    .event-date small {
+      display: block;
+      margin-top: 8px;
+      color: #A27C32;
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .event-separator {
+      width: 1px;
+      height: 75px;
+      background: rgba(11,31,51,.15);
+    }
+
+    .event-info h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.2rem;
+    }
+
+    .event-info p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.7;
+    }
+
+    .empty-state {
+      padding: 35px;
+      border: 1px dashed rgba(11,31,51,.2);
+      text-align: center;
+    }
+
+    .empty-state h3 {
+      color: var(--navy);
+    }
+
+    .empty-state p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* CONTACT */
+
+    .contact-cta {
+      text-align: center;
+      background: var(--ivory);
+    }
+
+    .contact-cta h2 {
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .contact-cta p {
+      max-width: 700px;
+      margin: 20px auto 28px;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    /* PIED DE PAGE */
+
+    .site-footer {
+      padding: 60px 0 20px;
+      color: rgba(255,255,255,.75);
+      background: var(--deep);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 45px;
+    }
+
+    .footer-brand h2 {
+      margin: 0 0 12px;
+      color: white;
+      font-size: 1.5rem;
+      letter-spacing: .08em;
+    }
+
+    .footer-tagline {
+      color: var(--gold-light);
+      font-size: .75rem;
+      line-height: 1.7;
+    }
+
+    .footer-brand p {
+      font-size: .85rem;
+      line-height: 1.8;
+    }
+
+    .footer-col h3 {
+      margin-top: 0;
+      color: white;
+      font-size: 1.05rem;
+    }
+
+    .footer-col ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a,
+    .footer-legal a,
+    .footer-soc a {
+      color: rgba(255,255,255,.72);
+      font-size: .82rem;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover,
+    .footer-legal a:hover,
+    .footer-soc a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-soc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .footer-separator {
+      height: 1px;
+      margin: 35px 0 20px;
+      background: rgba(255,255,255,.13);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: .75rem;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    /* BOUTONS FLOTTANTS */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 58px;
+      color: white;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    .back-top {
+      position: fixed;
+      right: 29px;
+      bottom: 92px;
+      z-index: 1100;
+      display: none;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: var(--navy);
+      border: 0;
+      cursor: pointer;
+    }
+
+    .back-top.visible {
+      display: flex;
+    }
+
+    .back-top svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* RESPONSIVE */
 
     @media (max-width: 1100px) {
-
-      .about-modern-grid {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 50px;
+      .nav-desktop {
+        gap: 8px;
       }
 
-      .pillars-grid-modern {
-        grid-template-columns: repeat(2, 1fr);
+      .nav-links a {
+        padding-inline: 5px;
+        font-size: .7rem;
       }
 
+      .pillars-grid,
+      .books-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .formations-grid {
+        gap: 30px;
+      }
+
+      .event-card {
+        grid-template-columns: 90px 1px minmax(0,1fr);
+      }
+
+      .event-actions {
+        grid-column: 1 / -1;
+      }
     }
 
+    @media (max-width: 900px) {
+      .nav-desktop {
+        display: none;
+      }
 
-    /* =========================================================
-       MOBILE
-    ========================================================= */
+      .hamburger {
+        display: flex;
+      }
 
-    @media (max-width: 760px) {
-
-      .about-modern-grid {
+      .about-grid,
+      .formations-grid {
         grid-template-columns: 1fr;
-
-        gap: 45px;
+        gap: 35px;
       }
 
-      .about-photo-modern {
-        max-width: 560px;
-
-        margin: 0 auto;
+      .about-photo {
+        width: min(100%, 600px);
+        margin-inline: auto;
       }
 
-      .about-modern-text {
-        max-width: none;
+      .formation-panel {
+        max-width: 600px;
       }
 
-      .about-actions-modern {
+      .footer-top {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .header-inner {
+        min-height: 72px;
+      }
+
+      .home-hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 90px 0 50px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+      }
+
+      .hero-roles {
+        gap: 6px;
+        font-size: .57rem;
+        line-height: 1.8;
+      }
+
+      .hero-description {
+        font-size: .84rem;
+      }
+
+      .hero-actions {
         flex-direction: column;
       }
 
-      .about-actions-modern .btn {
+      .hero-actions .btn {
         width: 100%;
+      }
 
+      .section {
+        padding: 60px 0;
+      }
+
+      .pillars-grid,
+      .books-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-card {
+        min-height: 0;
+      }
+
+      .book-cover {
+        height: min(420px, 90vw);
+      }
+
+      .book-cover img {
+        max-height: calc(min(420px, 90vw) - 40px);
+      }
+
+      .event-card {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 24px 18px;
         text-align: center;
       }
 
-      .pillars-grid-modern {
+      .event-separator {
+        width: 55px;
+        height: 1px;
+      }
+
+      .event-actions,
+      .event-actions .btn {
+        width: 100%;
+      }
+
+      .formation-panel {
+        padding: 25px;
+      }
+
+      .footer-top {
         grid-template-columns: 1fr;
-
-        gap: 20px;
+        gap: 28px;
       }
 
-      .pillar-card-modern {
-        min-height: auto;
-
-        padding: 30px 25px 27px;
+      .footer-brand {
+        grid-column: auto;
       }
 
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+        width: 52px;
+        height: 52px;
+      }
+
+      .back-top {
+        right: 20px;
+        bottom: 78px;
+      }
     }
 
-
-    /* =========================================================
-       PETIT MOBILE
-    ========================================================= */
-
-    @media (max-width: 480px) {
-
-      .about-photo-modern {
-        padding: 12px;
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
 
-      .about-modern-text h2 {
-        font-size: 2rem;
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
       }
-
-      .about-intro-modern {
-        font-size: 1.05rem;
-      }
-
-      .dimensions-header-modern {
-        margin-bottom: 38px;
-      }
-
     }
-
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hod Fragonard",
+    "jobTitle": [
+      "Juriste",
+      "Autrice",
+      "Entrepreneure",
+      "Ambassadrice de Paix"
+    ],
+    "url": "https://hodfragonard.com/",
+    "image": "https://hodfragonard.com/assets/images/hero-portrait.jpeg"
+  }
+  </script>
 </head>
 
-
 <body>
-
-  <!-- CURSEUR -->
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
-  <div id="cursor-label"></div>
-
-  <div id="page-transition"></div>
-
-
-  <!-- =========================================================
-       HEADER
-  ========================================================= -->
+  <a class="skip-link" href="#contenu-principal">
+    Aller au contenu principal
+  </a>
 
   <header class="site-header">
-
     <div class="container header-inner">
-
-      <a href="index.html" class="logo">
-        HOD
+      <a href="index.html" class="logo" aria-label="Hod Fragonard, accueil">
+        <span>HOD</span>
         <span>FRAGONARD</span>
-        <span class="logo-tag">Site Officiel</span>
+        <small class="logo-tag">Site officiel</small>
       </a>
 
-
-      <nav class="nav-desktop">
-
+      <nav class="nav-desktop" aria-label="Navigation principale">
         <ul class="nav-links">
-
-          <li>
-            <a href="index.html">
-              Accueil
-            </a>
-          </li>
-
-          <li>
-            <a href="a-propos.html" class="active">
-              À propos
-            </a>
-          </li>
-
-          <li>
-            <a href="juriste.html">
-              Juriste
-            </a>
-          </li>
-
-          <li>
-            <a href="autrice.html">
-              Autrice
-            </a>
-          </li>
-
-          <li>
-            <a href="ouvrages.html">
-              Ouvrages
-            </a>
-          </li>
-
-          <li>
-            <a href="projets.html">
-              Engagements
-            </a>
-          </li>
-
-          <li>
-            <a href="actualites.html">
-              Actualités
-            </a>
-          </li>
-
-          <li>
-            <a href="agenda.html">
-              Agenda
-            </a>
-          </li>
-
-          <li>
-            <a href="galerie.html">
-              Galerie
-            </a>
-          </li>
-
+          <li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="juriste.html">Juriste</a></li>
+          <li><a href="autrice.html">Autrice</a></li>
+          <li><a href="ouvrages.html">Ouvrages</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="projets.html">Engagements</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
         </ul>
 
-
-        <a
-          href="contact.html"
-          class="btn btn-or btn-sm"
-        >
+        <a href="contact.html" class="btn btn-or btn-sm">
           Me contacter
         </a>
-
       </nav>
 
-
       <button
-        class="hamburger hamburger-btn"
+        class="hamburger"
+        id="menu-toggle"
+        type="button"
         aria-label="Ouvrir le menu"
-      >
+        aria-expanded="false"
+        aria-controls="navigation-mobile">
         <span></span>
         <span></span>
         <span></span>
       </button>
-
     </div>
 
+    <nav
+      class="nav-mobile"
+      id="navigation-mobile"
+      aria-label="Navigation mobile">
+      <span class="nav-mobile-tagline">HOD FRAGONARD</span>
+
+      <ul class="nav-mobile-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="juriste.html">Juriste</a></li>
+        <li><a href="autrice.html">Autrice</a></li>
+        <li><a href="ouvrages.html">Ouvrages</a></li>
+        <li><a href="formations.html">Formations</a></li>
+        <li><a href="projets.html">Engagements</a></li>
+        <li><a href="ambassadrice.html">Ambassadrice de Paix</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="presse.html">Presse & médias</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-or">
+        Me contacter
+      </a>
+    </nav>
   </header>
 
+  <main id="contenu-principal">
 
-  <!-- =========================================================
-       MENU MOBILE
-  ========================================================= -->
+    <!-- SECTION D'ACCUEIL -->
 
-  <nav class="nav-mobile mobile-nav">
-
-    <span class="nav-mobile-tagline">
-      Menu Principal
-    </span>
-
-
-    <ul class="nav-mobile-links">
-
-      <li>
-        <a href="index.html">
-          Accueil
-        </a>
-      </li>
-
-      <li>
-        <a href="a-propos.html">
-          À propos
-        </a>
-      </li>
-
-      <li>
-        <a href="juriste.html">
-          Juriste
-        </a>
-      </li>
-
-      <li>
-        <a href="autrice.html">
-          Autrice
-        </a>
-      </li>
-
-      <li>
-        <a href="ouvrages.html">
-          Ouvrages
-        </a>
-      </li>
-
-      <li>
-        <a href="projets.html">
-          Engagements
-        </a>
-      </li>
-
-      <li>
-        <a href="ambassadrice.html">
-          Ambassadrice
-        </a>
-      </li>
-
-      <li>
-        <a href="agenda.html">
-          Agenda
-        </a>
-      </li>
-
-      <li>
-        <a href="galerie.html">
-          Galerie
-        </a>
-      </li>
-
-    </ul>
-
-
-    <a
-      href="contact.html"
-      class="btn btn-or"
-    >
-      Me contacter
-    </a>
-
-  </nav>
-
-
-  <!-- =========================================================
-       CONTENU
-  ========================================================= -->
-
-  <main>
-
-
-    <!-- =======================================================
-         HERO
-    ======================================================= -->
-
-    <section class="page-hero page-hero-ivory about-hero-modern">
-
-      <div class="page-hero-bg-deco"></div>
-
-      <div
-        class="container page-hero-content text-center max-900 reveal-up"
-      >
-
-        <span class="eyebrow">
-          Le Parcours
-        </span>
-
-        <h1>
-          À propos de Hod Fragonard
-        </h1>
-
-        <p class="lead mt-6">
-          Une vision portée par l'action et la réflexion au service des autres.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =======================================================
-         BIO
-    ======================================================= -->
-
-    <section class="section about-modern-section">
-
+    <section class="home-hero" id="accueil">
       <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">SITE OFFICIEL</div>
 
-        <div class="about-modern-grid">
+          <h1 class="hero-title">
+            <span>HOD</span>
+            <span>FRAGONARD</span>
+          </h1>
 
-
-          <!-- PHOTO -->
-
-          <div class="about-photo-modern reveal-l">
-
-            <div class="about-photo-inner">
-
-              <img
-                src="assets/images/WhatsApp Image 2026-08-29 at 19.32.10.jpeg"
-                alt="Hod Fragonard - Portrait Officiel"
-              >
-
-            </div>
-
+          <div class="hero-roles">
+            <span>JURISTE</span>
+            <span class="sep">•</span>
+            <span>AUTRICE</span>
+            <span class="sep">•</span>
+            <span>ENTREPRENEURE</span>
+            <span class="sep">•</span>
+            <span>AMBASSADRICE DE PAIX</span>
           </div>
 
+          <p class="hero-quote">
+            « Le droit, les idées et l'engagement au service d'une vision. »
+          </p>
 
-          <!-- TEXTE -->
+          <p class="hero-description">
+            Une trajectoire guidée par la rigueur du droit, la force
+            de la transmission littéraire, l'entrepreneuriat et la
+            construction du dialogue de paix.
+          </p>
 
-          <div class="about-modern-text reveal-r">
+          <div class="hero-actions">
+            <a href="a-propos.html" class="btn btn-gold-solid">
+              Découvrir mon parcours →
+            </a>
 
-            <h2>
-              Une femme d'engagement
-            </h2>
+            <a href="ouvrages.html" class="btn btn-gold-outline">
+              Découvrir mes ouvrages
+            </a>
+
+            <a href="formations.html" class="btn btn-gold-outline">
+              Explorer les formations
+            </a>
+          </div>
+
+          <div class="hero-peace">
+            AMBASSADRICE DE PAIX
+            <small>FPU / UPF · ECOSOC · NATIONS UNIES</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LES QUATRE DIMENSIONS -->
+
+    <section class="section bg-ivory">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">Quatre dimensions</span>
+
+          <h2>
+            Une femme de droit, de lettres, d'engagement et de paix.
+          </h2>
+
+          <div class="gold-line gold-line-center"></div>
+
+          <p>
+            Découvrez les multiples facettes d'un parcours dédié à la
+            justice, à la transmission des idées et à l'action concrète.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">§</div>
+            <div class="pillar-sub">Expertise juridique</div>
+            <h3>Juriste</h3>
+            <p>
+              Rigueur, analyse et accompagnement stratégique au service
+              des personnes et des organisations.
+            </p>
+            <a href="juriste.html" class="pillar-link">
+              Découvrir l'expertise →
+            </a>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">✒</div>
+            <div class="pillar-sub">Écriture & transmission</div>
+            <h3>Autrice</h3>
+            <p>
+              L'écriture comme espace de réflexion, de transmission,
+              d'apaisement et de partage.
+            </p>
+            <a href="autrice.html" class="pillar-link">
+              Découvrir la plume →
+            </a>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-icon" aria-hidden="true">◇</div>
+            <div class="pillar-sub">Projets & action</div>
+            <h3>Entrepreneure</h3>
+            <p>
+              Initiative, leadership et création de projets à impact,
+              notamment au sein de Koyeba Koluka.
+            </p>
+            <a href="projets.html" class="pillar-link">
+              Découvrir les projets →
+            </a>
+          </article>
+
+          <article class="pillar-card pillar-peace">
+            <div class="pillar-icon" aria-hidden="true">♡</div>
+            <div class="pillar-sub">FPU / UPF · ECOSOC</div>
+            <h3>Ambassadrice de Paix</h3>
+            <p>
+              Une voix engagée pour le dialogue, la transmission et la
+              promotion de la paix.
+            </p>
+            <a href="ambassadrice.html" class="pillar-link">
+              En savoir plus →
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+
+    <section class="section bg-white">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-photo">
+            <img
+              src="assets/images/hero-portrait.jpeg"
+              alt="Portrait de Hod Fragonard"
+              loading="lazy"
+              decoding="async">
+          </div>
+
+          <div class="about-content">
+            <span class="eyebrow">À propos</span>
+
+            <h2>Une vision portée par l'action</h2>
 
             <div class="gold-line"></div>
 
-
-            <p
-              class="italic-serif mb-4 about-intro-modern"
-            >
-              Hod Fragonard allie rigueur juridique, sensibilité littéraire et dynamisme entrepreneurial. À travers ses différents rôles, elle s'engage pour apporter des solutions concrètes et inspirer la réflexion.
+            <p>
+              Hod Fragonard allie rigueur juridique, sensibilité
+              littéraire et dynamisme entrepreneurial.
             </p>
 
-
-            <p class="mb-4">
-              Le droit est pour elle le socle de toute société juste. En tant que juriste, elle accompagne, conseille et défend avec une rigueur absolue, plaçant toujours l'humain au centre de son approche professionnelle.
+            <p>
+              À travers ses différents rôles, elle s'engage pour
+              transmettre des idées, contribuer au dialogue et
+              participer à la construction de la paix.
             </p>
 
-
-            <p class="mb-4">
-              La transmission est l'autre pilier de sa démarche. En tant qu'autrice, elle explore les thèmes de la résilience, de l'héritage et de la paix. Ses mots sont pensés pour accompagner, apaiser et susciter l'action chez ses lecteurs.
-            </p>
-
-
-            <p class="mb-8">
-              Entrepreneure audacieuse et Ambassadrice de Paix reconnue, elle mène des actions concrètes pour la jeunesse et l'insertion, croyant fermement que les idées n'ont de valeur que lorsqu'elles se transforment en impact positif sur le terrain.
-            </p>
-
-
-            <div class="about-actions-modern">
-
-              <a
-                href="juriste.html"
-                class="btn btn-primary"
-                data-cursor="Voir"
-              >
-                Expertise Juridique
-              </a>
-
-
-              <a
-                href="contact.html"
-                class="btn btn-outline"
-                data-cursor="Contact"
-              >
-                Me Contacter
-              </a>
-
-            </div>
-
+            <a href="a-propos.html" class="btn btn-primary">
+              Découvrir la biographie complète
+            </a>
           </div>
 
         </div>
-
       </div>
-
     </section>
 
+    <!-- OUVRAGES -->
 
-
-    <!-- =======================================================
-         LES 4 DIMENSIONS
-    ======================================================= -->
-
-    <section class="section dimensions-modern">
-
+    <section class="section bg-dark">
       <div class="container">
-
-
-        <!-- TITRE -->
-
-        <div class="dimensions-header-modern reveal-up">
-
-          <h2>
-            Quatre dimensions complémentaires
-          </h2>
-
-          <div class="gold-line"></div>
-
+        <div class="section-header">
+          <span class="eyebrow">Bibliographie</span>
+          <h2 class="section-heading">Mes ouvrages</h2>
+          <p>
+            Des textes pour réfléchir, apprendre, se reconstruire
+            et transmettre des valeurs.
+          </p>
+          <a href="ouvrages.html" class="btn btn-outline-white">
+            Voir tous les ouvrages
+          </a>
         </div>
 
+        <div class="books-grid">
 
-        <!-- CARTES -->
-
-        <div class="pillars-grid-modern">
-
-
-          <!-- =================================================
-               JURISTE
-          ================================================= -->
-
-          <div class="pillar-card-modern reveal-up s1">
-
-            <div class="pillar-icon-modern">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-
-                <path
-                  d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                />
-
-              </svg>
-
+          <article class="book-card">
+            <div class="book-cover">
+              <img
+                src="assets/images/livre-mantras.jpg"
+                alt="Couverture du livre Les 22 Mantras de la Résilience"
+                loading="lazy">
             </div>
-
-
-            <h3>
-              Juriste
-            </h3>
-
-
-            <p>
-              Une approche rigoureuse et stratégique du droit, pour sécuriser les parcours et accompagner avec justesse et déontologie.
-            </p>
-
-
-            <a
-              href="juriste.html"
-              class="pillar-link-modern"
-              data-cursor="Découvrir"
-            >
-              Découvrir
-            </a>
-
-          </div>
-
-
-
-          <!-- =================================================
-               AUTRICE
-          ================================================= -->
-
-          <div class="pillar-card-modern reveal-up s2">
-
-            <div class="pillar-icon-modern">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-
-                <path
-                  d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"
-                />
-
-                <path
-                  d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
-                />
-
-              </svg>
-
+            <div class="book-body">
+              <span class="book-number">01</span>
+              <h3>Les 22 Mantras de la Résilience</h3>
+              <p>22 mantras pour tenir bon et rebondir plus fort.</p>
+              <a href="livre-mantras.html" class="btn btn-outline">
+                Découvrir l'ouvrage →
+              </a>
             </div>
+          </article>
 
-
-            <h3>
-              Autrice
-            </h3>
-
-
-            <p>
-              Quatre ouvrages publiés autour de la résilience, de la paix et de la transmission. L'écriture comme outil de réflexion.
-            </p>
-
-
-            <a
-              href="autrice.html"
-              class="pillar-link-modern"
-              data-cursor="Découvrir"
-            >
-              Découvrir
-            </a>
-
-          </div>
-
-
-
-          <!-- =================================================
-               ENTREPRENEURE
-          ================================================= -->
-
-          <div class="pillar-card-modern reveal-up s3">
-
-            <div class="pillar-icon-modern">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                />
-
-                <polyline
-                  points="12 6 12 12 16 14"
-                />
-
-              </svg>
-
+          <article class="book-card">
+            <div class="book-cover">
+              <img
+                src="assets/images/livre-carnet.jpg"
+                alt="Couverture du livre Ton Carnet du Soir"
+                loading="lazy">
             </div>
-
-
-            <h3>
-              Entrepreneure
-            </h3>
-
-
-            <p>
-              Présidente fondatrice de l'association Koyeba Koluka (2020), engagée pour l'insertion professionnelle et l'éducation de la jeunesse.
-            </p>
-
-
-            <a
-              href="projets.html"
-              class="pillar-link-modern"
-              data-cursor="Découvrir"
-            >
-              Découvrir
-            </a>
-
-          </div>
-
-
-
-          <!-- =================================================
-               AMBASSADRICE DE PAIX
-          ================================================= -->
-
-          <div class="pillar-card-modern ambassadrice-modern reveal-up s4">
-
-            <div class="pillar-icon-modern">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-
-                <path
-                  d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
-                />
-
-                <path
-                  d="M12 6v6l4 2"
-                />
-
-              </svg>
-
+            <div class="book-body">
+              <span class="book-number">02</span>
+              <h3>Ton Carnet du Soir</h3>
+              <p>22 mantras pour s'apaiser avant de dormir.</p>
+              <a href="livre-carnet.html" class="btn btn-outline">
+                Découvrir l'ouvrage →
+              </a>
             </div>
+          </article>
 
+          <article class="book-card">
+            <div class="book-cover">
+              <img
+                src="assets/images/livre-grandpere.jpg"
+                alt="Couverture du livre Hommage à mon grand-père"
+                loading="lazy">
+            </div>
+            <div class="book-body">
+              <span class="book-number">03</span>
+              <h3>Hommage à mon grand-père</h3>
+              <p>L'héritage d'un homme de valeurs.</p>
+              <a href="livre-grand-pere.html" class="btn btn-outline">
+                Découvrir l'ouvrage →
+              </a>
+            </div>
+          </article>
 
-            <h3>
-              Ambassadrice de Paix
-            </h3>
-
-
-            <p>
-              Nommée Ambassadrice de Paix par la FPU (UPF), ONG dotée du statut consultatif général (ECOSOC) aux Nations Unies.
-            </p>
-
-
-            <a
-              href="ambassadrice.html"
-              class="pillar-link-modern"
-              data-cursor="Découvrir"
-            >
-              En savoir plus
-            </a>
-
-          </div>
-
+          <article class="book-card">
+            <div class="book-cover">
+              <img
+                src="assets/images/livre-paix.jpg"
+                alt="Couverture du livre Paroles de Paix pour la jeunesse"
+                loading="lazy">
+            </div>
+            <div class="book-body">
+              <span class="book-number">04</span>
+              <h3>Paroles de Paix pour la jeunesse</h3>
+              <p>Un ouvrage dédié à la jeunesse et aux valeurs de paix.</p>
+              <a href="livre-paix-jeunesse.html" class="btn btn-outline">
+                Découvrir l'ouvrage →
+              </a>
+            </div>
+          </article>
 
         </div>
-
       </div>
+    </section>
 
+    <!-- FORMATIONS NUMÉRIQUES -->
+
+    <section class="section formations-feature" id="formations">
+      <div class="container">
+        <div class="formations-grid">
+
+          <div>
+            <span class="eyebrow">Formations numériques</span>
+
+            <h2>Se former autrement, à son rythme.</h2>
+
+            <p>
+              Découvrez mes formations numériques au format e-book,
+              conçues pour vous accompagner dans votre développement
+              personnel et professionnel.
+            </p>
+
+            <p>
+              Chaque e-book aborde une thématique spécifique à travers
+              des conseils, des méthodes, des exercices pratiques et
+              des outils concrets pour vous permettre d'apprendre,
+              de progresser et surtout de passer à l'action.
+            </p>
+
+            <ul class="formation-benefits">
+              <li>
+                <span>✓</span>
+                Des contenus pratiques et faciles à consulter.
+              </li>
+              <li>
+                <span>✓</span>
+                Des méthodes pour développer vos compétences.
+              </li>
+              <li>
+                <span>✓</span>
+                Des exercices pour transformer les idées en actions.
+              </li>
+            </ul>
+
+            <a href="formations.html" class="btn btn-or btn-lg">
+              Découvrir les formations disponibles →
+            </a>
+          </div>
+
+          <aside class="formation-panel">
+            <span class="panel-label">Apprendre · Comprendre · Agir</span>
+
+            <h3>Votre prochaine étape commence ici.</h3>
+
+            <p>
+              Explorez les ressources disponibles, choisissez une
+              thématique et avancez à votre propre rythme.
+            </p>
+
+            <a href="formations.html" class="btn btn-primary">
+              Explorer le catalogue
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+              Poser une question
+            </a>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+
+    <section class="section bg-ivory">
+      <div class="container">
+        <div class="section-header center">
+          <span class="eyebrow">Agenda</span>
+          <h2>Agenda & prochains rendez-vous</h2>
+          <div class="gold-line gold-line-center"></div>
+          <p>
+            Les prochaines dates, rencontres et participations
+            seront annoncées ici.
+          </p>
+        </div>
+
+        <article class="event-card">
+          <div class="event-date">
+            SICOM
+            <small>Septembre 2026</small>
+          </div>
+
+          <div class="event-separator"></div>
+
+          <div class="event-info">
+            <h3>Retour sur la participation au SICOM</h3>
+            <p>
+              Retrouvez les informations relatives à la participation
+              de Hod Fragonard au SICOM du 17 au 19 septembre 2026.
+            </p>
+          </div>
+
+          <div class="event-actions">
+            <a
+              href="https://sicom.cg/inscription/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-or">
+              Site du SICOM ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ACTUALITÉS -->
+
+    <section class="section bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Magazine</span>
+          <h2>Actualités & réflexions</h2>
+          <div class="gold-line"></div>
+          <p>
+            Retrouvez les publications, réflexions et nouvelles
+            concernant les activités et projets de Hod Fragonard.
+          </p>
+          <a href="actualites.html" class="btn btn-outline">
+            Voir toute l'actualité
+          </a>
+        </div>
+
+        <div class="empty-state">
+          <h3>Les actualités seront bientôt disponibles.</h3>
+          <p>
+            Revenez prochainement pour découvrir les derniers articles
+            et réflexions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="section contact-cta">
+      <div class="container">
+        <span class="eyebrow">Collaboration</span>
+
+        <h2>Prêt à échanger ?</h2>
+
+        <div class="gold-line gold-line-center"></div>
+
+        <p>
+          Pour une proposition de conférence, une interview, une
+          collaboration ou une demande d'information, n'hésitez pas
+          à prendre contact.
+        </p>
+
+        <a href="contact.html" class="btn btn-or btn-lg">
+          Me contacter directement
+        </a>
+      </div>
     </section>
 
   </main>
 
-
-
-  <!-- =========================================================
-       FOOTER
-  ========================================================= -->
+  <!-- PIED DE PAGE -->
 
   <footer class="site-footer">
-
     <div class="container">
 
       <div class="footer-top">
 
-
         <div class="footer-brand">
-
-          <h2>
-            HOD FRAGONARD
-          </h2>
+          <h2>HOD FRAGONARD</h2>
 
           <span class="footer-tagline">
             Juriste • Autrice • Entrepreneure • Ambassadrice de Paix
           </span>
 
-        </div>
+          <p>
+            « Le droit, les idées et l'engagement au service d'une vision. »
+          </p>
 
+          <div class="footer-soc">
+            <!-- Remplacer les liens # par les profils officiels. -->
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="X">X</a>
+          </div>
+        </div>
 
         <div class="footer-col">
-
-          <h3>
-            Navigation
-          </h3>
-
+          <h3>Navigation</h3>
           <ul>
-
-            <li>
-              <a href="index.html">
-                Accueil
-              </a>
-            </li>
-
-            <li>
-              <a href="a-propos.html">
-                À propos
-              </a>
-            </li>
-
-            <li>
-              <a href="juriste.html">
-                Juriste
-              </a>
-            </li>
-
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="juriste.html">Juriste</a></li>
+            <li><a href="autrice.html">Autrice</a></li>
+            <li><a href="ouvrages.html">Ouvrages</a></li>
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="projets.html">Engagements</a></li>
+            <li><a href="ambassadrice.html">Ambassadrice de Paix</a></li>
           </ul>
-
         </div>
-
 
         <div class="footer-col">
-
-          <h3>
-            Contact
-          </h3>
-
+          <h3>Ressources & contact</h3>
           <ul>
-
-            <li>
-              <a href="contact.html">
-                Nous écrire
-              </a>
-            </li>
-
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="presse.html">Presse & médias</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-
         </div>
-
 
       </div>
 
+      <div class="footer-separator"></div>
 
       <div class="footer-bottom">
-
         <p>
-          &copy; 2026 Hod Fragonard.
+          © <span id="current-year">2026</span>
+          Hod Fragonard. Tous droits réservés.
         </p>
 
-
         <div class="footer-legal">
-
-          <a href="mentions-legales.html">
-            Mentions légales
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">
+            Politique de confidentialité
           </a>
-
         </div>
 
+        <p>Site conçu par Jason_INFORMATIQUE</p>
       </div>
 
     </div>
-
   </footer>
 
-
-
-  <!-- =========================================================
-       WHATSAPP
-  ========================================================= -->
+  <!-- BOUTON WHATSAPP -->
 
   <a
     href="https://wa.me/33646176485"
     class="whatsapp-float"
     target="_blank"
-    aria-label="WhatsApp"
-  >
-
-    <svg
-      viewBox="0 0 32 32"
-      fill="currentColor"
-    >
-
-      <path d="M16 2a13 13 0 0 0-11 20l-2 7 7-2a13 13 0 1 0 6-25zm0 24c-2 0-4-1-6-2l-1-1-4 1 1-4-1-1a11 11 0 1 1 11 7zm6-9c0 2-2 3-3 4l-1 1c-1 0-2 0-4-1-3-2-5-4-5-7 0-1 1-2 2-3h1l1 2 1 2-1 1c0 1 1 2 3 3l1-1 2-1 1 2v1z"/>
-
-    </svg>
-
+    rel="noopener noreferrer"
+    aria-label="Contacter Hod Fragonard sur WhatsApp">
+    ☎
   </a>
 
-
-
-  <!-- =========================================================
-       RETOUR EN HAUT
-  ========================================================= -->
+  <!-- RETOUR EN HAUT -->
 
   <button
     class="back-top"
-    aria-label="Retour en haut"
-  >
-
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-    >
-
+    id="back-top"
+    type="button"
+    aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" aria-hidden="true">
       <polyline points="18 15 12 9 6 15"></polyline>
-
     </svg>
-
   </button>
 
+  <script>
+    // Année automatique dans le pied de page.
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
 
+    // Ouverture et fermeture du menu mobile.
+    const menuButton = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("navigation-mobile");
 
-  <!-- =========================================================
-       JAVASCRIPT
-  ========================================================= -->
+    menuButton.addEventListener("click", function () {
+      const isOpen = mobileNav.classList.toggle("is-open");
 
-  <script src="assets/js/cursor.js"></script>
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Fermer le menu" : "Ouvrir le menu"
+      );
+    });
 
-  <script src="assets/js/transitions.js"></script>
+    // Fermer le menu après sélection d'une page.
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mobileNav.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Ouvrir le menu");
+      });
+    });
 
-  <script src="assets/js/main.js"></script>
+    // Fermer le menu avec la touche Échap.
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        mobileNav.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Ouvrir le menu");
+      }
+    });
+
+    // Afficher le bouton de retour en haut après défilement.
+    const backTop = document.getElementById("back-top");
+
+    window.addEventListener("scroll", function () {
+      backTop.classList.toggle("visible", window.scrollY > 400);
+    }, { passive: true });
+
+    backTop.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches ? "auto" : "smooth"
+      });
+    });
+  </script>
 
 </body>
 </html>
