@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations — Hod Fragonard</title>
+  <meta name="description" content="Découvrez mes formations numériques au format e-book : développement personnel, entrepreneuriat, leadership et bien plus.">
+  <link rel="stylesheet" href="assets/css/main.css">
+  
+  <style>
+    /* =========================================================
+       PAGE FORMATIONS — STYLE PREMIUM
+    ========================================================= */
+
+    .formations-section {
+      background: #ffffff;
+    }
+
+    .formations-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+
+    .formations-intro h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: #0b1f33;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .formations-intro .gold-line {
+      width: 70px;
+      height: 2px;
+      background: #c9a227;
+      margin: 20px auto 30px;
+    }
+
+    .formations-intro p {
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .formations-intro .lead {
+      color: #0b1f33;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    /* =========================================================
+       FEATURES
+    ========================================================= */
+
+    .formations-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin: 45px 0 65px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .feature-text {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       GRILLE DES FORMATIONS
+    ========================================================= */
+
+    .formations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+
+    .formation-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      border: 1px solid rgba(11, 31, 51, 0.08);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(11, 31, 51, 0.06);
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+    }
+
+    .formation-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(11, 31, 51, 0.12);
+      border-color: rgba(201, 162, 39, 0.25);
+    }
+
+    .formation-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #c9a227;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+      z-index: 2;
+    }
+
+    .formation-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* =========================================================
+       COUVERTURE FORMATION
+    ========================================================= */
+
+    .formation-cover {
+      position: relative;
+      height: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(
+        145deg,
+        #f8f5ed 0%,
+        #eee9dd 100%
+      );
+      overflow: hidden;
+    }
+
+    .formation-cover::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 1px solid rgba(201, 162, 39, 0.13);
+      top: -90px;
+      left: -90px;
+    }
+
+    .formation-cover::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 1px solid rgba(201, 162, 39, 0.18);
+      right: -65px;
+      bottom: -65px;
+    }
+
+    .formation-cover-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      width: 100%;
+    }
+
+    .formation-cover-icon {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .formation-cover-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #b08a1c;
+    }
+
+    /* =========================================================
+       CONTENU FORMATION
+    ========================================================= */
+
+    .formation-body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 25px 22px 22px;
+    }
+
+    .formation-title {
+      margin: 0 0 12px;
+      color: #0b1f33;
+      font-size: 1.3rem;
+      line-height: 1.25;
+      font-weight: 600;
+    }
+
+    .formation-desc {
+      margin: 0 0 20px;
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .formation-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-top: 1px solid rgba(11, 31, 51, 0.08);
+      border-bottom: 1px solid rgba(11, 31, 51, 0.08);
+      margin: 15px 0;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .formation-price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0b1f33;
+      margin-top: 15px;
+      margin-bottom: 18px;
+    }
+
+    .formation-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border: 1px solid rgba(11, 31, 51, 0.14);
+      background: #ffffff;
+      color: #0b1f33;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 5px;
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+      width: 100%;
+      text-align: center;
+    }
+
+    .formation-btn:hover {
+      background: #0b1f33;
+      color: #ffffff;
+      border-color: #0b1f33;
+    }
+
+    /* =========================================================
+       EMPTY STATE
+    ========================================================= */
+
+    .formations-empty {
+      text-align: center;
+      padding: 60px 30px;
+      background: #f7f3ea;
+      border-radius: 8px;
+      border: 1px solid rgba(201, 162, 39, 0.15);
+    }
+
+    .formations-empty svg {
+      width: 60px;
+      height: 60px;
+      color: #c9a227;
+      margin: 0 auto 20px;
+      display: block;
+      opacity: 0.6;
+    }
+
+    .formations-empty h3 {
+      color: #0b1f33;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .formations-empty p {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    /* =========================================================
+       SECTION COLLECTIONS
+    ========================================================= */
+
+    .formations-collections {
+      background: linear-gradient(
+        135deg,
+        #f7f3ea 0%,
+        #f4efe4 100%
+      );
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .formations-collections::before {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border: 1px solid rgba(201, 162, 39, 0.12);
+      border-radius: 50%;
+      left: -230px;
+      top: 50px;
+      pointer-events: none;
+    }
+
+    .formations-collections::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(201, 162, 39, 0.12);
+      border-radius: 50%;
+      right: -170px;
+      bottom: -120px;
+      pointer-events: none;
+    }
+
+    .formations-collections-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .formations-collections h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: #0b1f33;
+      margin-bottom: 15px;
+      line-height: 1.1;
+    }
+
+    .formations-collections .gold-line {
+      width: 70px;
+      height: 2px;
+      background: #c9a227;
+      margin: 20px auto 30px;
+    }
+
+    .formations-collections p {
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1024px) {
+      .formations-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .formations-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .formations-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .formations-features {
+        grid-template-columns: 1fr;
+      }
+
+      .formation-cover {
+        height: 250px;
+      }
+
+      .formation-cover-icon {
+        font-size: 2.8rem;
+      }
+
+      .formations-intro {
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="cursor-label"></div>
+  <div id="page-transition"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">HOD <span>FRAGONARD</span><span class="logo-tag">Site Officiel</span></a>
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="juriste.html">Juriste</a></li>
+          <li><a href="autrice.html">Autrice</a></li>
+          <li><a href="ouvrages.html">Ouvrages</a></li>
+          <li><a href="projets.html">Engagements</a></li>
+          <li><a href="formations.html" class="active">Formations</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-or btn-sm">Me contacter</a>
+      </nav>
+      <button class="hamburger hamburger-btn"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="nav-mobile mobile-nav">
+    <span class="nav-mobile-tagline">Menu Principal</span>
+    <ul class="nav-mobile-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="juriste.html">Juriste</a></li>
+      <li><a href="autrice.html">Autrice</a></li>
+      <li><a href="ouvrages.html">Ouvrages</a></li>
+      <li><a href="projets.html">Engagements</a></li>
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-or">Me contacter</a>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero page-hero-ivory">
+      <div class="page-hero-bg-deco"></div>
+      <div class="container page-hero-content text-center max-900 reveal-up">
+        <span class="eyebrow">Apprentissage</span>
+        <h1>Formations</h1>
+        <p class="lead mt-6">Se former autrement, à son rythme.</p>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="section formations-section">
+      <div class="container">
+        <div class="formations-intro reveal-up">
+          <h2>Découvrez mes formations numériques</h2>
+          <div class="gold-line"></div>
+          <p class="lead">
+            Au format e-book, conçues pour vous accompagner dans votre développement personnel et professionnel.
+          </p>
+          <p>
+            Chaque e-book aborde une thématique spécifique à travers des conseils, des méthodes, des exercices pratiques et des outils concrets pour vous permettre d'apprendre, de progresser et surtout de passer à l'action.
+          </p>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="formations-features reveal-up s1">
+          <div class="feature-item">
+            <span class="feature-icon">📘</span>
+            <span class="feature-text">Format 100 % numérique</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">📥</span>
+            <span class="feature-text">Téléchargement après achat</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🌍</span>
+            <span class="feature-text">Accessible où que vous soyez</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">⏱️</span>
+            <span class="feature-text">À suivre à votre rythme</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRILLE DES FORMATIONS -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="formations-grid reveal-up s1">
+          <!-- Les formations seront ajoutées ici -->
+          
+          <!-- EMPTY STATE -->
+          <div class="formations-empty" style="grid-column: 1 / -1;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="12" y1="13" x2="12" y2="17"/>
+              <line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+            <h3>Formations à venir</h3>
+            <p>De nouvelles formations seront bientôt disponibles. Deux formations arrivent dans 1 semaine.</p>
+            <a href="contact.html" class="btn btn-or">Me notifier</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTION EN EVOLUTION -->
+    <section class="formations-collections">
+      <div class="container">
+        <div class="formations-collections-content reveal-up">
+          <h2>Une collection appelée à évoluer</h2>
+          <div class="gold-line"></div>
+          <p>
+            De nouvelles formations seront régulièrement ajoutées autour de différentes thématiques : visibilité, communication, stratégie digitale, personal branding, entrepreneuriat, résilience et développement personnel.
+          </p>
+          <p style="margin-bottom: 0; font-style: italic; color: #888;">
+            ⏳ Suivez l'actualisation de cette page pour ne pas manquer les prochaines formations.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>HOD FRAGONARD</h2>
+          <span class="footer-tagline">Juriste • Autrice • Entrepreneure • Ambassadrice de Paix</span>
+        </div>
+        <div class="footer-col">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="juriste.html">Juriste</a></li>
+            <li><a href="formations.html">Formations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul><li><a href="contact.html">Nous écrire</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hod Fragonard.</p>
+        <div class="footer-legal"><a href="mentions-legales.html">Mentions légales</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/33646176485" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 2a13 13 0 0 0-11 20l-2 7 7-2a13 13 0 1 0 6-25zm0 24c-2 0-4-1-6-2l-1-1-4 1 1-4-1-1a11 11 0 1 1 11 7zm6-9c0 2-2 3-3 4l-1 1c-1 0-2 0-4-1-3-2-5-4-5-7 0-1 1-2 2-3h1l1 2 1 2-1 1c0 1 1 2 3 4 2 2 4 2 4 2h1l1-1c1-1 3-3 3-5z"/></svg>
+  </a>
+  <button class="back-top" aria-label="Retour en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg></button>
+
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/transitions.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
