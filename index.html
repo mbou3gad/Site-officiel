@@ -4,105 +4,34 @@
 <head>
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>Hod Fragonard — Juriste, Autrice, Entrepreneure, Ambassadrice de Paix | Site Officiel</title>
 
-  <title>
-    Hod Fragonard — Juriste, Autrice, Entrepreneure, Ambassadrice de Paix | Site Officiel
-  </title>
+  <meta name="description" content="Site officiel de Hod Fragonard. Juriste, autrice, entrepreneure et ambassadrice de paix. Découvrez son parcours, ses ouvrages, ses formations, ses engagements et ses projets.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hodfragonard.com/">
 
-  <meta
-    name="description"
-    content="Site officiel de Hod Fragonard. Juriste, autrice, entrepreneure et ambassadrice de paix. Découvrez son parcours, ses ouvrages, ses engagements et ses projets."
-  >
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Hod Fragonard — Site Officiel">
+  <meta property="og:description" content="Juriste, Autrice, Entrepreneure, Ambassadrice de Paix. Le droit, les idées et l'engagement au service d'une vision.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hodfragonard.com/">
+  <meta property="og:image" content="assets/images/hero-portrait.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+  <!-- POLICES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link
-    rel="canonical"
-    href="https://hodfragonard.com/"
-  >
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="assets/css/main.css">
 
-  <!-- =====================================================
-       OPEN GRAPH
-  ====================================================== -->
-
-  <meta
-    property="og:title"
-    content="Hod Fragonard — Site Officiel"
-  >
-
-  <meta
-    property="og:description"
-    content="Juriste, Autrice, Entrepreneure, Ambassadrice de Paix. Le droit, les idées et l'engagement au service d'une vision."
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:url"
-    content="https://hodfragonard.com/"
-  >
-
-  <meta
-    property="og:image"
-    content="assets/images/hero-portrait.jpeg"
-  >
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-
-  <!-- =====================================================
-       POLICES
-  ====================================================== -->
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-
-  <!-- =====================================================
-       CSS PRINCIPAL
-  ====================================================== -->
-
-  <link
-    rel="stylesheet"
-    href="assets/css/main.css"
-  >
-
-
-  <!-- =====================================================
-       STYLE SPÉCIFIQUE ACCUEIL
-  ====================================================== -->
-
+  <!-- STYLE SPÉCIFIQUE ACCUEIL -->
   <style>
 
     :root {
-
       --hf-navy: #0B1F33;
       --hf-deep: #071625;
       --hf-gold: #C9A45C;
@@ -111,2480 +40,1463 @@
       --hf-white: #FFFFFF;
       --hf-text: #222B33;
       --hf-muted: #68717A;
-
     }
 
+    /* ===== TYPOGRAPHIE ===== */
 
-    /* =====================================================
-       TYPOGRAPHIE
-    ====================================================== */
+    body { font-family: "DM Sans", Arial, sans-serif; }
 
-    body {
+    h1, h2, h3, h4 { font-family: "Playfair Display", Georgia, serif; }
 
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
-    }
-
-
-    h1,
-    h2,
-    h3,
-    h4 {
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-    }
-
-
-    /* =====================================================
-       HERO
-    ====================================================== */
+    /* ===== HERO ===== */
 
     .home-hero-modern {
-
       position: relative;
-
       min-height: 88vh;
-
       overflow: hidden;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       background:
-        radial-gradient(
-          circle at 50% 20%,
-          rgba(201,164,92,.09),
-          transparent 34%
-        ),
-        linear-gradient(
-          135deg,
-          #061522 0%,
-          #165ea6 55%,
-          #081827 100%
-        );
-
+        radial-gradient(circle at 50% 20%, rgba(201,164,92,.09), transparent 34%),
+        linear-gradient(135deg, #061522 0%, #165ea6 55%, #081827 100%);
       color: #fff;
-
     }
-
 
     .home-hero-modern::before {
-
       content: "";
-
       position: absolute;
-
       width: 600px;
       height: 600px;
-
       right: -300px;
       top: -250px;
-
-      border:
-        1px solid
-        rgba(201,164,92,.13);
-
+      border: 1px solid rgba(201,164,92,.13);
       border-radius: 50%;
-
       pointer-events: none;
-
     }
-
 
     .home-hero-modern::after {
-
       content: "";
-
       position: absolute;
-
       width: 360px;
       height: 360px;
-
       left: -190px;
       bottom: -190px;
-
-      border:
-        1px solid
-        rgba(201,164,92,.09);
-
+      border: 1px solid rgba(201,164,92,.09);
       border-radius: 50%;
-
       pointer-events: none;
-
     }
-
-
-    /* =====================================================
-       FOND HERO
-    ====================================================== */
 
     .hero-bg {
-
       position: absolute;
-
       inset: 0;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(7,22,37,.97),
-          rgba(11,31,51,.92),
-          rgba(11,31,51,.82)
-        );
-
+      background: linear-gradient(135deg, rgba(7,22,37,.97), rgba(11,31,51,.92), rgba(11,31,51,.82));
     }
-
-
-    /* =====================================================
-       GRILLE HERO
-    ====================================================== */
 
     .hero-grid {
-
       position: relative;
-
       z-index: 3;
-
       width: 100%;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       padding-top: 145px;
-
       padding-bottom: 75px;
-
     }
-
-
-    /* =====================================================
-       CONTENU HERO
-    ====================================================== */
 
     .hero-content-modern {
-
       position: relative;
-
       z-index: 4;
-
       width: 100%;
-
       max-width: 900px;
-
       margin: 0 auto;
-
       text-align: center;
-
     }
-
-
-    /* =====================================================
-       LABEL SITE OFFICIEL
-    ====================================================== */
 
     .hero-content-modern::before {
-
       content: "SITE OFFICIEL";
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 12px;
-
       margin-bottom: 22px;
-
-      color:
-        var(--hf-gold-light);
-
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
+      color: var(--hf-gold-light);
+      font-family: "DM Sans", Arial, sans-serif;
       font-size: .60rem;
-
       font-weight: 700;
-
       letter-spacing: .25em;
-
     }
-
-
-    /* =====================================================
-       TITRE
-    ====================================================== */
 
     .hero-title-modern {
-
       margin: 0;
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          3.1rem,
-          5.5vw,
-          5.4rem
-        );
-
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(3.1rem, 5.5vw, 5.4rem);
       line-height: .90;
-
       letter-spacing: -.035em;
-
       font-weight: 600;
-
       color: #fff;
-
       text-transform: uppercase;
-
     }
 
-
-    .hero-title-modern .word {
-
-      display: block;
-
-      white-space: nowrap;
-
-    }
-
-
-    /* HOD */
+    .hero-title-modern .word { display: block; white-space: nowrap; }
 
     .hero-title-modern .word:first-child {
-
-      color:
-        var(--hf-gold);
-
+      color: var(--hf-gold);
       font-size: .70em;
-
       font-weight: 500;
-
       letter-spacing: .02em;
-
       margin-bottom: 3px;
-
     }
-
-
-    /* FRAGONARD */
 
     .hero-title-modern .word:last-child {
-
       color: #fff;
-
       font-size: 1em;
-
       font-weight: 700;
-
       letter-spacing: -.045em;
-
     }
-
-
-    /* =====================================================
-       RÔLES
-    ====================================================== */
 
     .hero-roles-modern {
-
       display: flex;
-
       flex-wrap: wrap;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 7px;
-
       margin-top: 24px;
-
-      color:
-        rgba(255,255,255,.70);
-
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
+      color: rgba(255,255,255,.70);
+      font-family: "DM Sans", Arial, sans-serif;
       font-size: .64rem;
-
       font-weight: 600;
-
       line-height: 1.8;
-
       letter-spacing: .10em;
-
     }
 
-
-    .hero-roles-modern .sep {
-
-      color:
-        var(--hf-gold);
-
-    }
-
-
-    /* =====================================================
-       CITATION
-    ====================================================== */
+    .hero-roles-modern .sep { color: var(--hf-gold); }
 
     .hero-quote-modern {
-
       max-width: 700px;
-
-      margin:
-        25px auto 0;
-
+      margin: 25px auto 0;
       color: #fff;
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-      font-size:
-        clamp(
-          1.15rem,
-          2vw,
-          1.5rem
-        );
-
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
       font-style: italic;
-
       font-weight: 500;
-
       line-height: 1.5;
-
     }
-
-
-    /* =====================================================
-       DESCRIPTION
-    ====================================================== */
 
     .hero-desc-modern {
-
       max-width: 680px;
-
-      margin:
-        18px auto 0;
-
-      color:
-        rgba(255,255,255,.60);
-
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
+      margin: 18px auto 0;
+      color: rgba(255,255,255,.60);
+      font-family: "DM Sans", Arial, sans-serif;
       font-size: .88rem;
-
       line-height: 1.8;
-
     }
-
-
-    /* =====================================================
-       ACTIONS
-    ====================================================== */
 
     .hero-actions-modern {
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       flex-wrap: wrap;
-
       gap: 12px;
-
       margin-top: 31px;
-
     }
 
+    .hero-actions-modern .btn { min-height: 50px; }
 
-    .hero-actions-modern .btn {
-
-      min-height: 50px;
-
-    }
-
-
-    /* =====================================================
-       CONTACT
-    ====================================================== */
-
-    .hero-contact-modern {
-
-      margin-top: 15px;
-
-    }
-
+    .hero-contact-modern { margin-top: 15px; }
 
     .hero-contact-modern .btn {
-
       display: inline-flex;
-
       align-items: center;
-
-      color:
-        rgba(255,255,255,.65);
-
-      transition:
-        color .3s ease;
-
+      color: rgba(255,255,255,.65);
+      transition: color .3s ease;
     }
 
+    .hero-contact-modern .btn:hover { color: var(--hf-gold-light); }
 
-    .hero-contact-modern .btn:hover {
-
-      color:
-        var(--hf-gold-light);
-
-    }
-
-
-    /* =====================================================
-       BADGE AMBASSADRICE DE PAIX
-    ====================================================== */
+    /* ===== BADGE AMBASSADRICE DE PAIX ===== */
 
     .hero-peace-line {
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 14px;
-
       margin-top: 35px;
-
     }
-
 
     .hero-peace-line::before,
     .hero-peace-line::after {
-
       content: "";
-
       width: 35px;
-
       height: 1px;
-
-      background:
-        rgba(201,164,92,.50);
-
+      background: rgba(201,164,92,.50);
     }
-
 
     .hero-peace-content {
-
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
-
       gap: 4px;
-
     }
-
 
     .hero-peace-title {
-
-      color:
-        var(--hf-gold-light);
-
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
+      color: var(--hf-gold-light);
+      font-family: "DM Sans", Arial, sans-serif;
       font-size: .56rem;
-
       font-weight: 700;
-
       letter-spacing: .16em;
-
       text-transform: uppercase;
-
     }
-
 
     .hero-peace-sub {
-
-      color:
-        rgba(255,255,255,.40);
-
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
+      color: rgba(255,255,255,.40);
+      font-family: "DM Sans", Arial, sans-serif;
       font-size: .47rem;
-
       letter-spacing: .10em;
-
       text-transform: uppercase;
-
     }
 
-
-    /* =====================================================
-       PILIERS
-    ====================================================== */
+    /* ===== PILIERS ===== */
 
     .home-pillars-modern {
-
       display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-
     }
-
 
     .home-pillar-modern {
-
       position: relative;
-
       display: flex;
-
       flex-direction: column;
-
       min-height: 355px;
-
-      padding:
-        30px
-        25px
-        25px;
-
+      padding: 30px 25px 25px;
       background: #fff;
-
-      border:
-        1px solid
-        rgba(11,31,51,.07);
-
-      box-shadow:
-        0 10px 30px
-        rgba(11,31,51,.05);
-
-      transition:
-        transform .4s ease,
-        box-shadow .4s ease;
-
+      border: 1px solid rgba(11,31,51,.07);
+      box-shadow: 0 10px 30px rgba(11,31,51,.05);
+      transition: transform .4s ease, box-shadow .4s ease;
     }
-
 
     .home-pillar-modern::before {
-
       content: "";
-
       position: absolute;
-
       top: 0;
       left: 0;
-
       width: 100%;
       height: 3px;
-
-      background:
-        var(--hf-gold);
-
-      transform:
-        scaleX(0);
-
-      transform-origin:
-        left;
-
-      transition:
-        transform .4s ease;
-
+      background: var(--hf-gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s ease;
     }
-
 
     .home-pillar-modern:hover {
-
-      transform:
-        translateY(-7px);
-
-      box-shadow:
-        0 25px 50px
-        rgba(11,31,51,.12);
-
+      transform: translateY(-7px);
+      box-shadow: 0 25px 50px rgba(11,31,51,.12);
     }
 
-
-    .home-pillar-modern:hover::before {
-
-      transform:
-        scaleX(1);
-
-    }
-
+    .home-pillar-modern:hover::before { transform: scaleX(1); }
 
     .home-pillar-icon-modern {
-
       width: 55px;
       height: 55px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       margin-bottom: 20px;
-
       border-radius: 50%;
-
-      background:
-        var(--hf-ivory);
-
-      color:
-        #B08A1C;
-
-      border:
-        1px solid
-        rgba(201,164,92,.25);
-
+      background: var(--hf-ivory);
+      color: #B08A1C;
+      border: 1px solid rgba(201,164,92,.25);
     }
 
-
-    .home-pillar-icon-modern svg {
-
-      width: 24px;
-      height: 24px;
-
-    }
-
+    .home-pillar-icon-modern svg { width: 24px; height: 24px; }
 
     .home-pillar-sub {
-
       margin-bottom: 7px;
-
-      color:
-        #B08A1C;
-
-      font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
+      color: #B08A1C;
+      font-family: "DM Sans", Arial, sans-serif;
       font-size: .60rem;
-
       font-weight: 700;
-
       letter-spacing: .12em;
-
       text-transform: uppercase;
-
     }
-
 
     .home-pillar-modern h3 {
-
-      margin:
-        0 0 12px;
-
-      color:
-        var(--hf-navy);
-
-      font-size:
-        1.35rem;
-
+      margin: 0 0 12px;
+      color: var(--hf-navy);
+      font-size: 1.35rem;
     }
-
 
     .home-pillar-modern p {
-
-      margin:
-        0 0 22px;
-
-      color:
-        #68717A;
-
+      margin: 0 0 22px;
+      color: #68717A;
       font-size: .87rem;
-
       line-height: 1.7;
-
     }
-
 
     .home-pillar-link {
-
       display: inline-flex;
-
       align-items: center;
-
       gap: 8px;
-
       margin-top: auto;
-
-      color:
-        var(--hf-navy);
-
+      color: var(--hf-navy);
       text-decoration: none;
-
       font-size: .74rem;
-
       font-weight: 700;
-
-      transition:
-        gap .3s ease,
-        color .3s ease;
-
+      transition: gap .3s ease, color .3s ease;
     }
 
+    .home-pillar-link:hover { gap: 13px; color: #B08A1C; }
 
-    .home-pillar-link:hover {
-
-      gap: 13px;
-
-      color:
-        #B08A1C;
-
-    }
-
-
-    /* =====================================================
-       AMBASSADRICE
-    ====================================================== */
+    /* ===== AMBASSADRICE ===== */
 
     .ambassadrice-modern {
-
-      background:
-        linear-gradient(
-          145deg,
-          #0B1F33,
-          #102D47
-        );
-
-      border-color:
-        #0B1F33;
-
+      background: linear-gradient(145deg, #0B1F33, #102D47);
+      border-color: #0B1F33;
     }
 
+    .ambassadrice-modern h3 { color: #fff; }
 
-    .ambassadrice-modern h3 {
+    .ambassadrice-modern p { color: rgba(255,255,255,.68); }
 
-      color: #fff;
-
+    .ambassadrice-modern .home-pillar-icon-modern {
+      background: rgba(201,164,92,.10);
+      color: var(--hf-gold-light);
+      border-color: rgba(201,164,92,.30);
     }
 
+    .ambassadrice-modern .home-pillar-link { color: #fff; }
 
-    .ambassadrice-modern p {
-
-      color:
-        rgba(255,255,255,.68);
-
-    }
-
-
-    .ambassadrice-modern
-    .home-pillar-icon-modern {
-
-      background:
-        rgba(201,164,92,.10);
-
-      color:
-        var(--hf-gold-light);
-
-      border-color:
-        rgba(201,164,92,.30);
-
-    }
-
-
-    .ambassadrice-modern
-    .home-pillar-link {
-
-      color: #fff;
-
-    }
-
-
-    /* =====================================================
-       À PROPOS
-    ====================================================== */
+    /* ===== À PROPOS ===== */
 
     .home-about-modern {
-
       display: grid;
-
-      grid-template-columns:
-        minmax(300px,.9fr)
-        minmax(0,1.1fr);
-
+      grid-template-columns: minmax(300px,.9fr) minmax(0,1.1fr);
       align-items: center;
-
       gap: 80px;
-
     }
 
-
-    .home-about-photo {
-
-      position: relative;
-
-      padding: 16px;
-
-    }
-
+    .home-about-photo { position: relative; padding: 16px; }
 
     .home-about-photo::before {
-
       content: "";
-
       position: absolute;
-
       top: 0;
       left: 0;
-
       width: 70%;
       height: 70%;
-
-      border-top:
-        1px solid
-        var(--hf-gold);
-
-      border-left:
-        1px solid
-        var(--hf-gold);
-
+      border-top: 1px solid var(--hf-gold);
+      border-left: 1px solid var(--hf-gold);
     }
-
 
     .home-about-photo::after {
-
       content: "";
-
       position: absolute;
-
       right: 0;
       bottom: 0;
-
       width: 70%;
       height: 70%;
-
-      border-right:
-        1px solid
-        var(--hf-gold);
-
-      border-bottom:
-        1px solid
-        var(--hf-gold);
-
+      border-right: 1px solid var(--hf-gold);
+      border-bottom: 1px solid var(--hf-gold);
     }
-
 
     .home-about-photo-inner {
-
       position: relative;
-
       z-index: 2;
-
       overflow: hidden;
-
-      box-shadow:
-        0 25px 55px
-        rgba(11,31,51,.15);
-
+      box-shadow: 0 25px 55px rgba(11,31,51,.15);
     }
-
 
     .home-about-photo img {
-
       display: block;
-
       width: 100%;
-
-      transition:
-        transform .7s ease;
-
+      transition: transform .7s ease;
     }
 
-
-    .home-about-photo:hover img {
-
-      transform:
-        scale(1.025);
-
-    }
-
+    .home-about-photo:hover img { transform: scale(1.025); }
 
     .home-about-content h2 {
-
-      color:
-        var(--hf-navy);
-
-      font-size:
-        clamp(
-          2rem,
-          4vw,
-          3rem
-        );
-
+      color: var(--hf-navy);
+      font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1.1;
-
     }
 
+    .home-about-content p { color: #5E6870; line-height: 1.8; }
 
-    .home-about-content p {
-
-      color:
-        #5E6870;
-
-      line-height: 1.8;
-
-    }
-
-
-    /* =====================================================
-       LIVRES
-    ====================================================== */
+    /* ===== LIVRES ===== */
 
     .home-books-modern {
-
       display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
+      grid-template-columns: repeat(4,1fr);
       gap: 22px;
-
     }
-
 
     .home-book-modern {
-
       overflow: hidden;
-
       background: #fff;
-
-      transition:
-        transform .4s ease,
-        box-shadow .4s ease;
-
+      transition: transform .4s ease, box-shadow .4s ease;
     }
-
 
     .home-book-modern:hover {
-
-      transform:
-        translateY(-7px);
-
-      box-shadow:
-        0 20px 45px
-        rgba(0,0,0,.22);
-
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px rgba(0,0,0,.22);
     }
-
 
     .home-book-cover-modern {
-
       height: 390px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       padding: 20px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #F8F5ED,
-          #ECE7DC
-        );
-
+      background: linear-gradient(145deg, #F8F5ED, #ECE7DC);
     }
 
-
     .home-book-cover-modern img {
-
       max-width: 100%;
-
       max-height: 350px;
-
       width: auto;
-
       height: auto;
-
       object-fit: contain;
-
-      box-shadow:
-        0 15px 30px
-        rgba(0,0,0,.18);
-
-      transition:
-        transform .45s ease;
-
+      box-shadow: 0 15px 30px rgba(0,0,0,.18);
+      transition: transform .45s ease;
     }
 
-
-    .home-book-modern:hover
-    .home-book-cover-modern img {
-
-      transform:
-        scale(1.035)
-        translateY(-4px);
-
+    .home-book-modern:hover .home-book-cover-modern img {
+      transform: scale(1.035) translateY(-4px);
     }
-
 
     .home-book-body-modern {
-
       display: flex;
-
       flex-direction: column;
-
       min-height: 220px;
-
       padding: 21px;
-
     }
-
 
     .home-book-number {
-
       margin-bottom: 7px;
-
-      color:
-        #B08A1C;
-
+      color: #B08A1C;
       font-size: .62rem;
-
       font-weight: 700;
-
       letter-spacing: .17em;
-
     }
-
 
     .home-book-body-modern h3 {
-
-      margin:
-        0 0 8px;
-
-      color:
-        var(--hf-navy);
-
-      font-size:
-        1.15rem;
-
+      margin: 0 0 8px;
+      color: var(--hf-navy);
+      font-size: 1.15rem;
       line-height: 1.3;
-
     }
-
 
     .home-book-body-modern p {
-
-      margin:
-        0 0 20px;
-
-      color:
-        #6A6A6A;
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
+      margin: 0 0 20px;
+      color: #6A6A6A;
+      font-family: "Playfair Display", Georgia, serif;
       font-size: .83rem;
-
       font-style: italic;
-
       line-height: 1.55;
-
     }
 
-
-    .home-book-btn {
-
-      margin-top: auto;
-
-    }
-
+    .home-book-btn { margin-top: auto; }
 
     /* =====================================================
-       AGENDA
+       FORMATIONS (NOUVEAU)
     ====================================================== */
+
+    .home-formations-modern {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-formations-modern::before {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      right: -160px;
+      top: -160px;
+      border: 1px solid rgba(201,164,92,.18);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .formations-intro {
+      max-width: 760px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .formations-intro .formations-tagline {
+      margin: 0 0 14px;
+      color: #B08A1C;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.15rem;
+      font-style: italic;
+    }
+
+    .formations-intro p {
+      margin: 0 0 14px;
+      color: #5E6870;
+      font-size: .95rem;
+      line-height: 1.8;
+    }
+
+    .formations-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .formations-feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 22px 16px;
+      background: var(--hf-ivory);
+      border: 1px solid rgba(201,164,92,.25);
+      text-align: center;
+      color: var(--hf-navy);
+      font-size: .84rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .formations-feature .ico { font-size: 1.6rem; line-height: 1; }
+
+    .formations-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 22px;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+
+    .formation-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 26px 26px;
+      background: #fff;
+      border: 1px solid rgba(11,31,51,.07);
+      box-shadow: 0 10px 30px rgba(11,31,51,.06);
+      transition: transform .4s ease, box-shadow .4s ease;
+    }
+
+    .formation-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--hf-gold);
+    }
+
+    .formation-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(11,31,51,.12);
+    }
+
+    .formation-badge {
+      align-self: flex-start;
+      margin-bottom: 14px;
+      padding: 5px 12px;
+      background: rgba(201,164,92,.14);
+      color: #8A6A10;
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border-radius: 30px;
+    }
+
+    .formation-card h3 {
+      margin: 0 0 10px;
+      color: var(--hf-navy);
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+
+    .formation-card p {
+      margin: 0 0 22px;
+      color: #68717A;
+      font-size: .87rem;
+      line-height: 1.7;
+    }
+
+    .formation-card .btn { margin-top: auto; align-self: flex-start; }
+
+    .formations-cta { text-align: center; }
+
+    .formations-note {
+      max-width: 700px;
+      margin: 38px auto 0;
+      padding-top: 30px;
+      border-top: 1px solid rgba(11,31,51,.10);
+      text-align: center;
+    }
+
+    .formations-note h3 {
+      margin: 0 0 10px;
+      color: var(--hf-navy);
+      font-size: 1.3rem;
+    }
+
+    .formations-note p {
+      margin: 0;
+      color: #5E6870;
+      font-size: .9rem;
+      line-height: 1.8;
+    }
+
+    /* ===== AGENDA ===== */
 
     .home-event-modern {
-
       display: grid;
-
-      grid-template-columns:
-        140px
-        1px
-        1fr
-        auto;
-
+      grid-template-columns: 140px 1px 1fr auto;
       align-items: center;
-
       gap: 30px;
-
       padding: 30px;
-
       background: #fff;
-
-      border:
-        1px solid
-        rgba(11,31,51,.07);
-
-      box-shadow:
-        0 15px 35px
-        rgba(11,31,51,.06);
-
+      border: 1px solid rgba(11,31,51,.07);
+      box-shadow: 0 15px 35px rgba(11,31,51,.06);
     }
 
-
-    .home-event-date {
-
-      text-align: center;
-
-    }
-
+    .home-event-date { text-align: center; }
 
     .home-event-day {
-
-      color:
-        var(--hf-navy);
-
-      font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
+      color: var(--hf-navy);
+      font-family: "Playfair Display", Georgia, serif;
       font-size: 3rem;
-
       line-height: .9;
-
       font-weight: 700;
-
     }
 
-
-    .home-event-range {
-
-      color:
-        #B08A1C;
-
-      font-size: .72rem;
-
-    }
-
+    .home-event-range { color: #B08A1C; font-size: .72rem; }
 
     .home-event-month {
-
       margin-top: 5px;
-
-      color:
-        #777;
-
+      color: #777;
       font-size: .68rem;
-
       letter-spacing: .1em;
-
       text-transform: uppercase;
-
     }
 
+    .home-event-sep { width: 1px; height: 80px; background: rgba(11,31,51,.12); }
 
-    .home-event-sep {
+    .home-event-info h3 { margin: 0 0 7px; color: var(--hf-navy); font-size: 1.25rem; }
 
-      width: 1px;
+    .home-event-info p { margin: 0; color: #666; font-size: .88rem; line-height: 1.65; }
 
-      height: 80px;
-
-      background:
-        rgba(11,31,51,.12);
-
-    }
-
-
-    .home-event-info h3 {
-
-      margin:
-        0 0 7px;
-
-      color:
-        var(--hf-navy);
-
-      font-size:
-        1.25rem;
-
-    }
-
-
-    .home-event-info p {
-
-      margin: 0;
-
-      color:
-        #666;
-
-      font-size: .88rem;
-
-      line-height: 1.65;
-
-    }
-
-
-    /* =====================================================
-       ACTUALITÉS
-    ====================================================== */
+    /* ===== ACTUALITÉS ===== */
 
     .home-empty-modern {
-
       min-height: 280px;
-
       display: flex;
-
       flex-direction: column;
-
       align-items: center;
-
       justify-content: center;
-
       padding: 35px;
-
-      border:
-        1px dashed
-        rgba(11,31,51,.18);
-
+      border: 1px dashed rgba(11,31,51,.18);
       text-align: center;
-
     }
-
 
     .home-empty-modern svg {
-
       width: 45px;
-
       height: 45px;
-
       margin-bottom: 15px;
-
-      color:
-        #B08A1C;
-
+      color: #B08A1C;
     }
 
+    .home-empty-modern h3 { margin-bottom: 7px; color: var(--hf-navy); font-size: 1.15rem; }
 
-    .home-empty-modern h3 {
+    .home-empty-modern p { margin: 0; color: #777; font-size: .86rem; }
 
-      margin-bottom: 7px;
+    /* ===== CTA ===== */
 
-      color:
-        var(--hf-navy);
-
-      font-size:
-        1.15rem;
-
-    }
-
-
-    .home-empty-modern p {
-
-      margin: 0;
-
-      color:
-        #777;
-
-      font-size: .86rem;
-
-    }
-
-
-    /* =====================================================
-       CTA
-    ====================================================== */
-
-    .home-cta-modern {
-
-      position: relative;
-
-      overflow: hidden;
-
-    }
-
+    .home-cta-modern { position: relative; overflow: hidden; }
 
     .home-cta-modern::before,
     .home-cta-modern::after {
-
       content: "";
-
       position: absolute;
-
-      border:
-        1px solid
-        rgba(201,164,92,.12);
-
+      border: 1px solid rgba(201,164,92,.12);
       border-radius: 50%;
-
     }
 
+    .home-cta-modern::before { width: 300px; height: 300px; left: -150px; top: -150px; }
 
-    .home-cta-modern::before {
+    .home-cta-modern::after { width: 260px; height: 260px; right: -130px; bottom: -130px; }
 
-      width: 300px;
+    .home-cta-content-modern { position: relative; z-index: 2; }
 
-      height: 300px;
-
-      left: -150px;
-
-      top: -150px;
-
-    }
-
-
-    .home-cta-modern::after {
-
-      width: 260px;
-
-      height: 260px;
-
-      right: -130px;
-
-      bottom: -130px;
-
-    }
-
-
-    .home-cta-content-modern {
-
-      position: relative;
-
-      z-index: 2;
-
-    }
-
-
-    /* =====================================================
-       RESPONSIVE TABLET
-    ====================================================== */
+    /* ===== RESPONSIVE TABLET ===== */
 
     @media (max-width: 1150px) {
-
       .home-pillars-modern,
-      .home-books-modern {
-
-        grid-template-columns:
-          repeat(2,1fr);
-
-      }
-
+      .home-books-modern { grid-template-columns: repeat(2,1fr); }
+      .formations-features { grid-template-columns: repeat(2, 1fr); }
     }
-
-
-    /* =====================================================
-       TABLETTE
-    ====================================================== */
 
     @media (max-width: 850px) {
-
-      .hero-grid {
-
-        padding-top: 130px;
-
-        padding-bottom: 65px;
-
-      }
-
-
-      .hero-content-modern {
-
-        max-width: 720px;
-
-      }
-
-
-      .home-about-modern {
-
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-
-      }
-
-
-      .home-event-modern {
-
-        grid-template-columns:
-          100px
-          1px
-          1fr;
-
-      }
-
-
-      .home-event-actions {
-
-        grid-column:
-          1 / -1;
-
-      }
-
+      .hero-grid { padding-top: 130px; padding-bottom: 65px; }
+      .hero-content-modern { max-width: 720px; }
+      .home-about-modern { grid-template-columns: 1fr; gap: 45px; }
+      .home-event-modern { grid-template-columns: 100px 1px 1fr; }
+      .home-event-actions { grid-column: 1 / -1; }
     }
 
-
-    /* =====================================================
-       MOBILE
-    ====================================================== */
+    /* ===== MOBILE ===== */
 
     @media (max-width: 650px) {
 
-      .home-hero-modern {
+      .home-hero-modern { min-height: auto; }
 
-        min-height: auto;
+      .hero-grid { padding: 120px 18px 55px; }
 
-      }
+      .hero-content-modern::before { font-size: .53rem; letter-spacing: .20em; margin-bottom: 19px; }
 
+      .hero-title-modern { font-size: clamp(2.55rem, 13vw, 4rem); line-height: .90; letter-spacing: -.035em; }
 
-      .hero-grid {
+      .hero-title-modern .word:first-child { font-size: .69em; }
 
-        padding:
-          120px
-          18px
-          55px;
+      .hero-title-modern .word:last-child { letter-spacing: -.045em; }
 
-      }
+      .hero-roles-modern { margin-top: 20px; gap: 5px; font-size: .53rem; line-height: 1.9; letter-spacing: .065em; }
 
+      .hero-quote-modern { margin-top: 21px; font-size: clamp(1rem, 4.5vw, 1.25rem); line-height: 1.5; }
 
-      .hero-content-modern::before {
+      .hero-desc-modern { margin-top: 15px; font-size: .80rem; line-height: 1.75; }
 
-        font-size: .53rem;
+      .hero-actions-modern { flex-direction: column; gap: 9px; margin-top: 25px; }
 
-        letter-spacing: .20em;
+      .hero-actions-modern .btn { width: 100%; justify-content: center; min-height: 49px; }
 
-        margin-bottom: 19px;
+      .hero-contact-modern { margin-top: 17px; }
 
-      }
-
-
-      .hero-title-modern {
-
-        font-size:
-          clamp(
-            2.55rem,
-            13vw,
-            4rem
-          );
-
-        line-height: .90;
-
-        letter-spacing: -.035em;
-
-      }
-
-
-      .hero-title-modern .word:first-child {
-
-        font-size: .69em;
-
-      }
-
-
-      .hero-title-modern .word:last-child {
-
-        letter-spacing: -.045em;
-
-      }
-
-
-      .hero-roles-modern {
-
-        margin-top: 20px;
-
-        gap: 5px;
-
-        font-size: .53rem;
-
-        line-height: 1.9;
-
-        letter-spacing: .065em;
-
-      }
-
-
-      .hero-quote-modern {
-
-        margin-top: 21px;
-
-        font-size:
-          clamp(
-            1rem,
-            4.5vw,
-            1.25rem
-          );
-
-        line-height: 1.5;
-
-      }
-
-
-      .hero-desc-modern {
-
-        margin-top: 15px;
-
-        font-size: .80rem;
-
-        line-height: 1.75;
-
-      }
-
-
-      .hero-actions-modern {
-
-        flex-direction: column;
-
-        gap: 9px;
-
-        margin-top: 25px;
-
-      }
-
-
-      .hero-actions-modern .btn {
-
-        width: 100%;
-
-        justify-content: center;
-
-        min-height: 49px;
-
-      }
-
-
-      .hero-contact-modern {
-
-        margin-top: 17px;
-
-      }
-
-
-      .hero-peace-line {
-
-        margin-top: 30px;
-
-        gap: 9px;
-
-      }
-
+      .hero-peace-line { margin-top: 30px; gap: 9px; }
 
       .hero-peace-line::before,
-      .hero-peace-line::after {
+      .hero-peace-line::after { width: 22px; }
 
-        width: 22px;
+      .hero-peace-title { font-size: .49rem; letter-spacing: .12em; }
 
-      }
-
-
-      .hero-peace-title {
-
-        font-size: .49rem;
-
-        letter-spacing: .12em;
-
-      }
-
-
-      .hero-peace-sub {
-
-        font-size: .40rem;
-
-        letter-spacing: .07em;
-
-      }
-
+      .hero-peace-sub { font-size: .40rem; letter-spacing: .07em; }
 
       .home-pillars-modern,
-      .home-books-modern {
+      .home-books-modern { grid-template-columns: 1fr; }
 
-        grid-template-columns: 1fr;
+      .home-pillar-modern { min-height: auto; padding: 25px 22px; }
 
-      }
+      .home-book-cover-modern { height: 350px; }
 
+      .home-book-cover-modern img { max-height: 315px; }
 
-      .home-pillar-modern {
+      .home-event-modern { display: flex; flex-direction: column; gap: 18px; padding: 25px 20px; text-align: center; }
 
-        min-height: auto;
+      .home-event-sep { width: 55px; height: 1px; margin: auto; }
 
-        padding:
-          25px
-          22px;
+      .home-event-actions { width: 100%; }
 
-      }
+      .home-event-actions .btn { width: 100%; justify-content: center; }
 
+      .home-about-content h2 { font-size: 2rem; }
 
-      .home-book-cover-modern {
+      .home-cta-content-modern h2 { font-size: 2rem; }
 
-        height: 350px;
-
-      }
-
-
-      .home-book-cover-modern img {
-
-        max-height: 315px;
-
-      }
-
-
-      .home-event-modern {
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 18px;
-
-        padding:
-          25px
-          20px;
-
-        text-align: center;
-
-      }
-
-
-      .home-event-sep {
-
-        width: 55px;
-
-        height: 1px;
-
-        margin: auto;
-
-      }
-
-
-      .home-event-actions {
-
-        width: 100%;
-
-      }
-
-
-      .home-event-actions .btn {
-
-        width: 100%;
-
-        justify-content: center;
-
-      }
-
-
-      .home-about-content h2 {
-
-        font-size: 2rem;
-
-      }
-
-
-      .home-cta-content-modern h2 {
-
-        font-size: 2rem;
-
-      }
-
-
-      .home-cta-content-modern .btn {
-
-        width: 100%;
-
-        justify-content: center;
-
-      }
-
+      .home-cta-content-modern .btn { width: 100%; justify-content: center; }
     }
-
-
-    /* =====================================================
-       PETITS TÉLÉPHONES
-    ====================================================== */
 
     @media (max-width: 390px) {
-
-      .hero-grid {
-
-        padding-left: 14px;
-
-        padding-right: 14px;
-
-      }
-
-
-      .hero-title-modern {
-
-        font-size: 2.65rem;
-
-      }
-
-
-      .hero-roles-modern {
-
-        font-size: .48rem;
-
-      }
-
-
-      .hero-quote-modern {
-
-        font-size: .97rem;
-
-      }
-
-
-      .hero-desc-modern {
-
-        font-size: .77rem;
-
-      }
-
+      .hero-grid { padding-left: 14px; padding-right: 14px; }
+      .hero-title-modern { font-size: 2.65rem; }
+      .hero-roles-modern { font-size: .48rem; }
+      .hero-quote-modern { font-size: .97rem; }
+      .hero-desc-modern { font-size: .77rem; }
     }
-
 
     /* =====================================================
        OPTIMISATION RESPONSIVE — AJOUT SÉCURISÉ
        Aucun lien, bouton ou script n'est modifié.
-       Cette couche améliore uniquement l'affichage.
     ====================================================== */
 
-    html {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
+    html { width: 100%; max-width: 100%; overflow-x: hidden; scroll-behavior: smooth; }
 
-    body {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-    }
+    body { width: 100%; max-width: 100%; overflow-x: hidden; }
 
-    img,
-    svg,
-    video,
-    iframe {
-      max-width: 100%;
-    }
+    img, svg, video, iframe { max-width: 100%; }
 
-    .container {
-      width: min(100% - 40px, 1200px);
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .container { width: min(100% - 40px, 1200px); margin-left: auto; margin-right: auto; }
 
-    .section,
-    .section-lg {
-      overflow: hidden;
-    }
+    .section, .section-lg { overflow: hidden; }
 
-    /* ---------- HEADER / NAVIGATION ---------- */
+    /* HEADER / NAVIGATION */
 
-    .site-header {
-      width: 100%;
-    }
+    .site-header { width: 100%; }
 
-    .header-inner {
-      min-width: 0;
-      gap: 20px;
-    }
+    .header-inner { min-width: 0; gap: 20px; }
 
-    .logo {
-      flex: 0 0 auto;
-      min-width: 0;
-    }
+    .logo { flex: 0 0 auto; min-width: 0; }
 
-    .nav-desktop {
-      min-width: 0;
-    }
+    .nav-desktop { min-width: 0; }
 
-    .nav-links {
-      flex-wrap: wrap;
-    }
+    .nav-links { flex-wrap: wrap; }
 
-    .nav-links a {
-      white-space: nowrap;
-    }
+    .nav-links a { white-space: nowrap; }
 
-    .hamburger {
-      flex: 0 0 auto;
-    }
+    .hamburger { flex: 0 0 auto; }
 
-    /* ---------- HERO ---------- */
+    /* HERO */
 
-    .home-hero-modern {
-      width: 100%;
-      min-width: 0;
-    }
+    .home-hero-modern { width: 100%; min-width: 0; }
 
-    .hero-grid {
-      width: 100%;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
+    .hero-grid { width: 100%; max-width: 100%; box-sizing: border-box; }
 
-    .hero-content-modern {
-      box-sizing: border-box;
-    }
+    .hero-content-modern { box-sizing: border-box; }
 
-    .hero-title-modern .word {
-      max-width: 100%;
-      overflow-wrap: anywhere;
-    }
+    .hero-title-modern .word { max-width: 100%; overflow-wrap: anywhere; }
 
     .hero-roles-modern,
     .hero-actions-modern,
     .hero-contact-modern,
-    .hero-peace-line {
-      max-width: 100%;
-    }
+    .hero-peace-line { max-width: 100%; }
 
-    .hero-actions-modern .btn {
-      box-sizing: border-box;
-      max-width: 100%;
-    }
+    .hero-actions-modern .btn { box-sizing: border-box; max-width: 100%; }
 
-    /* ---------- GRILLES ---------- */
+    /* GRILLES */
 
     .home-pillars-modern,
     .home-books-modern,
     .home-about-modern,
-    .home-event-modern {
-      width: 100%;
-      box-sizing: border-box;
-    }
+    .home-event-modern,
+    .formations-features,
+    .formations-grid { width: 100%; box-sizing: border-box; }
 
     .home-pillar-modern,
     .home-book-modern,
     .home-book-body-modern,
-    .home-event-info {
-      min-width: 0;
-      box-sizing: border-box;
-    }
+    .home-event-info,
+    .formation-card,
+    .formations-feature { min-width: 0; box-sizing: border-box; }
 
     .home-pillar-modern p,
     .home-book-body-modern h3,
     .home-book-body-modern p,
     .home-event-info h3,
-    .home-event-info p {
-      overflow-wrap: anywhere;
-    }
+    .home-event-info p,
+    .formation-card h3,
+    .formation-card p { overflow-wrap: anywhere; }
 
-    .home-book-cover-modern {
-      box-sizing: border-box;
-      width: 100%;
-    }
+    .home-book-cover-modern { box-sizing: border-box; width: 100%; }
 
-    .home-book-cover-modern img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
+    .home-book-cover-modern img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-    /* ---------- IMAGE À PROPOS ---------- */
+    /* IMAGE À PROPOS */
 
     .home-about-photo,
-    .home-about-photo-inner {
-      max-width: 100%;
-      box-sizing: border-box;
-    }
+    .home-about-photo-inner { max-width: 100%; box-sizing: border-box; }
 
-    .home-about-photo img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+    .home-about-photo img { width: 100%; height: auto; object-fit: cover; }
 
-    /* ---------- CTA / CONTENU ---------- */
+    /* CTA */
 
-    .home-cta-content-modern {
-      width: 100%;
-      box-sizing: border-box;
-    }
+    .home-cta-content-modern { width: 100%; box-sizing: border-box; }
 
-    /* =====================================================
-       GRANDES TABLETTES / PETITS LAPTOPS
-    ====================================================== */
+    /* GRANDES TABLETTES / PETITS LAPTOPS */
 
     @media (max-width: 1100px) {
-
-      .container {
-        width: min(100% - 36px, 1000px);
-      }
-
-      .header-inner {
-        gap: 14px;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-
-      .nav-links a {
-        font-size: .72rem;
-      }
-
-      .home-about-modern {
-        gap: 45px;
-      }
-
-      .home-event-modern {
-        grid-template-columns: 120px 1px minmax(0, 1fr) auto;
-        gap: 22px;
-      }
-
+      .container { width: min(100% - 36px, 1000px); }
+      .header-inner { gap: 14px; }
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: .72rem; }
+      .home-about-modern { gap: 45px; }
+      .home-event-modern { grid-template-columns: 120px 1px minmax(0, 1fr) auto; gap: 22px; }
     }
 
-    /* =====================================================
-       TABLETTES
-    ====================================================== */
+    /* TABLETTES */
 
     @media (max-width: 900px) {
-
-      .container {
-        width: min(100% - 32px, 760px);
-      }
-
-      .nav-desktop {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .header-inner {
-        min-height: 74px;
-      }
-
-      .hero-grid {
-        padding-top: 110px;
-      }
-
-      .hero-content-modern {
-        max-width: 680px;
-      }
-
-      .hero-title-modern {
-        font-size: clamp(3rem, 10vw, 5rem);
-      }
-
-      .home-pillars-modern {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .home-books-modern {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .home-book-cover-modern {
-        height: 340px;
-      }
-
-      .home-book-cover-modern img {
-        max-height: 300px;
-      }
-
-      .home-about-modern {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 40px;
-      }
-
-      .home-about-photo {
-        width: min(100%, 620px);
-        margin: 0 auto;
-      }
-
-      .home-event-modern {
-        grid-template-columns: 100px 1px minmax(0, 1fr);
-        gap: 20px;
-      }
-
-      .home-event-actions {
-        grid-column: 1 / -1;
-        width: 100%;
-      }
-
+      .container { width: min(100% - 32px, 760px); }
+      .nav-desktop { display: none; }
+      .hamburger { display: flex; }
+      .header-inner { min-height: 74px; }
+      .hero-grid { padding-top: 110px; }
+      .hero-content-modern { max-width: 680px; }
+      .hero-title-modern { font-size: clamp(3rem, 10vw, 5rem); }
+      .home-pillars-modern { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .home-books-modern { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .home-book-cover-modern { height: 340px; }
+      .home-book-cover-modern img { max-height: 300px; }
+      .home-about-modern { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+      .home-about-photo { width: min(100%, 620px); margin: 0 auto; }
+      .home-event-modern { grid-template-columns: 100px 1px minmax(0, 1fr); gap: 20px; }
+      .home-event-actions { grid-column: 1 / -1; width: 100%; }
     }
 
-    /* =====================================================
-       MOBILES
-    ====================================================== */
+    /* MOBILES */
 
     @media (max-width: 650px) {
 
-      .container {
-        width: calc(100% - 28px);
-        max-width: none;
-      }
+      .container { width: calc(100% - 28px); max-width: none; }
 
-      .section,
-      .section-lg {
-        padding-left: 0;
-        padding-right: 0;
-      }
+      .section, .section-lg { padding-left: 0; padding-right: 0; }
 
-      /* Header */
-      .header-inner {
-        min-height: 68px;
-        gap: 10px;
-      }
+      .header-inner { min-height: 68px; gap: 10px; }
 
-      .logo {
-        max-width: calc(100% - 55px);
-      }
+      .logo { max-width: calc(100% - 55px); }
 
-      .logo span {
-        white-space: nowrap;
-      }
+      .logo span { white-space: nowrap; }
 
-      .logo-tag {
-        white-space: nowrap;
-      }
+      .logo-tag { white-space: nowrap; }
 
-      .hamburger {
-        width: 44px;
-        height: 44px;
-        flex-shrink: 0;
-      }
+      .hamburger { width: 44px; height: 44px; flex-shrink: 0; }
 
-      /* Menu mobile */
       .mobile-nav,
-      .nav-mobile {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow-x: hidden;
-      }
+      .nav-mobile { width: 100%; max-width: 100%; box-sizing: border-box; overflow-x: hidden; }
 
-      .nav-mobile-links {
-        width: 100%;
-        box-sizing: border-box;
-      }
+      .nav-mobile-links { width: 100%; box-sizing: border-box; }
 
-      .nav-mobile-links a {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-      }
+      .nav-mobile-links a { display: block; width: 100%; box-sizing: border-box; }
 
-      .nav-mobile > .btn {
-        width: calc(100% - 28px);
-        box-sizing: border-box;
-        justify-content: center;
-      }
+      .nav-mobile > .btn { width: calc(100% - 28px); box-sizing: border-box; justify-content: center; }
 
-      /* Hero */
-      .home-hero-modern::before {
-        width: 420px;
-        height: 420px;
-        right: -250px;
-        top: -180px;
-      }
+      .home-hero-modern::before { width: 420px; height: 420px; right: -250px; top: -180px; }
 
-      .home-hero-modern::after {
-        width: 280px;
-        height: 280px;
-        left: -170px;
-        bottom: -150px;
-      }
+      .home-hero-modern::after { width: 280px; height: 280px; left: -170px; bottom: -150px; }
 
-      .hero-grid {
-        padding: 105px 0 48px;
-      }
+      .hero-grid { padding: 105px 0 48px; }
 
-      .hero-content-modern {
-        width: 100%;
-        padding: 0;
-      }
+      .hero-content-modern { width: 100%; padding: 0; }
 
-      .hero-title-modern {
-        font-size: clamp(2.45rem, 15vw, 4.2rem);
-        line-height: .92;
-      }
+      .hero-title-modern { font-size: clamp(2.45rem, 15vw, 4.2rem); line-height: .92; }
 
-      .hero-title-modern .word {
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-break: normal;
-      }
+      .hero-title-modern .word { white-space: normal; overflow-wrap: break-word; word-break: normal; }
 
-      .hero-roles-modern {
-        font-size: .55rem;
-        letter-spacing: .06em;
-        line-height: 1.8;
-      }
+      .hero-roles-modern { font-size: .55rem; letter-spacing: .06em; line-height: 1.8; }
 
-      .hero-quote-modern {
-        font-size: clamp(1rem, 5vw, 1.25rem);
-        line-height: 1.45;
-      }
+      .hero-quote-modern { font-size: clamp(1rem, 5vw, 1.25rem); line-height: 1.45; }
 
-      .hero-desc-modern {
-        font-size: .82rem;
-        line-height: 1.7;
-      }
+      .hero-desc-modern { font-size: .82rem; line-height: 1.7; }
 
-      .hero-actions-modern {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-      }
+      .hero-actions-modern { width: 100%; flex-direction: column; align-items: stretch; }
 
-      .hero-actions-modern .btn {
-        width: 100%;
-        min-height: 48px;
-        padding-left: 16px;
-        padding-right: 16px;
-        justify-content: center;
-      }
+      .hero-actions-modern .btn { width: 100%; min-height: 48px; padding-left: 16px; padding-right: 16px; justify-content: center; }
 
-      .hero-contact-modern .btn {
-        justify-content: center;
-      }
+      .hero-contact-modern .btn { justify-content: center; }
 
-      .hero-peace-line {
-        width: 100%;
-        gap: 8px;
-      }
+      .hero-peace-line { width: 100%; gap: 8px; }
 
       .hero-peace-line::before,
-      .hero-peace-line::after {
-        flex: 1 1 20px;
-        width: auto;
-        max-width: 35px;
-      }
+      .hero-peace-line::after { flex: 1 1 20px; width: auto; max-width: 35px; }
 
-      .hero-peace-content {
-        min-width: 0;
-        text-align: center;
-      }
+      .hero-peace-content { min-width: 0; text-align: center; }
 
       .hero-peace-title,
-      .hero-peace-sub {
-        max-width: 100%;
-        overflow-wrap: anywhere;
-      }
+      .hero-peace-sub { max-width: 100%; overflow-wrap: anywhere; }
 
-      /* Piliers */
-      .home-pillars-modern {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
+      .home-pillars-modern { grid-template-columns: 1fr; gap: 16px; }
 
-      .home-pillar-modern {
-        min-height: 0;
-        padding: 25px 21px 23px;
-      }
+      .home-pillar-modern { min-height: 0; padding: 25px 21px 23px; }
 
-      .home-pillar-modern h3 {
-        font-size: 1.25rem;
-      }
+      .home-pillar-modern h3 { font-size: 1.25rem; }
 
-      .home-pillar-modern p {
-        font-size: .86rem;
-      }
+      .home-pillar-modern p { font-size: .86rem; }
 
-      /* À propos */
-      .home-about-modern {
-        gap: 30px;
-      }
+      .home-about-modern { gap: 30px; }
 
-      .home-about-photo {
-        padding: 11px;
-      }
+      .home-about-photo { padding: 11px; }
 
-      .home-about-content h2 {
-        font-size: clamp(1.8rem, 8vw, 2.4rem);
-      }
+      .home-about-content h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
 
-      /* Livres */
-      .home-books-modern {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
+      .home-books-modern { grid-template-columns: 1fr; gap: 18px; }
 
-      .home-book-cover-modern {
-        height: min(420px, 92vw);
-        padding: 18px;
-      }
+      .home-book-cover-modern { height: min(420px, 92vw); padding: 18px; }
 
-      .home-book-cover-modern img {
-        max-height: calc(min(420px, 92vw) - 36px);
-      }
+      .home-book-cover-modern img { max-height: calc(min(420px, 92vw) - 36px); }
 
-      .home-book-body-modern {
-        min-height: 0;
-        padding: 20px;
-      }
+      .home-book-body-modern { min-height: 0; padding: 20px; }
 
-      .home-book-body-modern h3 {
-        font-size: 1.08rem;
-      }
+      .home-book-body-modern h3 { font-size: 1.08rem; }
 
-      /* Agenda */
-      .home-event-modern {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 17px;
-        padding: 24px 18px;
-        text-align: center;
-      }
+      /* Formations */
+      .formations-intro { margin-bottom: 32px; }
 
-      .home-event-date {
-        width: 100%;
-      }
+      .formations-features { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; }
 
-      .home-event-day {
-        font-size: 2.6rem;
-      }
+      .formations-feature { padding: 18px 12px; font-size: .78rem; }
 
-      .home-event-sep {
-        width: 55px;
-        height: 1px;
-        margin: 0 auto;
-      }
+      .formations-grid { grid-template-columns: 1fr; gap: 16px; }
 
-      .home-event-info h3 {
-        font-size: 1.15rem;
-      }
+      .formation-card { padding: 26px 20px 22px; }
 
-      .home-event-info p {
-        font-size: .84rem;
-      }
+      .formation-card .btn { width: 100%; justify-content: center; align-self: stretch; }
+
+      .formations-cta .btn { width: 100%; justify-content: center; }
+
+      .home-event-modern { display: flex; flex-direction: column; align-items: stretch; gap: 17px; padding: 24px 18px; text-align: center; }
+
+      .home-event-date { width: 100%; }
+
+      .home-event-day { font-size: 2.6rem; }
+
+      .home-event-sep { width: 55px; height: 1px; margin: 0 auto; }
+
+      .home-event-info h3 { font-size: 1.15rem; }
+
+      .home-event-info p { font-size: .84rem; }
 
       .home-event-actions,
-      .home-event-actions .btn {
-        width: 100%;
-      }
+      .home-event-actions .btn { width: 100%; }
 
-      .home-event-actions .btn {
-        justify-content: center;
-      }
+      .home-event-actions .btn { justify-content: center; }
 
-      /* Actualités */
-      .home-empty-modern {
-        min-height: 230px;
-        padding: 28px 18px;
-      }
+      .home-empty-modern { min-height: 230px; padding: 28px 18px; }
 
-      /* CTA */
-      .home-cta-content-modern {
-        padding-left: 0;
-        padding-right: 0;
-      }
+      .home-cta-content-modern { padding-left: 0; padding-right: 0; }
 
-      .home-cta-content-modern h2 {
-        font-size: clamp(1.75rem, 8vw, 2.3rem);
-        line-height: 1.15;
-      }
+      .home-cta-content-modern h2 { font-size: clamp(1.75rem, 8vw, 2.3rem); line-height: 1.15; }
 
-      .home-cta-content-modern .btn {
-        width: 100%;
-        justify-content: center;
-      }
+      .home-cta-content-modern .btn { width: 100%; justify-content: center; }
 
-      /* Footer */
-      .site-footer {
-        overflow: hidden;
-      }
-
+      .site-footer { overflow: hidden; }
     }
 
-    /* =====================================================
-       PETITS TÉLÉPHONES — 480px
-    ====================================================== */
+    /* PETITS TÉLÉPHONES — 480px */
 
     @media (max-width: 480px) {
-
-      .container {
-        width: calc(100% - 24px);
-      }
-
-      .header-inner {
-        min-height: 64px;
-      }
-
-      .logo {
-        transform: scale(.94);
-        transform-origin: left center;
-      }
-
-      .hero-grid {
-        padding-top: 96px;
-        padding-bottom: 42px;
-      }
-
-      .hero-content-modern::before {
-        font-size: .48rem;
-        letter-spacing: .15em;
-        margin-bottom: 16px;
-      }
-
-      .hero-title-modern {
-        font-size: clamp(2.25rem, 16vw, 3.6rem);
-      }
-
-      .hero-roles-modern {
-        gap: 3px 6px;
-        font-size: .49rem;
-      }
-
-      .hero-quote-modern {
-        font-size: .98rem;
-      }
-
-      .hero-desc-modern {
-        font-size: .78rem;
-      }
-
-      .hero-peace-title {
-        font-size: .45rem;
-        letter-spacing: .08em;
-      }
-
-      .hero-peace-sub {
-        font-size: .38rem;
-        letter-spacing: .04em;
-      }
-
-      .home-pillar-modern {
-        padding: 22px 18px;
-      }
-
-      .home-book-cover-modern {
-        height: 88vw;
-        max-height: 390px;
-      }
-
-      .home-book-cover-modern img {
-        max-height: calc(88vw - 32px);
-      }
-
+      .container { width: calc(100% - 24px); }
+      .header-inner { min-height: 64px; }
+      .logo { transform: scale(.94); transform-origin: left center; }
+      .hero-grid { padding-top: 96px; padding-bottom: 42px; }
+      .hero-content-modern::before { font-size: .48rem; letter-spacing: .15em; margin-bottom: 16px; }
+      .hero-title-modern { font-size: clamp(2.25rem, 16vw, 3.6rem); }
+      .hero-roles-modern { gap: 3px 6px; font-size: .49rem; }
+      .hero-quote-modern { font-size: .98rem; }
+      .hero-desc-modern { font-size: .78rem; }
+      .hero-peace-title { font-size: .45rem; letter-spacing: .08em; }
+      .hero-peace-sub { font-size: .38rem; letter-spacing: .04em; }
+      .home-pillar-modern { padding: 22px 18px; }
+      .home-book-cover-modern { height: 88vw; max-height: 390px; }
+      .home-book-cover-modern img { max-height: calc(88vw - 32px); }
+      .formations-features { grid-template-columns: 1fr; }
     }
 
-    /* =====================================================
-       TRÈS PETITS TÉLÉPHONES — 360px
-    ====================================================== */
+    /* TRÈS PETITS TÉLÉPHONES — 360px */
 
     @media (max-width: 360px) {
-
-      .container {
-        width: calc(100% - 20px);
-      }
-
-      .hero-title-modern {
-        font-size: 2.15rem;
-      }
-
-      .hero-roles-modern {
-        font-size: .45rem;
-      }
-
-      .hero-quote-modern {
-        font-size: .92rem;
-      }
-
-      .hero-desc-modern {
-        font-size: .75rem;
-      }
-
-      .hero-actions-modern .btn {
-        font-size: .72rem;
-      }
-
-      .hero-peace-line {
-        gap: 5px;
-      }
-
-      .home-book-cover-modern {
-        height: 86vw;
-      }
-
+      .container { width: calc(100% - 20px); }
+      .hero-title-modern { font-size: 2.15rem; }
+      .hero-roles-modern { font-size: .45rem; }
+      .hero-quote-modern { font-size: .92rem; }
+      .hero-desc-modern { font-size: .75rem; }
+      .hero-actions-modern .btn { font-size: .72rem; }
+      .hero-peace-line { gap: 5px; }
+      .home-book-cover-modern { height: 86vw; }
     }
 
-    /* =====================================================
-       ACCESSIBILITÉ / TOUCH
-    ====================================================== */
+    /* ACCESSIBILITÉ / TOUCH */
 
     @media (hover: none) and (pointer: coarse) {
 
       .home-pillar-modern:hover,
-      .home-book-modern:hover {
-        transform: none;
-      }
+      .home-book-modern:hover,
+      .formation-card:hover { transform: none; }
 
       .home-about-photo:hover img,
-      .home-book-modern:hover .home-book-cover-modern img {
-        transform: none;
-      }
+      .home-book-modern:hover .home-book-cover-modern img { transform: none; }
 
-      a,
-      button {
-        -webkit-tap-highlight-color: transparent;
-      }
-
+      a, button { -webkit-tap-highlight-color: transparent; }
     }
 
     /* Empêche les longues chaînes de casser la page */
-    a,
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    span {
-      overflow-wrap: anywhere;
+    a, p, h1, h2, h3, h4, span { overflow-wrap: anywhere; }
+
+    /* =====================================================
+       BARRE DE MENU CENTRÉE
+       Desktop : logo à gauche | menu centré | bouton à droite
+       Mobile  : menu hamburger avec éléments centrés
+    ====================================================== */
+
+    @media (min-width: 1181px) {
+
+      .header-inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 24px;
+      }
+
+      /* Les enfants de nav-desktop deviennent éléments de la grille */
+      .nav-desktop { display: contents; }
+
+      .logo { justify-self: start; }
+
+      .nav-links {
+        grid-column: 2;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: clamp(14px, 1.5vw, 24px);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-size: .76rem;
+        white-space: nowrap;
+        text-align: center;
+      }
+
+      .nav-desktop > .btn {
+        grid-column: 3;
+        justify-self: end;
+      }
+
+      .hamburger { display: none; }
     }
 
+    /* En dessous de 1180px : menu hamburger (10 onglets = trop large) */
+    @media (max-width: 1180px) {
+
+      .header-inner { justify-content: space-between; }
+
+      .nav-desktop { display: none; }
+
+      .hamburger { display: flex; }
+    }
+
+    /* Menu mobile : tout est centré */
+    .nav-mobile,
+    .mobile-nav {
+      text-align: center;
+      align-items: center;
+    }
+
+    .nav-mobile-tagline {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-mobile-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .nav-mobile-links li { width: 100%; text-align: center; }
+
+    .nav-mobile-links a { text-align: center; justify-content: center; }
+
+    .nav-mobile > .btn { margin-left: auto; margin-right: auto; }
+
+    /* =====================================================
+       MENU SUR 2 LIGNES : AGENDA + GALERIE CENTRÉS EN BAS
+    ====================================================== */
+
+    .nav-break { display: none; }
+
+    @media (min-width: 1181px) {
+
+      .nav-links {
+        flex-wrap: wrap;
+        width: clamp(560px, 58vw, 720px);
+        justify-content: center;
+        align-content: center;
+        gap: 0 14px;
+      }
+
+      .nav-break {
+        display: block;
+        flex: 0 0 100%;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    }
+
+    /* =====================================================
+       LOGO ENTIÈREMENT LISIBLE (jamais coupé ni cassé)
+    ====================================================== */
+
+    .logo,
+    .logo span,
+    .logo small,
+    .logo-tag {
+      white-space: nowrap;
+      overflow: visible;
+      overflow-wrap: normal;
+      word-break: keep-all;
+      text-overflow: clip;
+    }
+
+    .logo {
+      flex: 0 0 auto;
+      min-width: max-content;
+      max-width: none;
+      transform: none;
+    }
+
+    @media (max-width: 650px) {
+      .logo { max-width: none; transform: none; }
+      .logo span { letter-spacing: .04em; }
+      .header-inner { padding-right: 4px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo { transform: none; }
+    }
+
+  
+    /* =====================================================
+       DESIGN PROFESSIONNEL DE LA BARRE DE MENU
+       Bleu nuit + or, effet verre, soulignement animé
+    ====================================================== */
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: linear-gradient(180deg, rgba(7,22,37,.96), rgba(7,22,37,.88));
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(201,164,92,.28);
+      box-shadow: 0 8px 30px rgba(3,10,18,.28);
+      transition: background .35s ease, box-shadow .35s ease;
+    }
+
+    .site-header .header-inner {
+      padding-top: 28px;
+      padding-bottom: 16px;
+      transition: padding .35s ease;
+    }
+
+    .site-header.is-scrolled {
+      background: rgba(7,22,37,.97);
+      box-shadow: 0 10px 34px rgba(3,10,18,.42);
+    }
+
+    .site-header.is-scrolled .header-inner {
+      padding-top: 16px;
+      padding-bottom: 10px;
+    }
+
+    /* ----- Logo ----- */
+
+    .site-header .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .site-header .logo span:first-child {
+      color: var(--hf-gold);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .5em;
+      padding-left: 1px;
+    }
+
+    .site-header .logo span:nth-child(2) {
+      color: #fff;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+    }
+
+    .site-header .logo .logo-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 5px;
+      color: rgba(255,255,255,.55);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .5rem;
+      font-weight: 600;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+    }
+
+    .site-header .logo .logo-tag::before {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: var(--hf-gold);
+    }
+
+    /* ----- Liens (desktop) ----- */
+
+    .site-header .nav-links a {
+      position: relative;
+      display: inline-block;
+      padding: 3px 2px;
+      line-height: 1.2;
+      color: rgba(255,255,255,.82);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color .3s ease;
+    }
+
+    .site-header .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--hf-gold);
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: center;
+      transition: transform .35s ease;
+    }
+
+    .site-header .nav-links a:hover,
+    .site-header .nav-links a.active {
+      color: var(--hf-gold-light);
+    }
+
+    .site-header .nav-links a:hover::after,
+    .site-header .nav-links a.active::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    /* ----- Bouton Me contacter ----- */
+
+    .site-header .nav-desktop > .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 26px;
+      background: linear-gradient(135deg, var(--hf-gold-light), var(--hf-gold));
+      color: var(--hf-navy);
+      border: 1px solid var(--hf-gold);
+      border-radius: 2px;
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(201,164,92,.25);
+      transition: transform .3s ease, box-shadow .3s ease, background .3s ease, color .3s ease;
+    }
+
+    .site-header .nav-desktop > .btn:hover {
+      background: transparent;
+      color: var(--hf-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(201,164,92,.18);
+    }
+
+    /* ----- Hamburger ----- */
+
+    .site-header .hamburger {
+      border: 1px solid rgba(201,164,92,.45);
+      border-radius: 2px;
+      background: rgba(255,255,255,.03);
+      cursor: pointer;
+      transition: border-color .3s ease, background .3s ease;
+    }
+
+    .site-header .hamburger:hover {
+      border-color: var(--hf-gold);
+      background: rgba(201,164,92,.10);
+    }
+
+    .site-header .hamburger span { background: #fff; }
+
+    /* ----- Menu mobile ----- */
+
+    .nav-mobile {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(201,164,92,.10), transparent 45%),
+        linear-gradient(180deg, #071625 0%, #0B1F33 100%);
+    }
+
+    .nav-mobile .nav-mobile-tagline {
+      color: var(--hf-gold);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .4em;
+      text-transform: uppercase;
+    }
+
+    .nav-mobile .nav-mobile-links a {
+      padding: 14px 10px;
+      color: rgba(255,255,255,.88);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,164,92,.14);
+      transition: color .3s ease, background .3s ease;
+    }
+
+    .nav-mobile .nav-mobile-links a:hover,
+    .nav-mobile .nav-mobile-links a.active {
+      color: var(--hf-gold-light);
+      background: rgba(201,164,92,.06);
+    }
+
+    .nav-mobile > .btn {
+      margin-top: 22px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, var(--hf-gold-light), var(--hf-gold));
+      color: var(--hf-navy);
+      border: 1px solid var(--hf-gold);
+      border-radius: 2px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    /* ----- Tailles réduites sur mobile ----- */
+
+    @media (max-width: 650px) {
+      .site-header .logo span:nth-child(2) { font-size: 1.25rem; }
+      .site-header .logo span:first-child { font-size: .6rem; letter-spacing: .45em; }
+      .site-header .logo .logo-tag { font-size: .46rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-header,
+      .site-header .header-inner,
+      .site-header .nav-links a,
+      .site-header .nav-links a::after { transition: none; }
+    }
 
   </style>
 
 
-  <!-- =====================================================
-       DONNÉES STRUCTURÉES
-  ====================================================== -->
-
+  <!-- DONNÉES STRUCTURÉES -->
   <script type="application/ld+json">
-
   {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -2593,7 +1505,6 @@
     "url": "https://hodfragonard.com",
     "image": "https://hodfragonard.com/assets/images/hero-portrait.jpeg"
   }
-
   </script>
 
 </head>
@@ -2601,28 +1512,14 @@
 
 <body>
 
-
-  <!-- =====================================================
-       PRELOADER
-  ====================================================== -->
-
+  <!-- PRELOADER -->
   <div id="preloader">
-
     <div class="preloader-text"></div>
-
-    <div class="preloader-sub">
-      Juriste • Autrice • Entrepreneure • Ambassadrice de Paix
-    </div>
-
+    <div class="preloader-sub">Juriste • Autrice • Entrepreneure • Ambassadrice de Paix</div>
     <div class="preloader-bar"></div>
-
   </div>
 
-
-  <!-- =====================================================
-       TRANSITION
-  ====================================================== -->
-
+  <!-- TRANSITION -->
   <div id="page-transition"></div>
 
 
@@ -2634,111 +1531,38 @@
 
     <div class="container header-inner">
 
-      <a
-        href="index.html"
-        class="logo"
-        aria-label="Hod Fragonard - Accueil"
-      >
-
+      <a href="index.html" class="logo" aria-label="Hod Fragonard - Accueil">
         <span>HOD</span>
-
         <span>FRAGONARD</span>
-
-        <small class="logo-tag">
-          Site Officiel
-        </small>
-
+        <small class="logo-tag">Site Officiel</small>
       </a>
 
-
-      <nav
-        class="nav-desktop"
-        aria-label="Navigation principale"
-      >
+      <nav class="nav-desktop" aria-label="Navigation principale">
 
         <ul class="nav-links">
-
-          <li>
-            <a
-              href="index.html"
-              class="active"
-            >
-              Accueil
-            </a>
-          </li>
-
-          <li>
-            <a href="a-propos.html">
-              À propos
-            </a>
-          </li>
-
-          <li>
-            <a href="juriste.html">
-              Juriste
-            </a>
-          </li>
-
-          <li>
-            <a href="autrice.html">
-              Autrice
-            </a>
-          </li>
-
-          <li>
-            <a href="ouvrages.html">
-              Ouvrages
-            </a>
-          </li>
-
-          <li>
-            <a href="projets.html">
-              Engagements
-            </a>
-          </li>
-
-          <li>
-            <a href="actualites.html">
-              Actualités
-            </a>
-          </li>
-
-          <li>
-            <a href="agenda.html">
-              Agenda
-            </a>
-          </li>
-
-          <li>
-            <a href="galerie.html">
-              Galerie
-            </a>
-          </li>
-
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="juriste.html">Juriste</a></li>
+          <li><a href="autrice.html">Autrice</a></li>
+          <li><a href="ouvrages.html">Ouvrages</a></li>
+          <!-- NOUVEAU : onglet Formations -->
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="projets.html">Engagements</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <!-- Saut de ligne : Agenda et Galerie centrés en bas -->
+          <li class="nav-break" aria-hidden="true"></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
         </ul>
 
-
-        <a
-          href="contact.html"
-          class="btn btn-or btn-sm"
-        >
-          Me contacter
-        </a>
+        <a href="contact.html" class="btn btn-or btn-sm">Me contacter</a>
 
       </nav>
 
-
-      <button
-        class="hamburger hamburger-btn"
-        type="button"
-        aria-label="Ouvrir le menu"
-        aria-expanded="false"
-      >
-
+      <button class="hamburger hamburger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-
       </button>
 
     </div>
@@ -2750,90 +1574,26 @@
        MENU MOBILE
   ====================================================== -->
 
-  <nav
-    class="nav-mobile mobile-nav"
-    aria-label="Navigation mobile"
-  >
+  <nav class="nav-mobile mobile-nav" aria-label="Navigation mobile">
 
-    <span class="nav-mobile-tagline">
-      HOD FRAGONARD
-    </span>
-
+    <span class="nav-mobile-tagline">HOD FRAGONARD</span>
 
     <ul class="nav-mobile-links">
-
-      <li>
-        <a
-          href="index.html"
-          class="active"
-        >
-          Accueil
-        </a>
-      </li>
-
-      <li>
-        <a href="a-propos.html">
-          À propos
-        </a>
-      </li>
-
-      <li>
-        <a href="juriste.html">
-          Juriste
-        </a>
-      </li>
-
-      <li>
-        <a href="autrice.html">
-          Autrice
-        </a>
-      </li>
-
-      <li>
-        <a href="ouvrages.html">
-          Ouvrages
-        </a>
-      </li>
-
-      <li>
-        <a href="projets.html">
-          Engagements
-        </a>
-      </li>
-
-      <li>
-        <a href="ambassadrice.html">
-          Ambassadrice de Paix
-        </a>
-      </li>
-
-      <li>
-        <a href="actualites.html">
-          Actualités
-        </a>
-      </li>
-
-      <li>
-        <a href="agenda.html">
-          Agenda
-        </a>
-      </li>
-
-      <li>
-        <a href="galerie.html">
-          Galerie
-        </a>
-      </li>
-
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="juriste.html">Juriste</a></li>
+      <li><a href="autrice.html">Autrice</a></li>
+      <li><a href="ouvrages.html">Ouvrages</a></li>
+      <!-- NOUVEAU : onglet Formations -->
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="projets.html">Engagements</a></li>
+      <li><a href="ambassadrice.html">Ambassadrice de Paix</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
     </ul>
 
-
-    <a
-      href="contact.html"
-      class="btn btn-or"
-    >
-      Me contacter
-    </a>
+    <a href="contact.html" class="btn btn-or">Me contacter</a>
 
   </nav>
 
@@ -2844,221 +1604,87 @@
 
   <main>
 
-
     <!-- ===================================================
          HERO
     ==================================================== -->
 
-    <section
-      class="hero home-hero-modern"
-      id="accueil"
-    >
+    <section class="hero home-hero-modern" id="accueil">
 
       <div class="hero-bg"></div>
 
-
       <div class="container hero-grid">
-
-
-        <!-- =================================================
-             CONTENU HERO
-        ================================================== -->
 
         <div class="hero-content hero-content-modern">
 
-
-          <!-- TITRE -->
-
           <h1 class="hero-title hero-title-modern">
-
-            <span class="word">
-              HOD
-            </span>
-
-            <span class="word">
-              FRAGONARD
-            </span>
-
+            <span class="word">HOD</span>
+            <span class="word">FRAGONARD</span>
           </h1>
 
-
-          <!-- RÔLES -->
-
           <div class="hero-roles hero-roles-modern">
-
             <span>JURISTE</span>
-
             <span class="sep">•</span>
-
             <span>AUTRICE</span>
-
             <span class="sep">•</span>
-
             <span>ENTREPRENEURE</span>
-
             <span class="sep">•</span>
-
             <span>AMBASSADRICE DE PAIX</span>
-
           </div>
-
-
-          <!-- CITATION -->
 
           <div class="hero-quote hero-quote-modern">
-
-            « Le droit, les idées et l'engagement
-            au service d'une vision. »
-
+            « Le droit, les idées et l'engagement au service d'une vision. »
           </div>
 
-
-          <!-- DESCRIPTION -->
-
           <p class="hero-desc hero-desc-modern">
-
             Une trajectoire guidée par la rigueur du droit,
             la force émancipatrice de la transmission
             littéraire, l'insertion par l'entrepreneuriat
             et la construction pérenne du dialogue de paix.
-
           </p>
-
-
-          <!-- ACTIONS -->
 
           <div class="hero-actions-grid hero-actions-modern">
 
-
-            <a
-              href="a-propos.html"
-              class="btn btn-gold-solid"
-            >
-
+            <a href="a-propos.html" class="btn btn-gold-solid">
               DÉCOUVRIR MON PARCOURS
-
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                aria-hidden="true"
-              >
-
-                <line
-                  x1="5"
-                  y1="12"
-                  x2="19"
-                  y2="12"
-                />
-
-                <polyline
-                  points="12 5 19 12 12 19"
-                />
-
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
               </svg>
-
             </a>
 
-
-            <a
-              href="ouvrages.html"
-              class="btn btn-gold-outline"
-            >
-
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                aria-hidden="true"
-              >
-
-                <path
-                  d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"
-                />
-
-                <path
-                  d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
-                />
-
+            <a href="ouvrages.html" class="btn btn-gold-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
               </svg>
-
               DÉCOUVRIR MES OUVRAGES
-
             </a>
 
           </div>
-
-
-          <!-- CONTACT -->
 
           <div class="hero-contact-row hero-contact-modern">
 
             <a
               href="contact.html"
               class="btn btn-ghost text-white"
-              style="
-                padding-left:0;
-                opacity:.8;
-                font-size:.8rem;
-                letter-spacing:.1em;
-                color:rgba(255,255,255,.7);
-              "
+              style="padding-left:0; opacity:.8; font-size:.8rem; letter-spacing:.1em; color:rgba(255,255,255,.7);"
             >
-
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                style="margin-right:.4rem"
-                aria-hidden="true"
-              >
-
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
-
-                <polyline
-                  points="22,6 12,13 2,6"
-                />
-
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:.4rem" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
               </svg>
-
               ME CONTACTER
-
             </a>
 
           </div>
 
-
-          <!-- =================================================
-               AMBASSADRICE DE PAIX
-          ================================================== -->
-
+          <!-- AMBASSADRICE DE PAIX -->
           <div class="hero-peace-line">
-
             <div class="hero-peace-content">
-
-              <span class="hero-peace-title">
-                AMBASSADRICE DE PAIX
-              </span>
-
-              <span class="hero-peace-sub">
-                FPU / UPF · ECOSOC · NATIONS UNIES
-              </span>
-
+              <span class="hero-peace-title">AMBASSADRICE DE PAIX</span>
+              <span class="hero-peace-sub">FPU / UPF · ECOSOC · NATIONS UNIES</span>
             </div>
-
           </div>
-
 
         </div>
 
@@ -3071,25 +1697,15 @@
          PILIERS
     ==================================================== -->
 
-    <section
-      class="section-lg bg-ivory home-pillars-section"
-    >
+    <section class="section-lg bg-ivory home-pillars-section">
 
       <div class="container">
 
+        <div class="section-header center reveal-up">
 
-        <div
-          class="section-header center reveal-up"
-        >
+          <span class="eyebrow">Quatre Dimensions</span>
 
-          <span class="eyebrow">
-            Quatre Dimensions
-          </span>
-
-          <h2>
-            Une femme de droit, de lettres,
-            d'engagement et de paix.
-          </h2>
+          <h2>Une femme de droit, de lettres, d'engagement et de paix.</h2>
 
           <div class="gold-line gold-line-center"></div>
 
@@ -3101,251 +1717,110 @@
 
         </div>
 
-
         <div class="pillars-grid home-pillars-modern">
 
-
           <!-- JURISTE -->
-
-          <article
-            class="pillar-card home-pillar-modern reveal-up s1"
-          >
+          <article class="pillar-card home-pillar-modern reveal-up s1">
 
             <div class="pillar-icon home-pillar-icon-modern">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-
-                <path
-                  d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                />
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-
             </div>
 
+            <div class="sub home-pillar-sub">Expertise juridique</div>
 
-            <div class="sub home-pillar-sub">
-              Expertise juridique
-            </div>
-
-
-            <h3>
-              Juriste
-            </h3>
-
+            <h3>Juriste</h3>
 
             <p>
               Rigueur, analyse et accompagnement stratégique
               au service des personnes et des organisations.
             </p>
 
-
-            <a
-              href="juriste.html"
-              class="home-pillar-link"
-            >
-
+            <a href="juriste.html" class="home-pillar-link">
               Découvrir l'expertise
-
               <span>→</span>
-
             </a>
 
           </article>
 
-
           <!-- AUTRICE -->
-
-          <article
-            class="pillar-card home-pillar-modern reveal-up s2"
-          >
+          <article class="pillar-card home-pillar-modern reveal-up s2">
 
             <div class="pillar-icon home-pillar-icon-modern">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-
-                <path
-                  d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"
-                />
-
-                <path
-                  d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
-                />
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
               </svg>
-
             </div>
 
+            <div class="sub home-pillar-sub">Écriture & Transmission</div>
 
-            <div class="sub home-pillar-sub">
-              Écriture & Transmission
-            </div>
-
-
-            <h3>
-              Autrice
-            </h3>
-
+            <h3>Autrice</h3>
 
             <p>
               L'écriture comme espace de réflexion,
               de transmission, d'apaisement et de partage.
             </p>
 
-
-            <a
-              href="autrice.html"
-              class="home-pillar-link"
-            >
-
+            <a href="autrice.html" class="home-pillar-link">
               Découvrir la plume
-
               <span>→</span>
-
             </a>
 
           </article>
 
-
           <!-- ENTREPRENEURE -->
-
-          <article
-            class="pillar-card home-pillar-modern reveal-up s3"
-          >
+          <article class="pillar-card home-pillar-modern reveal-up s3">
 
             <div class="pillar-icon home-pillar-icon-modern">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                />
-
-                <polyline
-                  points="12 6 12 12 16 14"
-                />
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
               </svg>
-
             </div>
 
+            <div class="sub home-pillar-sub">Projets & Action</div>
 
-            <div class="sub home-pillar-sub">
-              Projets & Action
-            </div>
-
-
-            <h3>
-              Entrepreneure
-            </h3>
-
+            <h3>Entrepreneure</h3>
 
             <p>
               Initiative, leadership et création de projets
               à impact, notamment au sein de Koyeba Koluka.
             </p>
 
-
-            <a
-              href="projets.html"
-              class="home-pillar-link"
-            >
-
+            <a href="projets.html" class="home-pillar-link">
               Découvrir les projets
-
               <span>→</span>
-
             </a>
 
           </article>
 
-
           <!-- AMBASSADRICE -->
-
-          <article
-            class="
-              pillar-card
-              home-pillar-modern
-              ambassadrice-modern
-              reveal-up
-              s4
-            "
-          >
+          <article class="pillar-card home-pillar-modern ambassadrice-modern reveal-up s4">
 
             <div class="pillar-icon home-pillar-icon-modern">
-
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                aria-hidden="true"
-              >
-
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="9"
-                />
-
-                <path
-                  d="M12 7v5l3 2"
-                />
-
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
               </svg>
-
             </div>
 
+            <div class="sub home-pillar-sub">FPU / UPF · ECOSOC</div>
 
-            <div class="sub home-pillar-sub">
-              FPU / UPF · ECOSOC
-            </div>
-
-
-            <h3>
-              Ambassadrice de Paix
-            </h3>
-
+            <h3>Ambassadrice de Paix</h3>
 
             <p>
               Une voix engagée pour le dialogue,
               la transmission et la promotion de la paix.
             </p>
 
-
-            <a
-              href="ambassadrice.html"
-              class="home-pillar-link"
-            >
-
+            <a href="ambassadrice.html" class="home-pillar-link">
               En savoir plus
-
               <span>→</span>
-
             </a>
 
           </article>
-
 
         </div>
 
@@ -3364,66 +1839,34 @@
 
         <div class="about-grid home-about-modern">
 
-
-          <div
-            class="about-image-wrap home-about-photo reveal-l"
-          >
-
+          <div class="about-image-wrap home-about-photo reveal-l">
             <div class="home-about-photo-inner">
-
-              <img
-                src="assets/images/hero-portrait.jpeg"
-                alt="Hod Fragonard"
-                loading="lazy"
-              >
-
+              <img src="assets/images/hero-portrait.jpeg" alt="Hod Fragonard" loading="lazy">
             </div>
-
           </div>
 
+          <div class="about-text home-about-content reveal-r">
 
-          <div
-            class="about-text home-about-content reveal-r"
-          >
+            <span class="eyebrow">À Propos</span>
 
-            <span class="eyebrow">
-              À Propos
-            </span>
-
-
-            <h2>
-              Une vision portée par l'action
-            </h2>
-
+            <h2>Une vision portée par l'action</h2>
 
             <div class="gold-line"></div>
 
-
             <p class="lead mb-4">
-
               Hod Fragonard allie rigueur juridique,
               sensibilité littéraire et dynamisme
               entrepreneurial.
-
             </p>
 
-
             <p class="mb-8">
-
               À travers ses différents rôles, elle s'engage
               pour apporter des solutions concrètes,
               transmettre des idées et contribuer au dialogue
               et à la construction de la paix.
-
             </p>
 
-
-            <a
-              href="a-propos.html"
-              class="btn btn-primary"
-            >
-              Découvrir la biographie complète
-            </a>
+            <a href="a-propos.html" class="btn btn-primary">Découvrir la biographie complète</a>
 
           </div>
 
@@ -3442,239 +1885,237 @@
 
       <div class="container">
 
-
-        <div
-          class="
-            flex
-            flex-wrap
-            justify-between
-            items-center
-            gap-4
-            mb-8
-            reveal-up
-          "
-        >
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-8 reveal-up">
 
           <div class="text-white">
-
-            <span class="eyebrow">
-              Bibliographie
-            </span>
-
-            <h2 style="margin:0">
-              Mes ouvrages
-            </h2>
-
+            <span class="eyebrow">Bibliographie</span>
+            <h2 style="margin:0">Mes ouvrages</h2>
           </div>
 
+          <a href="ouvrages.html" class="btn btn-outline-white">Voir tous les ouvrages</a>
 
-          <a
-            href="ouvrages.html"
-            class="btn btn-outline-white"
-          >
-            Voir tous les ouvrages
+        </div>
+
+        <div class="books-grid home-books-modern">
+
+          <!-- LIVRE 1 -->
+          <article class="book-card home-book-modern reveal-up s1">
+
+            <div class="book-cover home-book-cover-modern">
+              <img src="assets/images/livre-mantras.jpg" alt="Les 22 Mantras de la Résilience" loading="lazy">
+            </div>
+
+            <div class="book-body home-book-body-modern">
+              <span class="home-book-number">01</span>
+              <h3>Les 22 Mantras de la Résilience</h3>
+              <p>22 Mantras pour tenir bon et rebondir plus fort</p>
+              <a href="livre-mantras.html" class="btn btn-outline btn-sm home-book-btn">Découvrir l'ouvrage →</a>
+            </div>
+
+          </article>
+
+          <!-- LIVRE 2 -->
+          <article class="book-card home-book-modern reveal-up s2">
+
+            <div class="book-cover home-book-cover-modern">
+              <img src="assets/images/livre-carnet.jpg" alt="Ton Carnet du Soir" loading="lazy">
+            </div>
+
+            <div class="book-body home-book-body-modern">
+              <span class="home-book-number">02</span>
+              <h3>Ton Carnet du Soir</h3>
+              <p>22 Mantras pour s'apaiser avant de dormir</p>
+              <a href="livre-carnet.html" class="btn btn-outline btn-sm home-book-btn">Découvrir l'ouvrage →</a>
+            </div>
+
+          </article>
+
+          <!-- LIVRE 3 -->
+          <article class="book-card home-book-modern reveal-up s3">
+
+            <div class="book-cover home-book-cover-modern">
+              <img src="assets/images/livre-grandpere.jpg" alt="Hommage à mon grand-père" loading="lazy">
+            </div>
+
+            <div class="book-body home-book-body-modern">
+              <span class="home-book-number">03</span>
+              <h3>Hommage à mon grand-père</h3>
+              <p>L'héritage d'un homme de valeurs</p>
+              <a href="livre-grand-pere.html" class="btn btn-outline btn-sm home-book-btn">Découvrir l'ouvrage →</a>
+            </div>
+
+          </article>
+
+          <!-- LIVRE 4 -->
+          <article class="book-card home-book-modern reveal-up s4">
+
+            <div class="book-cover home-book-cover-modern">
+              <img src="assets/images/livre-paix.jpg" alt="Paroles de Paix pour la jeunesse" loading="lazy">
+            </div>
+
+            <div class="book-body home-book-body-modern">
+              <span class="home-book-number">04</span>
+              <h3>Paroles de Paix pour la jeunesse</h3>
+              <p>Un ouvrage dédié à la jeunesse et aux valeurs de paix.</p>
+              <a href="livre-paix-jeunesse.html" class="btn btn-outline btn-sm home-book-btn">Découvrir l'ouvrage →</a>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FORMATIONS (NOUVEAU)
+    ==================================================== -->
+
+    <section class="section bg-white home-formations-modern" id="formations">
+
+      <div class="container">
+
+        <div class="section-header center reveal-up">
+
+          <span class="eyebrow">Formations</span>
+
+          <h2>Se former autrement, à son rythme.</h2>
+
+          <div class="gold-line gold-line-center"></div>
+
+        </div>
+
+
+        <div class="formations-intro reveal-up">
+
+          <p>
+            Découvrez mes formations numériques au format e-book,
+            conçues pour vous accompagner dans votre développement
+            personnel et professionnel.
+          </p>
+
+          <p>
+            Chaque e-book aborde une thématique spécifique à travers
+            des conseils, des méthodes, des exercices pratiques et des
+            outils concrets pour vous permettre d'apprendre, de progresser
+            et surtout de passer à l'action.
+          </p>
+
+        </div>
+
+
+        <!-- AVANTAGES -->
+        <div class="formations-features reveal-up">
+
+          <div class="formations-feature">
+            <span class="ico" aria-hidden="true">📘</span>
+            <span>Format 100 % numérique</span>
+          </div>
+
+          <div class="formations-feature">
+            <span class="ico" aria-hidden="true">📥</span>
+            <span>Téléchargement après achat</span>
+          </div>
+
+          <div class="formations-feature">
+            <span class="ico" aria-hidden="true">🌍</span>
+            <span>Accessible où que vous soyez</span>
+          </div>
+
+          <div class="formations-feature">
+            <span class="ico" aria-hidden="true">⏱️</span>
+            <span>À suivre à votre rythme</span>
+          </div>
+
+        </div>
+
+
+        <!-- FORMATIONS DISPONIBLES
+             👉 Dans 1 semaine : remplacer le titre, la description
+             et le href="#" de chaque carte par le vrai lien d'achat. -->
+
+        <div class="formations-grid">
+
+          <!-- FORMATION 1 -->
+          <article class="formation-card reveal-up s1">
+
+            <span class="formation-badge">Bientôt disponible</span>
+
+            <h3>Formation 1 — Titre à venir</h3>
+
+            <p>
+              Description de la première formation en e-book.
+              Choisissez la formation qui correspond à vos objectifs
+              et accédez à votre e-book après votre achat.
+            </p>
+
+            <!-- 🔗 METTRE LE LIEN DE LA FORMATION 1 ICI -->
+            <a
+              href="#"
+              class="btn btn-or"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Accéder à la formation →
+            </a>
+
+          </article>
+
+          <!-- FORMATION 2 -->
+          <article class="formation-card reveal-up s2">
+
+            <span class="formation-badge">Bientôt disponible</span>
+
+            <h3>Formation 2 — Titre à venir</h3>
+
+            <p>
+              Description de la deuxième formation en e-book.
+              Choisissez la formation qui correspond à vos objectifs
+              et accédez à votre e-book après votre achat.
+            </p>
+
+            <!-- 🔗 METTRE LE LIEN DE LA FORMATION 2 ICI -->
+            <a
+              href="#"
+              class="btn btn-or"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Accéder à la formation →
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- BOUTON PRINCIPAL -->
+        <div class="formations-cta reveal-up">
+
+          <a href="formations.html" class="btn btn-primary">
+            DÉCOUVRIR LES FORMATIONS
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="margin-left:.5rem">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
           </a>
 
         </div>
 
 
-        <div class="books-grid home-books-modern">
+        <!-- COLLECTION ÉVOLUTIVE -->
+        <div class="formations-note reveal-up">
 
+          <h3>Une collection appelée à évoluer</h3>
 
-          <!-- LIVRE 1 -->
-
-          <article
-            class="
-              book-card
-              home-book-modern
-              reveal-up
-              s1
-            "
-          >
-
-            <div class="book-cover home-book-cover-modern">
-
-              <img
-                src="assets/images/livre-mantras.jpg"
-                alt="Les 22 Mantras de la Résilience"
-                loading="lazy"
-              >
-
-            </div>
-
-
-            <div class="book-body home-book-body-modern">
-
-              <span class="home-book-number">
-                01
-              </span>
-
-              <h3>
-                Les 22 Mantras de la Résilience
-              </h3>
-
-              <p>
-                22 Mantras pour tenir bon
-                et rebondir plus fort
-              </p>
-
-              <a
-                href="livre-mantras.html"
-                class="btn btn-outline btn-sm home-book-btn"
-              >
-                Découvrir l'ouvrage →
-              </a>
-
-            </div>
-
-          </article>
-
-
-          <!-- LIVRE 2 -->
-
-          <article
-            class="
-              book-card
-              home-book-modern
-              reveal-up
-              s2
-            "
-          >
-
-            <div class="book-cover home-book-cover-modern">
-
-              <img
-                src="assets/images/livre-carnet.jpg"
-                alt="Ton Carnet du Soir"
-                loading="lazy"
-              >
-
-            </div>
-
-
-            <div class="book-body home-book-body-modern">
-
-              <span class="home-book-number">
-                02
-              </span>
-
-              <h3>
-                Ton Carnet du Soir
-              </h3>
-
-              <p>
-                22 Mantras pour s'apaiser
-                avant de dormir
-              </p>
-
-              <a
-                href="livre-carnet.html"
-                class="btn btn-outline btn-sm home-book-btn"
-              >
-                Découvrir l'ouvrage →
-              </a>
-
-            </div>
-
-          </article>
-
-
-          <!-- LIVRE 3 -->
-
-          <article
-            class="
-              book-card
-              home-book-modern
-              reveal-up
-              s3
-            "
-          >
-
-            <div class="book-cover home-book-cover-modern">
-
-              <img
-                src="assets/images/livre-grandpere.jpg"
-                alt="Hommage à mon grand-père"
-                loading="lazy"
-              >
-
-            </div>
-
-
-            <div class="book-body home-book-body-modern">
-
-              <span class="home-book-number">
-                03
-              </span>
-
-              <h3>
-                Hommage à mon grand-père
-              </h3>
-
-              <p>
-                L'héritage d'un homme de valeurs
-              </p>
-
-              <a
-                href="livre-grand-pere.html"
-                class="btn btn-outline btn-sm home-book-btn"
-              >
-                Découvrir l'ouvrage →
-              </a>
-
-            </div>
-
-          </article>
-
-
-          <!-- LIVRE 4 -->
-
-          <article
-            class="
-              book-card
-              home-book-modern
-              reveal-up
-              s4
-            "
-          >
-
-            <div class="book-cover home-book-cover-modern">
-
-              <img
-                src="assets/images/livre-paix.jpg"
-                alt="Paroles de Paix pour la jeunesse"
-                loading="lazy"
-              >
-
-            </div>
-
-
-            <div class="book-body home-book-body-modern">
-
-              <span class="home-book-number">
-                04
-              </span>
-
-              <h3>
-                Paroles de Paix pour la jeunesse
-              </h3>
-
-              <p>
-                Un ouvrage dédié à la jeunesse
-                et aux valeurs de paix.
-              </p>
-
-              <a
-                href="livre-paix-jeunesse.html"
-                class="btn btn-outline btn-sm home-book-btn"
-              >
-                Découvrir l'ouvrage →
-              </a>
-
-            </div>
-
-          </article>
-
+          <p>
+            De nouvelles formations seront régulièrement ajoutées
+            autour de différentes thématiques : visibilité,
+            communication, stratégie digitale, personal branding,
+            entrepreneuriat, résilience et développement personnel.
+          </p>
 
         </div>
 
@@ -3691,85 +2132,40 @@
 
       <div class="container max-900">
 
+        <div class="section-header center reveal-up">
 
-        <div
-          class="
-            section-header
-            center
-            reveal-up
-          "
-        >
+          <span class="eyebrow">Agenda</span>
 
-          <span class="eyebrow">
-            Agenda
-          </span>
-
-          <h2>
-            Prochain rendez-vous
-          </h2>
+          <h2>Prochain rendez-vous</h2>
 
           <div class="gold-line gold-line-center"></div>
 
         </div>
 
-
-        <div
-          class="
-            event-card
-            home-event-modern
-            reveal-scale
-          "
-        >
-
+        <div class="event-card home-event-modern reveal-scale">
 
           <div class="event-date home-event-date">
-
-            <div class="event-date-day home-event-day">
-              17
-            </div>
-
-            <div class="event-date-range home-event-range">
-              — 19
-            </div>
-
-            <div class="event-date-month home-event-month">
-              Septembre
-            </div>
-
+            <div class="event-date-day home-event-day">17</div>
+            <div class="event-date-range home-event-range">— 19</div>
+            <div class="event-date-month home-event-month">Septembre</div>
           </div>
-
 
           <div class="event-sep home-event-sep"></div>
 
-
           <div class="event-info home-event-info">
-
-            <h3>
-              Formatrice pendant le SICOM
-            </h3>
-
+            <h3>Formatrice pendant le SICOM</h3>
             <p>
               Retrouvez Hod Fragonard en tant que
               formatrice pendant l'événement SICOM
               du 17 au 19 septembre.
             </p>
-
           </div>
-
 
           <div class="event-actions home-event-actions">
-
-            <a
-              href="https://sicom.cg/inscription/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-or"
-            >
+            <a href="https://sicom.cg/inscription/" target="_blank" rel="noopener noreferrer" class="btn btn-or">
               S'inscrire →
             </a>
-
           </div>
-
 
         </div>
 
@@ -3786,101 +2182,30 @@
 
       <div class="container">
 
-
-        <div
-          class="
-            flex
-            flex-wrap
-            justify-between
-            items-center
-            gap-4
-            mb-8
-            reveal-up
-          "
-        >
+        <div class="flex flex-wrap justify-between items-center gap-4 mb-8 reveal-up">
 
           <div>
-
-            <span class="eyebrow">
-              Magazine
-            </span>
-
-            <h2 style="margin:0">
-              Actualités & Réflexions
-            </h2>
-
+            <span class="eyebrow">Magazine</span>
+            <h2 style="margin:0">Actualités & Réflexions</h2>
           </div>
 
-
-          <a
-            href="actualites.html"
-            class="btn btn-outline"
-          >
-            Voir toute l'actualité
-          </a>
+          <a href="actualites.html" class="btn btn-outline">Voir toute l'actualité</a>
 
         </div>
 
-
         <div class="articles-grid">
 
-          <div
-            class="empty-state home-empty-modern"
-            style="grid-column:1 / -1;"
-          >
+          <div class="empty-state home-empty-modern" style="grid-column:1 / -1;">
 
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              aria-hidden="true"
-            >
-
-              <rect
-                x="3"
-                y="4"
-                width="18"
-                height="18"
-                rx="2"
-              />
-
-              <line
-                x1="16"
-                y1="2"
-                x2="16"
-                y2="6"
-              />
-
-              <line
-                x1="8"
-                y1="2"
-                x2="8"
-                y2="6"
-              />
-
-              <line
-                x1="3"
-                y1="10"
-                x2="21"
-                y2="10"
-              />
-
-              <rect
-                x="8"
-                y="14"
-                width="8"
-                height="4"
-                rx="1"
-              />
-
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+              <rect x="8" y="14" width="8" height="4" rx="1" />
             </svg>
 
-
-            <h3>
-              Les actualités seront bientôt disponibles.
-            </h3>
-
+            <h3>Les actualités seront bientôt disponibles.</h3>
 
             <p>
               Revenez prochainement pour découvrir
@@ -3900,58 +2225,28 @@
          CTA
     ==================================================== -->
 
-    <section
-      class="
-        section
-        bg-ivory
-        home-cta-modern
-      "
-    >
+    <section class="section bg-ivory home-cta-modern">
 
-      <div
-        class="
-          container
-          text-center
-          max-700
-          home-cta-content-modern
-          reveal-scale
-        "
-      >
+      <div class="container text-center max-700 home-cta-content-modern reveal-scale">
 
-        <span class="eyebrow">
-          Collaboration
-        </span>
+        <span class="eyebrow">Collaboration</span>
 
-
-        <h2>
-          Prêt à échanger ?
-        </h2>
-
+        <h2>Prêt à échanger ?</h2>
 
         <div class="gold-line gold-line-center"></div>
 
-
         <p class="lead mb-8">
-
           Qu'il s'agisse d'un accompagnement juridique,
           d'une proposition de conférence, d'une interview
           ou d'un projet de collaboration, n'hésitez pas
           à prendre contact.
-
         </p>
 
-
-        <a
-          href="contact.html"
-          class="btn btn-or btn-lg"
-        >
-          Me contacter directement
-        </a>
+        <a href="contact.html" class="btn btn-or btn-lg">Me contacter directement</a>
 
       </div>
 
     </section>
-
 
   </main>
 
@@ -3964,176 +2259,69 @@
 
     <div class="container">
 
-
       <div class="footer-top">
-
 
         <div class="footer-brand">
 
-          <h2>
-            HOD FRAGONARD
-          </h2>
+          <h2>HOD FRAGONARD</h2>
 
-          <span class="footer-tagline">
-            Juriste • Autrice • Entrepreneure • Ambassadrice de Paix
-          </span>
+          <span class="footer-tagline">Juriste • Autrice • Entrepreneure • Ambassadrice de Paix</span>
 
-          <p>
-            « Le droit, les idées et l'engagement
-            au service d'une vision. »
-          </p>
-
+          <p>« Le droit, les idées et l'engagement au service d'une vision. »</p>
 
           <div class="footer-soc">
-
-            <a
-              href="#"
-              aria-label="LinkedIn"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="#"
-              aria-label="Instagram"
-            >
-              Instagram
-            </a>
-
-            <a
-              href="#"
-              aria-label="Twitter"
-            >
-              X
-            </a>
-
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Twitter">X</a>
           </div>
 
         </div>
 
-
         <div class="footer-col">
 
-          <h3>
-            Navigation
-          </h3>
+          <h3>Navigation</h3>
 
           <ul>
-
-            <li>
-              <a href="index.html">
-                Accueil
-              </a>
-            </li>
-
-            <li>
-              <a href="a-propos.html">
-                À propos
-              </a>
-            </li>
-
-            <li>
-              <a href="juriste.html">
-                Juriste
-              </a>
-            </li>
-
-            <li>
-              <a href="autrice.html">
-                Autrice
-              </a>
-            </li>
-
-            <li>
-              <a href="ouvrages.html">
-                Ouvrages
-              </a>
-            </li>
-
-            <li>
-              <a href="projets.html">
-                Engagements
-              </a>
-            </li>
-
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="juriste.html">Juriste</a></li>
+            <li><a href="autrice.html">Autrice</a></li>
+            <li><a href="ouvrages.html">Ouvrages</a></li>
+            <!-- NOUVEAU -->
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="projets.html">Engagements</a></li>
           </ul>
 
         </div>
 
-
         <div class="footer-col">
 
-          <h3>
-            Ressources & Contact
-          </h3>
+          <h3>Ressources & Contact</h3>
 
           <ul>
-
-            <li>
-              <a href="actualites.html">
-                Actualités
-              </a>
-            </li>
-
-            <li>
-              <a href="agenda.html">
-                Agenda
-              </a>
-            </li>
-
-            <li>
-              <a href="galerie.html">
-                Galerie
-              </a>
-            </li>
-
-            <li>
-              <a href="presse.html">
-                Presse & Médias
-              </a>
-            </li>
-
-            <li>
-              <a href="contact.html">
-                Contact
-              </a>
-            </li>
-
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="presse.html">Presse & Médias</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
 
         </div>
-
 
       </div>
 
-
       <div class="footer-sep"></div>
-
 
       <div class="footer-bottom">
 
-        <p>
-          © 2026 Hod Fragonard.
-          Tous droits réservés.
-        </p>
-
+        <p>© 2026 Hod Fragonard. Tous droits réservés.</p>
 
         <div class="footer-legal">
-
-          <a href="mentions-legales.html">
-            Mentions légales
-          </a>
-
-          <a href="politique-confidentialite.html">
-            Politique de confidentialité
-          </a>
-
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
         </div>
 
-
-        <p>
-          Site conçu par Jason_INFORMATIQUE
-        </p>
+        <p>Site conçu par Jason_INFORMATIQUE</p>
 
       </div>
 
@@ -4142,72 +2330,39 @@
   </footer>
 
 
-  <!-- =====================================================
-       WHATSAPP
-  ====================================================== -->
-
-  <a
-    href="https://wa.me/33646176485"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contacter Hod Fragonard sur WhatsApp"
-  >
-
-    <svg
-      viewBox="0 0 32 32"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-
-      <path
-        d="M16 2a13 13 0 0 0-11 20l-2 7 7-2a13 13 0 1 0 6-25zm0 24c-2 0-4-1-6-2l-1-1-4 1 1-4-1-1a11 11 0 1 1 11 7zm6-9c0 2-2 3-3 4l-1 1c-1 0-2 0-4-1-3-2-5-4-5-7 0-1 1-2 2-3h1l1 2 1 2-1 1c0 1 1 2 3 3l1-1 2-1 1 2v1z"
-      />
-
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/33646176485" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter Hod Fragonard sur WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16 2a13 13 0 0 0-11 20l-2 7 7-2a13 13 0 1 0 6-25zm0 24c-2 0-4-1-6-2l-1-1-4 1 1-4-1-1a11 11 0 1 1 11 7zm6-9c0 2-2 3-3 4l-1 1c-1 0-2 0-4-1-3-2-5-4-5-7 0-1 1-2 2-3h1l1 2 1 2-1 1c0 1 1 2 3 3l1-1 2-1 1 2v1z" />
     </svg>
-
   </a>
 
-
-  <!-- =====================================================
-       RETOUR EN HAUT
-  ====================================================== -->
-
-  <button
-    class="back-top"
-    type="button"
-    aria-label="Retour en haut"
-  >
-
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      aria-hidden="true"
-    >
-
-      <polyline
-        points="18 15 12 9 6 15"
-      />
-
+  <!-- RETOUR EN HAUT -->
+  <button class="back-top" type="button" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15" />
     </svg>
-
   </button>
 
 
-  <!-- =====================================================
-       JAVASCRIPT
-  ====================================================== -->
+  <!-- JAVASCRIPT -->
+  <!-- En-tête : effet au défilement -->
+  <script>
+    (function () {
+      var header = document.querySelector('.site-header');
+      if (!header) return;
+      function onScroll() {
+        header.classList.toggle('is-scrolled', window.scrollY > 24);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 
   <script src="assets/js/preloader.js"></script>
-
   <script src="assets/js/cursor.js"></script>
-
   <script src="assets/js/transitions.js"></script>
-
   <script src="assets/js/main.js"></script>
-
 
 </body>
 
