@@ -1,160 +1,555 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Titre de l'Article] — Hod Fragonard</title>
-    <meta name="description" content="Lecture de l'article : [Titre de l'Article].">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Titre de l'Article] — Hod Fragonard</title>
+  <meta name="description" content="Lecture de l'article : [Titre de l'Article].">
+
+  <!-- POLICES (identiques à l'accueil, utilisées par le menu) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+
+  <!-- =========================================================
+       BARRE DE MENU — identique à la page d'accueil
+       (à copier tel quel dans toutes les autres pages)
+  ========================================================== -->
+  <style>
+
+    :root {
+      --hf-navy: #0B1F33;
+      --hf-deep: #071625;
+      --hf-gold: #C9A45C;
+      --hf-gold-light: #E4C985;
+      --hf-ivory: #F7F3EA;
+    }
+
+    /* Espace sous la barre de menu fixe */
+    .page-hero { padding-top: 160px; }
+
+    /* ----- Structure de base ----- */
+
+    .site-header { width: 100%; }
+
+    .header-inner { min-width: 0; gap: 20px; }
+
+    .nav-desktop { min-width: 0; }
+
+    .nav-links { flex-wrap: wrap; }
+
+    .nav-links a { white-space: nowrap; }
+
+    .hamburger { flex: 0 0 auto; }
+
+    .nav-break { display: none; }
+
+    /* ----- Desktop : logo | menu centré sur 2 lignes | bouton ----- */
+
+    @media (min-width: 1181px) {
+
+      .header-inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .nav-desktop { display: contents; }
+
+      .logo { justify-self: start; }
+
+      .nav-links {
+        grid-column: 2;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: clamp(560px, 58vw, 720px);
+        gap: 0 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-break {
+        display: block;
+        flex: 0 0 100%;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-desktop > .btn { grid-column: 3; justify-self: end; }
+
+      .hamburger { display: none; }
+    }
+
+    /* ----- Moins de 1180px : menu hamburger ----- */
+
+    @media (max-width: 1180px) {
+      .header-inner { justify-content: space-between; }
+      .nav-desktop { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ----- Logo toujours lisible ----- */
+
+    .logo,
+    .logo span,
+    .logo small,
+    .logo-tag {
+      white-space: nowrap;
+      overflow: visible;
+      overflow-wrap: normal;
+      word-break: keep-all;
+      text-overflow: clip;
+    }
+
+    .logo { flex: 0 0 auto; min-width: max-content; max-width: none; transform: none; }
+
+    /* ----- Design professionnel ----- */
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: linear-gradient(180deg, rgba(7,22,37,.96), rgba(7,22,37,.88));
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(201,164,92,.28);
+      box-shadow: 0 8px 30px rgba(3,10,18,.28);
+      transition: background .35s ease, box-shadow .35s ease;
+    }
+
+    .site-header .header-inner {
+      padding-top: 28px;
+      padding-bottom: 16px;
+      transition: padding .35s ease;
+    }
+
+    .site-header.is-scrolled { background: rgba(7,22,37,.97); box-shadow: 0 10px 34px rgba(3,10,18,.42); }
+
+    .site-header.is-scrolled .header-inner { padding-top: 16px; padding-bottom: 10px; }
+
+    /* Logo */
+
+    .site-header .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .site-header .logo span:first-child {
+      color: var(--hf-gold);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .5em;
+      padding-left: 1px;
+    }
+
+    .site-header .logo span:nth-child(2) {
+      color: #fff;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+    }
+
+    .site-header .logo .logo-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 5px;
+      color: rgba(255,255,255,.55);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .5rem;
+      font-weight: 600;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+    }
+
+    .site-header .logo .logo-tag::before { content: ""; width: 22px; height: 1px; background: var(--hf-gold); }
+
+    /* Liens */
+
+    .site-header .nav-links a {
+      position: relative;
+      display: inline-block;
+      padding: 3px 2px;
+      line-height: 1.2;
+      color: rgba(255,255,255,.82);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color .3s ease;
+    }
+
+    .site-header .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--hf-gold);
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: center;
+      transition: transform .35s ease;
+    }
+
+    .site-header .nav-links a:hover,
+    .site-header .nav-links a.active { color: var(--hf-gold-light); }
+
+    .site-header .nav-links a:hover::after,
+    .site-header .nav-links a.active::after { transform: translateX(-50%) scaleX(1); }
+
+    /* Bouton Me contacter */
+
+    .site-header .nav-desktop > .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 26px;
+      background: linear-gradient(135deg, var(--hf-gold-light), var(--hf-gold));
+      color: var(--hf-navy);
+      border: 1px solid var(--hf-gold);
+      border-radius: 2px;
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(201,164,92,.25);
+      transition: transform .3s ease, box-shadow .3s ease, background .3s ease, color .3s ease;
+    }
+
+    .site-header .nav-desktop > .btn:hover {
+      background: transparent;
+      color: var(--hf-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(201,164,92,.18);
+    }
+
+    /* Hamburger */
+
+    .site-header .hamburger {
+      border: 1px solid rgba(201,164,92,.45);
+      border-radius: 2px;
+      background: rgba(255,255,255,.03);
+      cursor: pointer;
+      transition: border-color .3s ease, background .3s ease;
+    }
+
+    .site-header .hamburger:hover { border-color: var(--hf-gold); background: rgba(201,164,92,.10); }
+
+    .site-header .hamburger span { background: #fff; }
+
+    /* Menu mobile */
+
+    .nav-mobile,
+    .mobile-nav {
+      text-align: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(201,164,92,.10), transparent 45%),
+        linear-gradient(180deg, #071625 0%, #0B1F33 100%);
+    }
+
+    .nav-mobile .nav-mobile-tagline {
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: var(--hf-gold);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .4em;
+      text-transform: uppercase;
+    }
+
+    .nav-mobile .nav-mobile-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .nav-mobile .nav-mobile-links li { width: 100%; text-align: center; }
+
+    .nav-mobile .nav-mobile-links a {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 10px;
+      text-align: center;
+      color: rgba(255,255,255,.88);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,164,92,.14);
+      transition: color .3s ease, background .3s ease;
+    }
+
+    .nav-mobile .nav-mobile-links a:hover,
+    .nav-mobile .nav-mobile-links a.active { color: var(--hf-gold-light); background: rgba(201,164,92,.06); }
+
+    .nav-mobile > .btn {
+      margin: 22px auto 0;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, var(--hf-gold-light), var(--hf-gold));
+      color: var(--hf-navy);
+      border: 1px solid var(--hf-gold);
+      border-radius: 2px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      justify-content: center;
+    }
+
+    /* Petits écrans */
+
+    @media (max-width: 650px) {
+      .header-inner { min-height: 68px; gap: 10px; }
+      .hamburger { width: 44px; height: 44px; flex-shrink: 0; }
+      .mobile-nav, .nav-mobile { width: 100%; max-width: 100%; box-sizing: border-box; overflow-x: hidden; }
+      .site-header .logo span:nth-child(2) { font-size: 1.25rem; letter-spacing: .04em; }
+      .site-header .logo span:first-child { font-size: .6rem; letter-spacing: .45em; }
+      .site-header .logo .logo-tag { font-size: .46rem; }
+      .page-hero { padding-top: 130px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-header,
+      .site-header .header-inner,
+      .site-header .nav-links a,
+      .site-header .nav-links a::after { transition: none; }
+    }
+
+  </style>
 </head>
 <body>
+  <div id="cursor-dot"></div><div id="cursor-ring"></div><div id="cursor-label"></div>
+  <div id="page-transition"></div>
 
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container header-container">
-            <a href="index.html" class="logo">Hod Fragonard</a>
-            
-            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
-                <span class="hamburger"></span>
-            </button>
-            
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="a-propos.html">À propos</a></li>
-                    <li><a href="juriste.html">Juriste</a></li>
-                    <li><a href="autrice.html">Autrice</a></li>
-                    <li><a href="projets.html">Engagements</a></li>
-                    <li><a href="actualites.html" class="active">Actualités</a></li>
-                    <li><a href="galerie.html">Galerie</a></li>
-                </ul>
-                <a href="contact.html" class="btn btn-gold">Me contacter</a>
-            </nav>
+  <!-- =========================================================
+       HEADER
+  ========================================================= -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Hod Fragonard - Accueil">
+        <span>HOD</span>
+        <span>FRAGONARD</span>
+        <small class="logo-tag">Site Officiel</small>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navigation principale">
+
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="juriste.html">Juriste</a></li>
+          <li><a href="autrice.html">Autrice</a></li>
+          <li><a href="ouvrages.html">Ouvrages</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="projets.html">Engagements</a></li>
+          <li><a href="actualites.html" class="active">Actualités</a></li>
+          <!-- Saut de ligne : Agenda et Galerie centrés en bas -->
+          <li class="nav-break" aria-hidden="true"></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+        </ul>
+
+        <a href="contact.html" class="btn btn-or btn-sm">Me contacter</a>
+
+      </nav>
+
+      <button class="hamburger hamburger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    </div>
+  </header>
+
+  <!-- =========================================================
+       MENU MOBILE
+  ========================================================= -->
+
+  <nav class="nav-mobile mobile-nav" aria-label="Navigation mobile">
+    <span class="nav-mobile-tagline">HOD FRAGONARD</span>
+    <ul class="nav-mobile-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="juriste.html">Juriste</a></li>
+      <li><a href="autrice.html">Autrice</a></li>
+      <li><a href="ouvrages.html">Ouvrages</a></li>
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="projets.html">Engagements</a></li>
+      <li><a href="ambassadrice.html">Ambassadrice de Paix</a></li>
+      <li><a href="actualites.html" class="active">Actualités</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-or">Me contacter</a>
+  </nav>
+
+  <!-- =========================================================
+       CONTENU
+  ========================================================= -->
+
+  <main>
+    <!-- Article Header -->
+    <section class="section-padding" style="padding-top: 150px; background-color: var(--color-white);">
+      <div class="container" style="max-width: 800px;">
+        <div class="breadcrumb" style="font-size: var(--text-sm); margin-bottom: var(--space-6); color: rgba(32,37,43,0.7);">
+          <a href="index.html">Accueil</a> <span style="margin: 0 10px;">/</span> <a href="actualites.html">Actualités</a> <span style="margin: 0 10px;">/</span> [Catégorie]
         </div>
-    </header>
 
-    <main>
-        <!-- Article Header -->
-        <section class="section-padding" style="padding-top: 150px; background-color: var(--color-white);">
-            <div class="container" style="max-width: 800px;">
-                <div class="breadcrumb" style="font-size: var(--text-sm); margin-bottom: var(--space-6); color: rgba(32,37,43,0.7);">
-                    <a href="index.html">Accueil</a> <span style="margin: 0 10px;">/</span> <a href="actualites.html">Actualités</a> <span style="margin: 0 10px;">/</span> [Catégorie]
-                </div>
-                
-                <h1 style="margin-bottom: var(--space-4); line-height: 1.2;">[Titre de l'Article]</h1>
-                
-                <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-8); color: rgba(32,37,43,0.7); font-size: var(--text-sm);">
-                    <span>[Date de publication]</span>
-                    <span>•</span>
-                    <span style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary); font-weight: 500;">[Catégorie]</span>
-                </div>
-            </div>
-        </section>
+        <h1 style="margin-bottom: var(--space-4); line-height: 1.2;">[Titre de l'Article]</h1>
 
-        <!-- Image Principale -->
-        <section>
-            <div class="container">
-                <div style="height: 50vh; min-height: 300px; background-color: #e0d8c3; display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
-                    [IMAGE DE COUVERTURE DE L'ARTICLE]
-                </div>
-            </div>
-        </section>
-
-        <!-- Contenu Article -->
-        <section class="section-padding bg-white">
-            <div class="container" style="max-width: 800px;">
-                <div style="font-size: var(--text-lg); line-height: 1.8; color: rgba(32,37,43,0.8);">
-                    <p style="margin-bottom: var(--space-6); font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--color-primary); line-height: 1.4;">
-                        [Chapeau introductif de l'article. Il résume brièvement le propos et accroche le lecteur.]
-                    </p>
-                    
-                    <p style="margin-bottom: var(--space-4);">
-                        [Contenu de l'article. Paragraphe 1. Ceci est un espace réservé pour le contenu réel qui sera fourni.]
-                    </p>
-                    
-                    <h2 style="font-size: var(--text-2xl); margin-top: var(--space-8); margin-bottom: var(--space-4);">[Sous-titre de l'article]</h2>
-                    
-                    <p style="margin-bottom: var(--space-4);">
-                        [Contenu de l'article. Paragraphe 2. Le texte est aéré pour faciliter la lecture sur tous les supports.]
-                    </p>
-                    
-                    <blockquote style="margin: var(--space-8) 0; padding: var(--space-6) var(--space-8); background-color: var(--color-background); border-left: 4px solid var(--color-secondary); font-family: var(--font-heading); font-size: var(--text-xl); font-style: italic; color: var(--color-primary);">
-                        « [Citation mise en avant dans le corps de l'article.] »
-                    </blockquote>
-                    
-                    <p style="margin-bottom: var(--space-4);">
-                        [Contenu de l'article. Paragraphe 3.]
-                    </p>
-                </div>
-                
-                <!-- Partage social -->
-                <div style="margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid rgba(11,31,51,0.1); display: flex; align-items: center; gap: var(--space-4);">
-                    <strong style="font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em;">Partager :</strong>
-                    <a href="#" style="color: var(--color-secondary);">LinkedIn</a>
-                    <a href="#" style="color: var(--color-secondary);">Twitter</a>
-                    <a href="#" style="color: var(--color-secondary);">Facebook</a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <!-- Contenu identique au footer -->
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h2>Hod Fragonard</h2>
-                    <p>Juriste • Autrice • Entrepreneure</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h3>Liens Rapides</h3>
-                    <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="a-propos.html">À propos</a></li>
-                        <li><a href="juriste.html">Juriste</a></li>
-                        <li><a href="autrice.html">Autrice</a></li>
-                        <li><a href="actualites.html">Actualités</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-social">
-                    <h3>Contact & Réseaux</h3>
-                    <ul style="margin-bottom: 1rem;">
-                        <li style="margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.7);">[EMAIL À FOURNIR]</li>
-                    </ul>
-                    <div class="social-icons">
-                        <a href="#" aria-label="LinkedIn">IN</a>
-                        <a href="#" aria-label="Twitter">TW</a>
-                        <a href="#" aria-label="Instagram">IG</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Hod Fragonard. Tous droits réservés.</p>
-                <div class="footer-legal">
-                    <a href="mentions-legales.html">Mentions légales</a>
-                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
-                </div>
-                <p>Site conçu par Jason_INFORMATIQUE</p>
-            </div>
+        <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-8); color: rgba(32,37,43,0.7); font-size: var(--text-sm);">
+          <span>[Date de publication]</span>
+          <span>•</span>
+          <span style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary); font-weight: 500;">[Catégorie]</span>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/animations.js"></script>
+    <!-- Image Principale -->
+    <section>
+      <div class="container">
+        <div style="height: 50vh; min-height: 300px; background-color: #e0d8c3; display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+          [IMAGE DE COUVERTURE DE L'ARTICLE]
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenu Article -->
+    <section class="section-padding bg-white">
+      <div class="container" style="max-width: 800px;">
+        <div style="font-size: var(--text-lg); line-height: 1.8; color: rgba(32,37,43,0.8);">
+          <p style="margin-bottom: var(--space-6); font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--color-primary); line-height: 1.4;">
+            [Chapeau introductif de l'article. Il résume brièvement le propos et accroche le lecteur.]
+          </p>
+
+          <p style="margin-bottom: var(--space-4);">
+            [Contenu de l'article. Paragraphe 1. Ceci est un espace réservé pour le contenu réel qui sera fourni.]
+          </p>
+
+          <h2 style="font-size: var(--text-2xl); margin-top: var(--space-8); margin-bottom: var(--space-4);">[Sous-titre de l'article]</h2>
+
+          <p style="margin-bottom: var(--space-4);">
+            [Contenu de l'article. Paragraphe 2. Le texte est aéré pour faciliter la lecture sur tous les supports.]
+          </p>
+
+          <blockquote style="margin: var(--space-8) 0; padding: var(--space-6) var(--space-8); background-color: var(--color-background); border-left: 4px solid var(--color-secondary); font-family: var(--font-heading); font-size: var(--text-xl); font-style: italic; color: var(--color-primary);">
+            « [Citation mise en avant dans le corps de l'article.] »
+          </blockquote>
+
+          <p style="margin-bottom: var(--space-4);">
+            [Contenu de l'article. Paragraphe 3.]
+          </p>
+        </div>
+
+        <!-- Partage social -->
+        <div style="margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid rgba(11,31,51,0.1); display: flex; align-items: center; gap: var(--space-4);">
+          <strong style="font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em;">Partager :</strong>
+          <a href="#" style="color: var(--color-secondary);">LinkedIn</a>
+          <a href="#" style="color: var(--color-secondary);">Twitter</a>
+          <a href="#" style="color: var(--color-secondary);">Facebook</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <!-- Contenu identique au footer -->
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Hod Fragonard</h2>
+          <p>Juriste • Autrice • Entrepreneure</p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Liens Rapides</h3>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="juriste.html">Juriste</a></li>
+            <li><a href="autrice.html">Autrice</a></li>
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h3>Contact & Réseaux</h3>
+          <ul style="margin-bottom: 1rem;">
+            <li style="margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.7);">[EMAIL À FOURNIR]</li>
+          </ul>
+          <div class="social-icons">
+            <a href="#" aria-label="LinkedIn">IN</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="Instagram">IG</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Hod Fragonard. Tous droits réservés.</p>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        </div>
+        <p>Site conçu par Jason_INFORMATIQUE</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- En-tête : effet au défilement -->
+  <script>
+    (function () {
+      var header = document.querySelector('.site-header');
+      if (!header) return;
+      function onScroll() {
+        header.classList.toggle('is-scrolled', window.scrollY > 24);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+
+  <script src="assets/js/cursor.js"></script><script src="assets/js/transitions.js"></script><script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
 </body>
 </html>
