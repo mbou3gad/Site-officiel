@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Les 22 Mantras de la Résilience — Hod Fragonard</title>
+
+  <!-- POLICES (identiques à l'accueil, utilisées par le menu) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/main.css">
 
@@ -15,10 +18,8 @@
        PAGE LIVRE
     ========================================= */
 
-    .book-page {
-      padding-top: 45px;
-      padding-bottom: 100px;
-    }
+    /* Espace sous la barre de menu fixe */
+    .book-page { padding-top: 160px; padding-bottom: 100px; }
 
     .book-detail {
       display: grid;
@@ -27,476 +28,608 @@
       align-items: start;
     }
 
-
-    /* =========================================
-       COUVERTURE
-    ========================================= */
+    /* ===== COUVERTURE ===== */
 
     .book-visual {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       position: relative;
-
       padding-top: 5px;
     }
 
     .book-visual::before {
       content: "";
-
       position: absolute;
-
       width: 390px;
       height: 390px;
-
       border-radius: 50%;
-
       background: rgba(201, 162, 39, 0.07);
-
       top: 35px;
       left: 50%;
-
       transform: translateX(-50%);
-
       z-index: 0;
     }
 
     .book-cover-large {
       position: relative;
       z-index: 1;
-
       width: 100%;
-
       display: flex;
       justify-content: center;
-
       transform: translateY(-35px);
     }
 
     .book-cover-large img {
       width: 92%;
       max-width: 490px;
-
       height: auto;
-
       display: block;
-
       object-fit: contain;
-
       border-radius: 5px 11px 11px 5px;
-
-      box-shadow:
-        0 22px 55px rgba(0, 0, 0, 0.20),
-        9px 10px 0 rgba(201, 162, 39, 0.10);
-
-      transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.20), 9px 10px 0 rgba(201, 162, 39, 0.10);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .book-cover-large img:hover {
       transform: translateY(-7px);
-
-      box-shadow:
-        0 30px 65px rgba(0, 0, 0, 0.24),
-        11px 12px 0 rgba(201, 162, 39, 0.16);
+      box-shadow: 0 30px 65px rgba(0, 0, 0, 0.24), 11px 12px 0 rgba(201, 162, 39, 0.16);
     }
 
+    /* ===== CONTENU ===== */
 
-    /* =========================================
-       CONTENU
-    ========================================= */
-
-    .book-content {
-      max-width: 590px;
-
-      padding-top: 5px;
-    }
+    .book-content { max-width: 590px; padding-top: 5px; }
 
     .book-badge {
       display: inline-block;
-
       padding: 7px 13px;
-
       margin-bottom: 17px;
-
       border: 1px solid rgba(176, 138, 24, 0.45);
-
       color: #a77f16;
-
       font-size: 0.72rem;
-
       letter-spacing: 0.17em;
-
       text-transform: uppercase;
-
       font-weight: 600;
     }
 
-    .book-content h1 {
-      font-size: clamp(2.3rem, 4.5vw, 4rem);
-
-      line-height: 1.05;
-
-      margin: 0 0 16px;
-    }
+    .book-content h1 { font-size: clamp(2.3rem, 4.5vw, 4rem); line-height: 1.05; margin: 0 0 16px; }
 
     .book-subtitle-large {
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: 1.25rem;
-
       line-height: 1.65;
-
       font-style: italic;
-
       color: #555;
-
       margin-bottom: 22px;
     }
 
-    .book-gold-line {
-      width: 58px;
-      height: 3px;
+    .book-gold-line { width: 58px; height: 3px; background: #c9a227; margin: 20px 0 28px; }
 
-      background: #c9a227;
+    /* ===== INTRODUCTION ===== */
 
-      margin: 20px 0 28px;
-    }
+    .book-intro { font-size: 1rem; line-height: 1.85; margin-bottom: 17px; }
 
-
-    /* =========================================
-       INTRODUCTION
-    ========================================= */
-
-    .book-intro {
-      font-size: 1rem;
-
-      line-height: 1.85;
-
-      margin-bottom: 17px;
-    }
-
-
-    /* =========================================
-       INFORMATIONS DU LIVRE
-    ========================================= */
+    /* ===== INFORMATIONS DU LIVRE ===== */
 
     .book-details {
       margin: 28px 0;
-
       padding: 18px 22px;
-
       background: rgba(0, 0, 0, 0.025);
-
       border-left: 3px solid #c9a227;
     }
 
     .book-detail-row {
       display: flex;
-
       justify-content: space-between;
-
       gap: 25px;
-
       padding: 8px 0;
-
       border-bottom: 1px solid rgba(0, 0, 0, 0.055);
-
       font-size: 0.92rem;
-
       line-height: 1.5;
     }
 
-    .book-detail-row:last-child {
-      border-bottom: none;
-    }
+    .book-detail-row:last-child { border-bottom: none; }
 
-    .book-detail-row strong {
-      font-weight: 600;
+    .book-detail-row strong { font-weight: 600; white-space: nowrap; }
 
-      white-space: nowrap;
-    }
+    .book-detail-row span { text-align: right; color: #555; }
 
-    .book-detail-row span {
-      text-align: right;
-
-      color: #555;
-    }
-
-
-    /* =========================================
-       AMAZON
-    ========================================= */
+    /* ===== AMAZON ===== */
 
     .amazon-box {
       margin-top: 25px;
-
       padding: 23px 25px;
-
       background: #0b1f33;
-
       color: #fff;
-
       border-radius: 5px;
-
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
     }
 
-    .amazon-box h3 {
-      margin: 0 0 7px;
+    .amazon-box h3 { margin: 0 0 7px; font-size: 1.15rem; }
 
-      font-size: 1.15rem;
-    }
-
-    .amazon-box p {
-      margin: 0 0 17px;
-
-      font-size: 0.92rem;
-
-      line-height: 1.6;
-
-      opacity: 0.88;
-    }
+    .amazon-box p { margin: 0 0 17px; font-size: 0.92rem; line-height: 1.6; opacity: 0.88; }
 
     .amazon-button {
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 9px;
-
       padding: 12px 22px;
-
       background: #c9a227;
-
       color: #fff;
-
       text-decoration: none;
-
       font-size: 0.92rem;
-
       font-weight: 600;
-
       border-radius: 3px;
-
-      transition:
-        background 0.3s ease,
-        transform 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
-    .amazon-button:hover {
-      background: #ad881e;
+    .amazon-button:hover { background: #ad881e; transform: translateY(-2px); }
 
-      transform: translateY(-2px);
-    }
-
-
-    /* =========================================
-       CITATION
-    ========================================= */
+    /* ===== CITATION ===== */
 
     .book-quote {
       margin-top: 28px;
-
       padding: 3px 0 3px 18px;
-
       border-left: 2px solid #c9a227;
-
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: 1.08rem;
-
       line-height: 1.7;
-
       font-style: italic;
-
       color: #555;
     }
 
-
-    /* =========================================
-       BOUTON RETOUR
-    ========================================= */
+    /* ===== BOUTON RETOUR ===== */
 
     .book-back {
       display: inline-block;
-
       margin-top: 25px;
-
       font-size: 0.9rem;
-
       text-decoration: none;
-
       color: #0b1f33;
-
       transition: opacity 0.3s ease;
     }
 
-    .book-back:hover {
-      opacity: 0.65;
-    }
+    .book-back:hover { opacity: 0.65; }
 
-
-    /* =========================================
-       RESPONSIVE TABLETTE
-    ========================================= */
+    /* ===== RESPONSIVE TABLETTE ===== */
 
     @media (max-width: 900px) {
-
-      .book-page {
-        padding-top: 35px;
-      }
-
-      .book-detail {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-      }
-
-      .book-visual {
-        padding-top: 0;
-      }
-
-      .book-cover-large {
-        transform: translateY(-15px);
-      }
-
-      .book-cover-large img {
-        width: 82%;
-
-        max-width: 430px;
-      }
-
-      .book-content {
-        max-width: 100%;
-
-        padding-top: 0;
-      }
-
-      .book-visual::before {
-        width: 320px;
-        height: 320px;
-      }
+      .book-page { padding-top: 150px; }
+      .book-detail { grid-template-columns: 1fr; gap: 30px; }
+      .book-visual { padding-top: 0; }
+      .book-cover-large { transform: translateY(-15px); }
+      .book-cover-large img { width: 82%; max-width: 430px; }
+      .book-content { max-width: 100%; padding-top: 0; }
+      .book-visual::before { width: 320px; height: 320px; }
     }
 
-
-    /* =========================================
-       RESPONSIVE MOBILE
-    ========================================= */
+    /* ===== RESPONSIVE MOBILE ===== */
 
     @media (max-width: 600px) {
-
-      .book-page {
-        padding-top: 25px;
-
-        padding-bottom: 70px;
-      }
-
-      .book-detail {
-        gap: 25px;
-      }
-
-      .book-cover-large {
-        transform: translateY(-10px);
-      }
-
-      .book-cover-large img {
-        width: 88%;
-
-        max-width: 350px;
-      }
-
-      .book-visual::before {
-        width: 260px;
-        height: 260px;
-
-        top: 20px;
-      }
-
-      .book-content h1 {
-        font-size: 2.35rem;
-      }
-
-      .book-subtitle-large {
-        font-size: 1.1rem;
-      }
-
-      .book-detail-row {
-        flex-direction: column;
-
-        gap: 2px;
-      }
-
-      .book-detail-row strong {
-        white-space: normal;
-      }
-
-      .book-detail-row span {
-        text-align: left;
-      }
-
-      .amazon-button {
-        width: 100%;
-      }
+      .book-page { padding-top: 130px; padding-bottom: 70px; }
+      .book-detail { gap: 25px; }
+      .book-cover-large { transform: translateY(-10px); }
+      .book-cover-large img { width: 88%; max-width: 350px; }
+      .book-visual::before { width: 260px; height: 260px; top: 20px; }
+      .book-content h1 { font-size: 2.35rem; }
+      .book-subtitle-large { font-size: 1.1rem; }
+      .book-detail-row { flex-direction: column; gap: 2px; }
+      .book-detail-row strong { white-space: normal; }
+      .book-detail-row span { text-align: left; }
+      .amazon-button { width: 100%; }
     }
 
   </style>
 
+  <!-- =========================================================
+       BARRE DE MENU — identique à la page d'accueil
+       (à copier tel quel dans toutes les autres pages)
+  ========================================================== -->
+  <style>
+
+    :root {
+      --hf-navy: #0B1F33;
+      --hf-deep: #071625;
+      --hf-gold: #C9A45C;
+      --hf-gold-light: #E4C985;
+      --hf-ivory: #F7F3EA;
+    }
+
+    /* Espace sous la barre de menu fixe */
+    .page-hero { padding-top: 160px; }
+
+    /* ----- Structure de base ----- */
+
+    .site-header { width: 100%; }
+
+    .header-inner { min-width: 0; gap: 20px; }
+
+    .nav-desktop { min-width: 0; }
+
+    .nav-links { flex-wrap: wrap; }
+
+    .nav-links a { white-space: nowrap; }
+
+    .hamburger { flex: 0 0 auto; }
+
+    .nav-break { display: none; }
+
+    /* ----- Desktop : logo | menu centré sur 2 lignes | bouton ----- */
+
+    @media (min-width: 1181px) {
+
+      .header-inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .nav-desktop { display: contents; }
+
+      .logo { justify-self: start; }
+
+      .nav-links {
+        grid-column: 2;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: clamp(560px, 58vw, 720px);
+        gap: 0 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-break {
+        display: block;
+        flex: 0 0 100%;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav-desktop > .btn { grid-column: 3; justify-self: end; }
+
+      .hamburger { display: none; }
+    }
+
+    /* ----- Moins de 1180px : menu hamburger ----- */
+
+    @media (max-width: 1180px) {
+      .header-inner { justify-content: space-between; }
+      .nav-desktop { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ----- Logo toujours lisible ----- */
+
+    .logo,
+    .logo span,
+    .logo small,
+    .logo-tag {
+      white-space: nowrap;
+      overflow: visible;
+      overflow-wrap: normal;
+      word-break: keep-all;
+      text-overflow: clip;
+    }
+
+    .logo { flex: 0 0 auto; min-width: max-content; max-width: none; transform: none; }
+
+    /* ----- Design professionnel ----- */
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: linear-gradient(180deg, rgba(7,22,37,.96), rgba(7,22,37,.88));
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(201,164,92,.28);
+      box-shadow: 0 8px 30px rgba(3,10,18,.28);
+      transition: background .35s ease, box-shadow .35s ease;
+    }
+
+    .site-header .header-inner {
+      padding-top: 28px;
+      padding-bottom: 16px;
+      transition: padding .35s ease;
+    }
+
+    .site-header.is-scrolled { background: rgba(7,22,37,.97); box-shadow: 0 10px 34px rgba(3,10,18,.42); }
+
+    .site-header.is-scrolled .header-inner { padding-top: 16px; padding-bottom: 10px; }
+
+    /* Logo */
+
+    .site-header .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .site-header .logo span:first-child {
+      color: var(--hf-gold);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .5em;
+      padding-left: 1px;
+    }
+
+    .site-header .logo span:nth-child(2) {
+      color: #fff;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+    }
+
+    .site-header .logo .logo-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 5px;
+      color: rgba(255,255,255,.55);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .5rem;
+      font-weight: 600;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+    }
+
+    .site-header .logo .logo-tag::before { content: ""; width: 22px; height: 1px; background: var(--hf-gold); }
+
+    /* Liens */
+
+    .site-header .nav-links a {
+      position: relative;
+      display: inline-block;
+      padding: 3px 2px;
+      line-height: 1.2;
+      color: rgba(255,255,255,.82);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color .3s ease;
+    }
+
+    .site-header .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--hf-gold);
+      transform: translateX(-50%) scaleX(0);
+      transform-origin: center;
+      transition: transform .35s ease;
+    }
+
+    .site-header .nav-links a:hover,
+    .site-header .nav-links a.active { color: var(--hf-gold-light); }
+
+    .site-header .nav-links a:hover::after,
+    .site-header .nav-links a.active::after { transform: translateX(-50%) scaleX(1); }
+
+    /* Bouton Me contacter */
+
+    .site-header .nav-desktop > .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 26px;
+      background: linear-gradient(135deg, var(--hf-gold-light), var(--hf-gold));
+      color: var(--hf-navy);
+      border: 1px solid var(--hf-gold);
+      border-radius: 2px;
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(201,164,92,.25);
+      transition: transform .3s ease, box-shadow .3s ease, background .3s ease, color .3s ease;
+    }
+
+    .site-header .nav-desktop > .btn:hover {
+      background: transparent;
+      color: var(--hf-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(201,164,92,.18);
+    }
+
+    /* Hamburger */
+
+    .site-header .hamburger {
+      border: 1px solid rgba(201,164,92,.45);
+      border-radius: 2px;
+      background: rgba(255,255,255,.03);
+      cursor: pointer;
+      transition: border-color .3s ease, background .3s ease;
+    }
+
+    .site-header .hamburger:hover { border-color: var(--hf-gold); background: rgba(201,164,92,.10); }
+
+    .site-header .hamburger span { background: #fff; }
+
+    /* Menu mobile */
+
+    .nav-mobile,
+    .mobile-nav {
+      text-align: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(201,164,92,.10), transparent 45%),
+        linear-gradient(180deg, #071625 0%, #0B1F33 100%);
+    }
+
+    .nav-mobile .nav-mobile-tagline {
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: var(--hf-gold);
+      font-family: "DM Sans", Arial, sans-serif;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .4em;
+      text-transform: uppercase;
+    }
+
+    .nav-mobile .nav-mobile-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .nav-mobile .nav-mobile-links li { width: 100%; text-align: center; }
+
+    .nav-mobile .nav-mobile-links a {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 10px;
+      text-align: center;
+      color: rgba(255,255,255,.88);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,164,92,.14);
+      transition: color .3s ease, background .3s ease;
+    }
+
+    .nav-mobile .nav-mobile-links a:hover,
+    .nav-mobile .nav-mobile-links a.active { color: var(--hf-gold-light); background: rgba(201,164,92,.06); }
+
+    .nav-mobile > .btn {
+      margin: 22px auto 0;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, var(--hf-gold-light), var(--hf-gold));
+      color: var(--hf-navy);
+      border: 1px solid var(--hf-gold);
+      border-radius: 2px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      justify-content: center;
+    }
+
+    /* Petits écrans */
+
+    @media (max-width: 650px) {
+      .header-inner { min-height: 68px; gap: 10px; }
+      .hamburger { width: 44px; height: 44px; flex-shrink: 0; }
+      .mobile-nav, .nav-mobile { width: 100%; max-width: 100%; box-sizing: border-box; overflow-x: hidden; }
+      .site-header .logo span:nth-child(2) { font-size: 1.25rem; letter-spacing: .04em; }
+      .site-header .logo span:first-child { font-size: .6rem; letter-spacing: .45em; }
+      .site-header .logo .logo-tag { font-size: .46rem; }
+      .page-hero { padding-top: 130px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-header,
+      .site-header .header-inner,
+      .site-header .nav-links a,
+      .site-header .nav-links a::after { transition: none; }
+    }
+
+  </style>
 </head>
-
-
 <body>
-
-  <!-- =========================================
-       CURSEUR
-  ========================================= -->
-
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
-  <div id="cursor-label"></div>
-
+  <div id="cursor-dot"></div><div id="cursor-ring"></div><div id="cursor-label"></div>
   <div id="page-transition"></div>
 
-
-  <!-- =========================================
+  <!-- =========================================================
        HEADER
-  ========================================= -->
+  ========================================================= -->
 
   <header class="site-header">
-
     <div class="container header-inner">
 
-      <a href="index.html" class="logo">
-        HOD <span>FRAGONARD</span>
+      <a href="index.html" class="logo" aria-label="Hod Fragonard - Accueil">
+        <span>HOD</span>
+        <span>FRAGONARD</span>
+        <small class="logo-tag">Site Officiel</small>
       </a>
 
-      <nav class="nav-desktop">
+      <nav class="nav-desktop" aria-label="Navigation principale">
 
         <ul class="nav-links">
-
-          <li>
-            <a href="index.html">
-              Accueil
-            </a>
-          </li>
-
-          <li>
-            <a href="ouvrages.html" class="active">
-              Ouvrages
-            </a>
-          </li>
-
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="juriste.html">Juriste</a></li>
+          <li><a href="autrice.html">Autrice</a></li>
+          <li><a href="ouvrages.html" class="active">Ouvrages</a></li>
+          <li><a href="formations.html">Formations</a></li>
+          <li><a href="projets.html">Engagements</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <!-- Saut de ligne : Agenda et Galerie centrés en bas -->
+          <li class="nav-break" aria-hidden="true"></li>
+          <li><a href="agenda.html">Agenda</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
         </ul>
+
+        <a href="contact.html" class="btn btn-or btn-sm">Me contacter</a>
 
       </nav>
 
-    </div>
+      <button class="hamburger hamburger-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
 
+    </div>
   </header>
 
+  <!-- =========================================================
+       MENU MOBILE
+  ========================================================= -->
+
+  <nav class="nav-mobile mobile-nav" aria-label="Navigation mobile">
+    <span class="nav-mobile-tagline">HOD FRAGONARD</span>
+    <ul class="nav-mobile-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="juriste.html">Juriste</a></li>
+      <li><a href="autrice.html">Autrice</a></li>
+      <li><a href="ouvrages.html" class="active">Ouvrages</a></li>
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="projets.html">Engagements</a></li>
+      <li><a href="ambassadrice.html">Ambassadrice de Paix</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li><a href="galerie.html">Galerie</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-or">Me contacter</a>
+  </nav>
+
+  <!-- =========================================================
+       CONTENU
+  ========================================================= -->
 
   <!-- =========================================
        PAGE DU LIVRE
@@ -504,20 +637,13 @@
 
   <main>
 
-    <section
-      class="book-page"
-      style="margin-top:var(--header-h)"
-    >
+    <section class="book-page">
 
       <div class="container">
 
         <div class="book-detail">
 
-
-          <!-- =====================================
-               COUVERTURE
-          ====================================== -->
-
+          <!-- COUVERTURE -->
           <div class="book-visual">
 
             <div class="book-cover-large">
@@ -531,31 +657,21 @@
 
           </div>
 
-
-          <!-- =====================================
-               INFORMATIONS
-          ====================================== -->
-
+          <!-- INFORMATIONS -->
           <div class="book-content">
 
-            <span class="book-badge">
-              Tome 1 · Ouvrage
-            </span>
-
+            <span class="book-badge">Tome 1 · Ouvrage</span>
 
             <h1>
               Les 22 Mantras<br>
               de la Résilience
             </h1>
 
-
             <p class="book-subtitle-large">
               22 Mantras pour tenir bon et rebondir plus fort
             </p>
 
-
             <div class="book-gold-line"></div>
-
 
             <p class="book-intro">
               <strong>
@@ -564,139 +680,73 @@
               </strong>
             </p>
 
-
             <p class="book-intro">
-
               Dans cet ouvrage, Hod Fragonard partage
               22 mantras conçus comme des paroles de
               réflexion, d'encouragement et de résilience.
-
             </p>
 
-
             <p class="book-intro">
-
               Chaque mantra invite à prendre du recul,
               à retrouver sa force intérieure et à continuer
               d'avancer malgré les difficultés.
-
             </p>
 
-
             <p class="book-intro">
-
               Un ouvrage à découvrir, à relire et à garder
               près de soi lorsque l'on a besoin de retrouver
               confiance et courage.
-
             </p>
 
-
-            <!-- =====================================
-                 FICHE DU LIVRE
-            ====================================== -->
-
+            <!-- FICHE DU LIVRE -->
             <div class="book-details">
 
               <div class="book-detail-row">
-
                 <strong>Auteure</strong>
-
-                <span>
-                  Hod Fragonard
-                </span>
-
+                <span>Hod Fragonard</span>
               </div>
 
-
               <div class="book-detail-row">
-
                 <strong>Titre</strong>
-
-                <span>
-                  Les 22 Mantras de la Résilience
-                </span>
-
+                <span>Les 22 Mantras de la Résilience</span>
               </div>
 
-
               <div class="book-detail-row">
-
                 <strong>Tome</strong>
-
-                <span>
-                  Tome 1
-                </span>
-
+                <span>Tome 1</span>
               </div>
 
-
               <div class="book-detail-row">
-
                 <strong>Sous-titre</strong>
-
-                <span>
-                  22 Mantras pour tenir bon et rebondir plus fort
-                </span>
-
+                <span>22 Mantras pour tenir bon et rebondir plus fort</span>
               </div>
 
-
               <div class="book-detail-row">
-
                 <strong>Format</strong>
-
-                <span>
-                  Broché
-                </span>
-
+                <span>Broché</span>
               </div>
 
-
               <div class="book-detail-row">
-
                 <strong>Nombre de pages</strong>
-
-                <span>
-                  104 pages
-                </span>
-
+                <span>104 pages</span>
               </div>
 
-
               <div class="book-detail-row">
-
                 <strong>ISBN</strong>
-
-                <span>
-                  979-8-2983-4182-0
-                </span>
-
+                <span>979-8-2983-4182-0</span>
               </div>
 
-
               <div class="book-detail-row">
-
                 <strong>ASIN</strong>
-
-                <span>
-                  B0FMPHT2CW
-                </span>
-
+                <span>B0FMPHT2CW</span>
               </div>
 
             </div>
 
-
-            <!-- =====================================
-                 AMAZON
-            ====================================== -->
-
+            <!-- AMAZON -->
             <div class="amazon-box">
 
-              <h3>
-                Disponible sur Amazon
-              </h3>
+              <h3>Disponible sur Amazon</h3>
 
               <p>
                 Procurez-vous votre exemplaire directement
@@ -710,30 +760,18 @@
                 class="amazon-button"
                 data-cursor="Acheter"
               >
-
                 🛒 Acheter sur Amazon
-
               </a>
 
             </div>
 
-
-            <!-- =====================================
-                 CITATION
-            ====================================== -->
-
+            <!-- CITATION -->
             <p class="book-quote">
-
               « Tenir bon, avancer et croire que
               le meilleur reste possible. »
-
             </p>
 
-
-            <a
-              href="ouvrages.html"
-              class="book-back"
-            >
+            <a href="ouvrages.html" class="book-back">
               ← Retour aux ouvrages
             </a>
 
@@ -747,15 +785,19 @@
 
   </main>
 
+  <!-- En-tête : effet au défilement -->
+  <script>
+    (function () {
+      var header = document.querySelector('.site-header');
+      if (!header) return;
+      function onScroll() {
+        header.classList.toggle('is-scrolled', window.scrollY > 24);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 
-  <!-- =========================================
-       SCRIPTS
-  ========================================= -->
-
-  <script src="assets/js/cursor.js"></script>
-  <script src="assets/js/transitions.js"></script>
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/cursor.js"></script><script src="assets/js/transitions.js"></script><script src="assets/js/main.js"></script>
 </body>
-
 </html>
