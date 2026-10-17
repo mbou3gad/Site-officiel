@@ -789,9 +789,10 @@
 
       .home-pillar-modern { min-height: auto; padding: 25px 22px; }
 
-      .home-book-cover-modern { height: 350px; }
+      /* OUVRAGES — taille réduite sur téléphone */
+      .home-book-cover-modern { height: 280px; }
 
-      .home-book-cover-modern img { max-height: 315px; }
+      .home-book-cover-modern img { max-height: 250px; }
 
       .home-event-modern { display: flex; flex-direction: column; gap: 18px; padding: 25px 20px; text-align: center; }
 
@@ -888,9 +889,25 @@
     .formation-card h3,
     .formation-card p { overflow-wrap: anywhere; }
 
-    .home-book-cover-modern { box-sizing: border-box; width: 100%; }
+    .home-book-cover-modern {
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
-    .home-book-cover-modern img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .home-book-cover-modern img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+      object-fit: contain;
+      object-position: center;
+    }
 
     /* IMAGE À PROPOS */
 
@@ -926,8 +943,8 @@
       .hero-title-modern { font-size: clamp(3rem, 10vw, 5rem); }
       .home-pillars-modern { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
       .home-books-modern { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-      .home-book-cover-modern { height: 340px; }
-      .home-book-cover-modern img { max-height: 300px; }
+      .home-book-cover-modern { height: 300px; }
+      .home-book-cover-modern img { max-height: 260px; }
       .home-about-modern { grid-template-columns: minmax(0, 1fr); gap: 40px; }
       .home-about-photo { width: min(100%, 620px); margin: 0 auto; }
       .home-event-modern { grid-template-columns: 100px 1px minmax(0, 1fr); gap: 20px; }
@@ -1009,15 +1026,20 @@
 
       .home-about-content h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
 
-      .home-books-modern { grid-template-columns: 1fr; gap: 18px; }
+      /* OUVRAGES — taille réduite sur téléphone */
+      .home-books-modern { grid-template-columns: 1fr; gap: 16px; }
 
-      .home-book-cover-modern { height: min(420px, 92vw); padding: 18px; }
+      .home-book-modern { width: 100%; max-width: 320px; margin-left: auto; margin-right: auto; }
 
-      .home-book-cover-modern img { max-height: calc(min(420px, 92vw) - 36px); }
+      .home-book-cover-modern { height: min(280px, 72vw); padding: 14px; }
 
-      .home-book-body-modern { min-height: 0; padding: 20px; }
+      .home-book-cover-modern img { max-height: calc(min(280px, 72vw) - 28px); }
 
-      .home-book-body-modern h3 { font-size: 1.08rem; }
+      .home-book-body-modern { min-height: 0; padding: 16px; }
+
+      .home-book-body-modern h3 { font-size: 1rem; }
+
+      .home-book-body-modern p { font-size: .8rem; margin-bottom: 16px; }
 
       /* Formations */
       .formations-intro { margin-bottom: 32px; }
@@ -1077,8 +1099,9 @@
       .hero-peace-title { font-size: .45rem; letter-spacing: .08em; }
       .hero-peace-sub { font-size: .38rem; letter-spacing: .04em; }
       .home-pillar-modern { padding: 22px 18px; }
-      .home-book-cover-modern { height: 88vw; max-height: 390px; }
-      .home-book-cover-modern img { max-height: calc(88vw - 32px); }
+      .home-book-modern { max-width: 290px; }
+      .home-book-cover-modern { height: 68vw; max-height: 250px; }
+      .home-book-cover-modern img { max-height: calc(68vw - 28px); }
       .formations-features { grid-template-columns: 1fr; }
     }
 
@@ -1092,7 +1115,8 @@
       .hero-desc-modern { font-size: .75rem; }
       .hero-actions-modern .btn { font-size: .72rem; }
       .hero-peace-line { gap: 5px; }
-      .home-book-cover-modern { height: 86vw; }
+      .home-book-modern { max-width: 260px; }
+      .home-book-cover-modern { height: 66vw; }
     }
 
     /* ACCESSIBILITÉ / TOUCH */
@@ -1259,7 +1283,7 @@
       .logo { transform: none; }
     }
 
-  
+
     /* =====================================================
        DESIGN PROFESSIONNEL DE LA BARRE DE MENU
        Bleu nuit + or, effet verre, soulignement animé
