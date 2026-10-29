@@ -6,6 +6,41 @@
   <title>Engagements & Projets — Hod Fragonard</title>
   <meta name="description" content="Découvrez les engagements et projets de Hod Fragonard, notamment l'association Koyeba Koluka pour l'insertion de la jeunesse.">
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Correctif : empêche le texte des cartes d'être coupé -->
+  <style>
+    .koyeba-card {
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+    .koyeba-card .koyeba-text {
+      min-width: 0;
+      max-height: none !important;
+      overflow: visible !important;
+      overflow-wrap: break-word;
+    }
+    .koyeba-card .koyeba-text h2,
+    .koyeba-card .koyeba-text p {
+      display: block !important;
+      max-height: none !important;
+      overflow: visible !important;
+      white-space: normal !important;
+      text-overflow: clip !important;
+      -webkit-line-clamp: unset !important;
+      line-clamp: unset !important;
+    }
+    .koyeba-card .koyeba-axes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+    }
+    .koyeba-card .koyeba-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <div id="cursor-dot"></div><div id="cursor-ring"></div><div id="cursor-label"></div>
@@ -68,17 +103,19 @@
             <span class="year">2018</span>
             <span class="label">Création</span>
           </div>
-          <div class="koyeba-text">
-            <h2 style="font-size: 2.2rem; margin-bottom:.5rem;">Création de Lotus Services</h2>
-            <div class="gold-line"></div>
-            <p class="lead" style="margin-bottom: 1.5rem">Fondation de Lotus Services, cabinet de conseil juridique dont le siège est situé à Troyes, en France.</p>
-            <p>Le cabinet accompagne les particuliers et les professionnels dans leurs démarches juridiques et administratives, tout en développant un réseau de connexions et de collaborations stratégiques à l’échelle nationale et internationale.</p>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; align-items: center;">
+            <div class="koyeba-text">
+              <h2 style="font-size: 2.2rem; margin-bottom:.5rem;">Création de Lotus Services</h2>
+              <div class="gold-line"></div>
+              <p class="lead" style="margin-bottom: 1.5rem">Fondation de Lotus Services, cabinet de conseil juridique dont le siège est situé à Troyes, en France.</p>
+              <p>Le cabinet accompagne les particuliers et les professionnels dans leurs démarches juridiques et administratives, tout en développant un réseau de connexions et de collaborations stratégiques à l’échelle nationale et internationale.</p>
 
-            <div class="koyeba-axes" style="margin-top: 2rem;">
-              <span class="koyeba-axe">Conseil juridique</span>
-              <span class="koyeba-axe">Démarches administratives</span>
-              <span class="koyeba-axe">Particuliers & professionnels</span>
-              <span class="koyeba-axe">Réseau international</span>
+              <div class="koyeba-axes" style="margin-top: 2rem;">
+                <span class="koyeba-axe">Conseil juridique</span>
+                <span class="koyeba-axe">Démarches administratives</span>
+                <span class="koyeba-axe">Particuliers & professionnels</span>
+                <span class="koyeba-axe">Réseau international</span>
+              </div>
             </div>
           </div>
         </div>
@@ -89,13 +126,13 @@
             <span class="year">2020</span>
             <span class="label">Création</span>
           </div>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 3rem; align-items: center;">
             <div class="koyeba-text">
               <h2 style="font-size: 2.2rem; margin-bottom:.5rem;">Association KOYEBA KOLUKA</h2>
               <div class="gold-line"></div>
               <p class="lead" style="margin-bottom: 1.5rem">Créée en 2020, KOYEBA KOLUKA est une association présidée par Hod Fragonard et engagée dans l'insertion professionnelle des jeunes.</p>
               <p>Consciente des défis auxquels fait face la jeunesse aujourd'hui, Hod Fragonard a fondé Koyeba Koluka avec la conviction profonde que l'éducation et l'accompagnement sont les clés de la réussite. L'association mène des actions concrètes sur le terrain pour offrir des opportunités, des formations et un réseau aux jeunes en quête d'avenir.</p>
-              
+
               <div class="koyeba-axes" style="margin-top: 2rem;">
                 <span class="koyeba-axe">Jeunesse</span>
                 <span class="koyeba-axe">Éducation</span>
@@ -117,17 +154,19 @@
             <span class="year">2025</span>
             <span class="label">Publication</span>
           </div>
-          <div class="koyeba-text">
-            <h2 style="font-size: 2.2rem; margin-bottom:.5rem;">Auteure de plusieurs ouvrages</h2>
-            <div class="gold-line"></div>
-            <p class="lead" style="margin-bottom: 1.5rem">Hod Fragonard fait ses premiers pas dans l’univers littéraire avec la publication de plusieurs ouvrages consacrés à la résilience, au développement personnel et à la transmission des valeurs humaines.</p>
-            <p>À travers ses écrits, elle partage ses réflexions, ses expériences et sa vision de la vie, avec l’ambition d’inspirer, d’encourager et d’accompagner chacun sur le chemin de la confiance en soi et du dépassement de soi.</p>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; align-items: center;">
+            <div class="koyeba-text">
+              <h2 style="font-size: 2.2rem; margin-bottom:.5rem;">Auteure de plusieurs ouvrages</h2>
+              <div class="gold-line"></div>
+              <p class="lead" style="margin-bottom: 1.5rem">Hod Fragonard fait ses premiers pas dans l’univers littéraire avec la publication de plusieurs ouvrages consacrés à la résilience, au développement personnel et à la transmission des valeurs humaines.</p>
+              <p>À travers ses écrits, elle partage ses réflexions, ses expériences et sa vision de la vie, avec l’ambition d’inspirer, d’encourager et d’accompagner chacun sur le chemin de la confiance en soi et du dépassement de soi.</p>
 
-            <div class="koyeba-axes" style="margin-top: 2rem;">
-              <span class="koyeba-axe">Résilience</span>
-              <span class="koyeba-axe">Développement personnel</span>
-              <span class="koyeba-axe">Valeurs humaines</span>
-              <span class="koyeba-axe">Confiance en soi</span>
+              <div class="koyeba-axes" style="margin-top: 2rem;">
+                <span class="koyeba-axe">Résilience</span>
+                <span class="koyeba-axe">Développement personnel</span>
+                <span class="koyeba-axe">Valeurs humaines</span>
+                <span class="koyeba-axe">Confiance en soi</span>
+              </div>
             </div>
           </div>
         </div>
@@ -138,17 +177,19 @@
             <span class="year">2026</span>
             <span class="label">Distinction</span>
           </div>
-          <div class="koyeba-text">
-            <h2 style="font-size: 2.2rem; margin-bottom:.5rem;">Distinction d’Ambassadrice de paix</h2>
-            <div class="gold-line"></div>
-            <p class="lead" style="margin-bottom: 1.5rem">Le 23 juin 2026, à Paris, Hod Fragonard reçoit le titre d’Ambassadrice de paix, décerné par la Fédération pour la paix universelle (Universal Peace Federation – UPF), organisation internationale bénéficiant du statut consultatif général auprès du Conseil économique et social des Nations unies (ECOSOC).</p>
-            <p>Cette distinction vient reconnaître son engagement en faveur de la paix, de la jeunesse, du dialogue interculturel et du développement d’initiatives à impact social.</p>
+          <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; align-items: center;">
+            <div class="koyeba-text">
+              <h2 style="font-size: 2.2rem; margin-bottom:.5rem;">Distinction d’Ambassadrice de paix</h2>
+              <div class="gold-line"></div>
+              <p class="lead" style="margin-bottom: 1.5rem">Le 23 juin 2026, à Paris, Hod Fragonard reçoit le titre d’Ambassadrice de paix, décerné par la Fédération pour la paix universelle (Universal Peace Federation – UPF), organisation internationale bénéficiant du statut consultatif général auprès du Conseil économique et social des Nations unies (ECOSOC).</p>
+              <p>Cette distinction vient reconnaître son engagement en faveur de la paix, de la jeunesse, du dialogue interculturel et du développement d’initiatives à impact social.</p>
 
-            <div class="koyeba-axes" style="margin-top: 2rem;">
-              <span class="koyeba-axe">Paix</span>
-              <span class="koyeba-axe">Jeunesse</span>
-              <span class="koyeba-axe">Dialogue interculturel</span>
-              <span class="koyeba-axe">Impact social</span>
+              <div class="koyeba-axes" style="margin-top: 2rem;">
+                <span class="koyeba-axe">Paix</span>
+                <span class="koyeba-axe">Jeunesse</span>
+                <span class="koyeba-axe">Dialogue interculturel</span>
+                <span class="koyeba-axe">Impact social</span>
+              </div>
             </div>
           </div>
         </div>
